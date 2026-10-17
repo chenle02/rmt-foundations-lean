@@ -178,6 +178,14 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
+**In words.**
+
+```latex
+For every real $x$, the real Airy function satisfies
+\[ \operatorname{Ai}''(x) = x\,\operatorname{Ai}(x). \]
+Here $\operatorname{Ai}$ on $\mathbb{R}$ is the real part of the complex Airy function.
+```
+
 **In Lean.** `RMTFoundations.Airy.iteratedDeriv_two_airyAiReal` in [Challenge/Reference/Airy/Core.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Airy/Core.lean#L1147): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
@@ -191,6 +199,14 @@ theorem iteratedDeriv_two_airyAiReal (x : ℝ /- [definition] -/ ) :
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
+**In words.**
+
+```latex
+For every real $s$, let $A_s$ be the integral operator on $L^2(0,\infty)$ with kernel
+$\operatorname{Ai}(x+y+s)$. Then $K_s = A_s \circ A_s$ is trace class, that is, a composition of two
+Hilbert--Schmidt operators.
+```
+
 **In Lean.** `RMTFoundations.Airy.isTraceClass_airyKernelShift` in [Challenge/Reference/Airy/Core.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Airy/Core.lean#L8894): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
@@ -203,6 +219,14 @@ theorem isTraceClass_airyKernelShift (s : ℝ /- [definition] -/) :
 ### Factorially bounded coefficients give an entire Fredholm power series
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
+
+**In words.**
+
+```latex
+Let $c_n \in \mathbb{C}$ and $M \ge 0$ satisfy $|c_n| \le M^n / n!$ for all $n \ge 0$. Then the power series
+\[ z \mapsto \sum_{n \ge 0} c_n z^n \]
+is analytic on all of $\mathbb{C}$.
+```
 
 **In Lean.** `RMTFoundations.Fredholm.fredholmSeries_entire` in [Challenge/Reference/Operator/Fredholm.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Operator/Fredholm.lean#L92): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
@@ -221,6 +245,14 @@ theorem fredholmSeries_entire
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
+**In words.**
+
+```latex
+Let $F_1(s)$ be the real part of the Fredholm series, at coupling $-1$, of the kernel
+$\operatorname{Ai}(x+y+s)$ on $(0,\infty)$ (formally $\det(I - A_s)$). Then $s \mapsto F_1(s)$ is
+nondecreasing on $\mathbb{R}$.
+```
+
 **In Lean.** `RMTFoundations.TWOneMonotone.monotone_TW1R` in [Challenge/Reference/TracyWidom/OrderOneMonotone.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/TracyWidom/OrderOneMonotone.lean#L51791): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
@@ -232,6 +264,15 @@ theorem monotone_TW1R : Monotone TW1R
 ### Analytic moment-cumulant recursion at zero on the interior of the exponential integrability set
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
+
+**In words.**
+
+```latex
+Let $X$ be a real random variable on a space with a nonzero measure $\mu$, and suppose $0$ lies in the
+interior of the set of $t$ for which $e^{tX}$ is $\mu$-integrable. Then for every $n \ge 0$,
+\[ \int X^{n+1}\,d\mu = \sum_{j=0}^{n} \binom{n}{j}\, \kappa_{j+1} \int X^{n-j}\,d\mu, \]
+where $\kappa_m$ is the $m$-th derivative at $0$ of the cumulant generating function of $X$.
+```
 
 **In Lean.** `RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment` in [Challenge/Reference/Probability/Cumulants.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Probability/Cumulants.lean#L63): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
@@ -247,6 +288,14 @@ theorem moment_succ_eq_sum_cumulant_mul_moment [NeZero μ /- [standing] -/ ]
 ### First resolvent identity for two invertible shifts of an arbitrary finite complex matrix
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
+
+**In words.**
+
+```latex
+Let $H$ be a square complex matrix and $z_1, z_2 \in \mathbb{C}$ such that $H - z_1 I$ and $H - z_2 I$
+are invertible. Then
+\[ (H - z_1 I)^{-1} - (H - z_2 I)^{-1} = (z_1 - z_2)\,(H - z_1 I)^{-1}(H - z_2 I)^{-1}. \]
+```
 
 **In Lean.** `RMTFoundations.Resolvent.resolvent_identity` in [Challenge/Reference/Matrix/Resolvent.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Matrix/Resolvent.lean#L23): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
@@ -264,6 +313,14 @@ theorem resolvent_identity (H : Matrix n n ℂ /- [definition] -/ ) (z₁ z₂ :
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
+**In words.**
+
+```latex
+Let $F : \mathbb{R} \to \mathbb{C}$ be $K+1$ times continuously differentiable. Then for every real $h$,
+of either sign,
+\[ F(h) - \sum_{j=0}^{K} \frac{h^j}{j!}\, F^{(j)}(0) = \int_0^h \frac{(h-t)^K}{K!}\, F^{(K+1)}(t)\,dt. \]
+```
+
 **In Lean.** `RMTFoundations.Taylor.remainder_eq_interval_integral` in [Challenge/Reference/Analysis/Taylor.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Analysis/Taylor.lean#L37): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
@@ -279,6 +336,14 @@ theorem remainder_eq_interval_integral (F : ℝ → ℂ /- [definition] -/ ) (K 
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
+**In words.**
+
+```latex
+For natural numbers $k, v, s$ with $v \ge 1$ and $k + 2 = 2v + s$,
+\[ \binom{k}{2v-2}\, v^{2s}\, 2^{2v-2} \le 2^k\, k^{3s}. \]
+This is the scalar inequality used to bound walk counts; it does not itself count walks.
+```
+
 **In Lean.** `RMTFoundations.WalkMajorant.walk_count_majorant` in [Challenge/Reference/Combinatorics/WalkMajorant.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Combinatorics/WalkMajorant.lean#L17): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
@@ -293,6 +358,14 @@ theorem walk_count_majorant (k v s : ℕ /- [definition] -/ ) (hv : 1 ≤ v /- [
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
+**In words.**
+
+```latex
+Suppose $(f, f')$ and $(g, g')$ both solve the Airy equation on $\mathbb{R}$: $f$ has derivative $f'$
+and $f'$ has derivative $x f(x)$ at every $x$, and likewise for $g$ and $g'$. If $f(t_0) = g(t_0)$ and
+$f'(t_0) = g'(t_0)$ at some point $t_0$, then $f = g$.
+```
+
 **In Lean.** `RMTFoundations.Airy.airySolution_unique` in [Challenge/Reference/Airy/ODE.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Airy/ODE.lean#L221): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
@@ -306,6 +379,14 @@ theorem airySolution_unique (hf : IsAirySolution f f' /- [standing] -/ ) (hg : I
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
+**In words.**
+
+```latex
+For every finite measure $\mu$ on $\mathbb{R}$, the Stieltjes transform
+\[ S_\mu(z) = \int \frac{d\mu(x)}{x - z} \]
+is analytic on the upper half-plane $\{ z : \operatorname{Im} z > 0 \}$.
+```
+
 **In Lean.** `RMTFoundations.Stieltjes.analyticOn_stieltjes` in [Challenge/Reference/Stieltjes/HalfPlane.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Stieltjes/HalfPlane.lean#L86): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
@@ -318,6 +399,13 @@ theorem analyticOn_stieltjes (μ : Measure ℝ /- [definition] -/ ) [IsFiniteMea
 ### For aspect ratio 0 &lt; y &lt; 1, the explicitly constructed MP measure is a probability law
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
+
+**In words.**
+
+```latex
+For $0 < y < 1$, the Marchenko--Pastur measure $\mu_y$ constructed in the library is a probability
+measure.
+```
 
 **In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_prob` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/MarchenkoPastur.lean#L535): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
@@ -334,6 +422,14 @@ theorem mpMeasure_prob (y : ℝ
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
+**In words.**
+
+```latex
+For $0 < y < 1$, the Marchenko--Pastur measure $\mu_y$ has the density
+\[ \frac{\sqrt{(b - x)(x - a)}}{2\pi y x} \quad \text{on } [a, b], \qquad 0 \text{ elsewhere}, \]
+with respect to Lebesgue measure, where $a = (1 - \sqrt{y})^2$ and $b = (1 + \sqrt{y})^2$.
+```
+
 **In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_density` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/MarchenkoPastur.lean#L526): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
@@ -348,6 +444,14 @@ theorem mpMeasure_density (y : ℝ
 ### The genuine MP Stieltjes transform solves its covariance quadratic in the upper half-plane
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
+
+**In words.**
+
+```latex
+For $0 < y < 1$ and $\operatorname{Im} z > 0$, the Stieltjes transform $m(z) = S_{\mu_y}(z)$ of the
+Marchenko--Pastur measure satisfies
+\[ y z\, m(z)^2 + (z + y - 1)\, m(z) + 1 = 0. \]
+```
 
 **In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/MarchenkoPastur.lean#L632): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
@@ -367,6 +471,15 @@ theorem mpMeasure_transform_quadratic (y : ℝ
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
+**In words.**
+
+```latex
+Let $\mu_1, \mu_2$ be probability measures on $\mathbb{R}$ supported in $[-R, R]$ for some $R > 0$, and
+$\operatorname{Im} z > 0$. The library's subordination functions $\omega_1, \omega_2$ satisfy
+$\operatorname{Im} \omega_j(z) \ge \operatorname{Im} z$ for $j = 1, 2$ and
+\[ -\frac{1}{S_{\mu_1}(\omega_1(z))} = -\frac{1}{S_{\mu_2}(\omega_2(z))} = \omega_1(z) + \omega_2(z) - z. \]
+```
+
 **In Lean.** `RMTFoundations.FreeConvolution.subordination` in [Challenge/Reference/Measure/FreeConvolution.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/FreeConvolution.lean#L1200): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
@@ -383,6 +496,14 @@ theorem subordination (h1 : SupportedIn μ1 R /- [standing] -/ ) (h2 : Supported
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
+**In words.**
+
+```latex
+Let $F$ be holomorphic on the upper half-plane, with $\operatorname{Im} F(z) \ge 0$ and
+$|F(z)| \le M / \operatorname{Im} z$ there. Then there is a finite measure $\mu$ on $\mathbb{R}$ of total
+mass at most $M$ such that $F(z) = S_\mu(z)$ for every $z$ in the upper half-plane.
+```
+
 **In Lean.** `RMTFoundations.HerglotzBorelProof.herglotzBorel` in [Challenge/Reference/Measure/HerglotzBorel.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/HerglotzBorel.lean#L516): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
@@ -394,6 +515,14 @@ theorem herglotzBorel : RMTFoundations.AnalyticHalfPlane.HerglotzBorel
 ### The interval Stieltjes inversion limit includes the exact half-endpoint atom terms
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
+
+**In words.**
+
+```latex
+For a finite measure $\nu$ on $\mathbb{R}$ and real $a < b$,
+\[ \lim_{\eta \downarrow 0} \int_a^b \operatorname{Im} S_\nu(x + i\eta)\,dx
+   = \pi \Big( \nu\big((a,b)\big) + \tfrac12\, \nu(\{a\}) + \tfrac12\, \nu(\{b\}) \Big). \]
+```
 
 **In Lean.** `RMTFoundations.StieltjesInversion.tendsto_interval_im` in [Challenge/Reference/Measure/StieltjesInversion.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/StieltjesInversion.lean#L190): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
