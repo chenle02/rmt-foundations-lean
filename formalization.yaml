@@ -40,12 +40,12 @@ status:
     remains open; CDF C1 and density continuity/positivity are proved.
   sorry_count: 0
   axioms:
-  - propext
-  - Quot.sound
   - Classical.choice
+  - Quot.sound
+  - propext
   evidence:
     commit: 8edff84bb8b00441bf8b860b96547122103c0279
-    gate_receipt: .lean-receipts/8edff84bb8b0-5581013.json
+    gate_receipt: .lean-receipts/8edff84bb8b0-slurm-5582463.json
     comparator_receipt: .lean-receipts/8edff84bb8b0-comparator.json
   main_results:
   - comparator_config: comparator.json
