@@ -9,52 +9,117 @@ rows:
 - title: The actual real Airy function satisfies its second-order ODE
   claims:
   - rmt-foundations/airy-ode
+  statement: |
+    For every real $x$, the real Airy function satisfies
+    \[ \operatorname{Ai}''(x) = x\,\operatorname{Ai}(x). \]
+    Here $\operatorname{Ai}$ on $\mathbb{R}$ is the real part of the complex Airy function.
 - title: The genuine shifted Airy kernel operator is trace class
   claims:
   - rmt-foundations/airy-trace-class
+  statement: |
+    For every real $s$, let $A_s$ be the integral operator on $L^2(0,\infty)$ with kernel
+    $\operatorname{Ai}(x+y+s)$. Then $K_s = A_s \circ A_s$ is trace class, that is, a composition of two
+    Hilbert--Schmidt operators.
 - title: Factorially bounded coefficients give an entire Fredholm power series
   claims:
   - rmt-foundations/fredholm-entire
+  statement: |
+    Let $c_n \in \mathbb{C}$ and $M \ge 0$ satisfy $|c_n| \le M^n / n!$ for all $n \ge 0$. Then the power series
+    \[ z \mapsto \sum_{n \ge 0} c_n z^n \]
+    is analytic on all of $\mathbb{C}$.
 - title: The canonical real order-one Airy kernel series is monotone
   claims:
   - rmt-foundations/tw1-monotone
+  statement: |
+    Let $F_1(s)$ be the real part of the Fredholm series, at coupling $-1$, of the kernel
+    $\operatorname{Ai}(x+y+s)$ on $(0,\infty)$ (formally $\det(I - A_s)$). Then $s \mapsto F_1(s)$ is
+    nondecreasing on $\mathbb{R}$.
 - title: Analytic moment-cumulant recursion at zero on the interior of the exponential integrability set
   claims:
   - rmt-foundations/moment-cumulant-recursion
+  statement: |
+    Let $X$ be a real random variable on a space with a nonzero measure $\mu$, and suppose $0$ lies in the
+    interior of the set of $t$ for which $e^{tX}$ is $\mu$-integrable. Then for every $n \ge 0$,
+    \[ \int X^{n+1}\,d\mu = \sum_{j=0}^{n} \binom{n}{j}\, \kappa_{j+1} \int X^{n-j}\,d\mu, \]
+    where $\kappa_m$ is the $m$-th derivative at $0$ of the cumulant generating function of $X$.
 - title: First resolvent identity for two invertible shifts of an arbitrary finite complex matrix
   claims:
   - rmt-foundations/first-resolvent-identity
+  statement: |
+    Let $H$ be a square complex matrix and $z_1, z_2 \in \mathbb{C}$ such that $H - z_1 I$ and $H - z_2 I$
+    are invertible. Then
+    \[ (H - z_1 I)^{-1} - (H - z_2 I)^{-1} = (z_1 - z_2)\,(H - z_1 I)^{-1}(H - z_2 I)^{-1}. \]
 - title: Signed real-parameter complex-valued Taylor integral remainder
   claims:
   - rmt-foundations/taylor-integral-remainder
+  statement: |
+    Let $F : \mathbb{R} \to \mathbb{C}$ be $K+1$ times continuously differentiable. Then for every real $h$,
+    of either sign,
+    \[ F(h) - \sum_{j=0}^{K} \frac{h^j}{j!}\, F^{(j)}(0) = \int_0^h \frac{(h-t)^K}{K!}\, F^{(K+1)}(t)\,dt. \]
 - title: Scalar binomial repeated-edge walk-count majorant; does not count walks itself
   claims:
   - rmt-foundations/walk-defect-majorant
+  statement: |
+    For natural numbers $k, v, s$ with $v \ge 1$ and $k + 2 = 2v + s$,
+    \[ \binom{k}{2v-2}\, v^{2s}\, 2^{2v-2} \le 2^k\, k^{3s}. \]
+    This is the scalar inequality used to bound walk counts; it does not itself count walks.
 - title: Any two Airy ODE solutions with identical first-order initial data agree
   claims:
   - rmt-foundations/airy-abstract-uniqueness
+  statement: |
+    Suppose $(f, f')$ and $(g, g')$ both solve the Airy equation on $\mathbb{R}$: $f$ has derivative $f'$
+    and $f'$ has derivative $x f(x)$ at every $x$, and likewise for $g$ and $g'$. If $f(t_0) = g(t_0)$ and
+    $f'(t_0) = g'(t_0)$ at some point $t_0$, then $f = g$.
 - title: The finite-measure Stieltjes transform is analytic on the upper half-plane
   claims:
   - rmt-foundations/stieltjes-analytic
+  statement: |
+    For every finite measure $\mu$ on $\mathbb{R}$, the Stieltjes transform
+    \[ S_\mu(z) = \int \frac{d\mu(x)}{x - z} \]
+    is analytic on the upper half-plane $\{ z : \operatorname{Im} z > 0 \}$.
 - title: For aspect ratio 0 < y < 1, the explicitly constructed MP measure is a probability law
   claims:
   - rmt-foundations/mp-probability
+  statement: |
+    For $0 < y < 1$, the Marchenko--Pastur measure $\mu_y$ constructed in the library is a probability
+    measure.
 - title: The MP law equals volume weighted by its explicit density for 0 < y < 1
   claims:
   - rmt-foundations/mp-density
+  statement: |
+    For $0 < y < 1$, the Marchenko--Pastur measure $\mu_y$ has the density
+    \[ \frac{\sqrt{(b - x)(x - a)}}{2\pi y x} \quad \text{on } [a, b], \qquad 0 \text{ elsewhere}, \]
+    with respect to Lebesgue measure, where $a = (1 - \sqrt{y})^2$ and $b = (1 + \sqrt{y})^2$.
 - title: The genuine MP Stieltjes transform solves its covariance quadratic in the upper half-plane
   claims:
   - rmt-foundations/mp-transform-quadratic
+  statement: |
+    For $0 < y < 1$ and $\operatorname{Im} z > 0$, the Stieltjes transform $m(z) = S_{\mu_y}(z)$ of the
+    Marchenko--Pastur measure satisfies
+    \[ y z\, m(z)^2 + (z + y - 1)\, m(z) + 1 = 0. \]
 - title: Analytic subordination for compactly supported probability measures with explicit support hypotheses
   claims:
   - rmt-foundations/free-convolution-subordination
+  statement: |
+    Let $\mu_1, \mu_2$ be probability measures on $\mathbb{R}$ supported in $[-R, R]$ for some $R > 0$, and
+    $\operatorname{Im} z > 0$. The library's subordination functions $\omega_1, \omega_2$ satisfy
+    $\operatorname{Im} \omega_j(z) \ge \operatorname{Im} z$ for $j = 1, 2$ and
+    \[ -\frac{1}{S_{\mu_1}(\omega_1(z))} = -\frac{1}{S_{\mu_2}(\omega_2(z))} = \omega_1(z) + \omega_2(z) - z. \]
 - title: Finite Herglotz-Borel representation under upper-half-plane holomorphy, positivity and an inverse-height
     bound
   claims:
   - rmt-foundations/herglotz-borel
+  statement: |
+    Let $F$ be holomorphic on the upper half-plane, with $\operatorname{Im} F(z) \ge 0$ and
+    $|F(z)| \le M / \operatorname{Im} z$ there. Then there is a finite measure $\mu$ on $\mathbb{R}$ of total
+    mass at most $M$ such that $F(z) = S_\mu(z)$ for every $z$ in the upper half-plane.
 - title: The interval Stieltjes inversion limit includes the exact half-endpoint atom terms
   claims:
   - rmt-foundations/stieltjes-inversion
+  statement: |
+    For a finite measure $\nu$ on $\mathbb{R}$ and real $a < b$,
+    \[ \lim_{\eta \downarrow 0} \int_a^b \operatorname{Im} S_\nu(x + i\eta)\,dx
+       = \pi \Big( \nu\big((a,b)\big) + \tfrac12\, \nu(\{a\}) + \tfrac12\, \nu(\{b\}) \Big). \]
 compute:
 - cluster: easley
   jobs:
