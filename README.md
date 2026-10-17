@@ -176,22 +176,22 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 | Result | Lean declarations | Ledger | Notes |
 |---|---|---|---|
-| The actual real Airy function satisfies its second-order ODE | `RMTFoundations.Airy.iteratedDeriv_two_airyAiReal` | verified | — |
-| The genuine shifted Airy kernel operator is trace class | `RMTFoundations.Airy.isTraceClass_airyKernelShift` | verified | — |
-| Factorially bounded coefficients give an entire Fredholm power series | `RMTFoundations.Fredholm.fredholmSeries_entire` | verified | — |
-| The canonical real order-one Airy kernel series is monotone | `RMTFoundations.TWOneMonotone.monotone_TW1R` | verified | — |
-| Analytic moment-cumulant recursion at zero on the interior of the exponential integrability set | `RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment` | verified | — |
-| First resolvent identity for two invertible shifts of an arbitrary finite complex matrix | `RMTFoundations.Resolvent.resolvent_identity` | verified | — |
-| Signed real-parameter complex-valued Taylor integral remainder | `RMTFoundations.Taylor.remainder_eq_interval_integral` | verified | — |
-| Scalar binomial repeated-edge walk-count majorant; does not count walks itself | `RMTFoundations.WalkMajorant.walk_count_majorant` | verified | — |
-| Any two Airy ODE solutions with identical first-order initial data agree | `RMTFoundations.Airy.airySolution_unique` | verified | — |
-| The finite-measure Stieltjes transform is analytic on the upper half-plane | `RMTFoundations.Stieltjes.analyticOn_stieltjes` | verified | — |
-| For aspect ratio 0 &lt; y &lt; 1, the explicitly constructed MP measure is a probability law | `RMTFoundations.MarchenkoPastur.mpMeasure_prob` | verified | — |
-| The MP law equals volume weighted by its explicit density for 0 &lt; y &lt; 1 | `RMTFoundations.MarchenkoPastur.mpMeasure_density` | verified | — |
-| The genuine MP Stieltjes transform solves its covariance quadratic in the upper half-plane | `RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic` | verified | — |
-| Analytic subordination for compactly supported probability measures with explicit support hypotheses | `RMTFoundations.FreeConvolution.subordination` | verified | — |
-| Finite Herglotz-Borel representation under upper-half-plane holomorphy, positivity and an inverse-height bound | `RMTFoundations.HerglotzBorelProof.herglotzBorel` | verified | — |
-| The interval Stieltjes inversion limit includes the exact half-endpoint atom terms | `RMTFoundations.StieltjesInversion.tendsto_interval_im` | verified | — |
+| The actual real Airy function satisfies its second-order ODE | [`RMTFoundations.Airy.iteratedDeriv_two_airyAiReal`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Airy/Core.lean) | verified | — |
+| The genuine shifted Airy kernel operator is trace class | [`RMTFoundations.Airy.isTraceClass_airyKernelShift`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Airy/Core.lean) | verified | — |
+| Factorially bounded coefficients give an entire Fredholm power series | [`RMTFoundations.Fredholm.fredholmSeries_entire`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Operator/Fredholm.lean) | verified | — |
+| The canonical real order-one Airy kernel series is monotone | [`RMTFoundations.TWOneMonotone.monotone_TW1R`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/TracyWidom/OrderOneMonotone.lean) | verified | — |
+| Analytic moment-cumulant recursion at zero on the interior of the exponential integrability set | [`RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Probability/Cumulants.lean) | verified | — |
+| First resolvent identity for two invertible shifts of an arbitrary finite complex matrix | [`RMTFoundations.Resolvent.resolvent_identity`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Matrix/Resolvent.lean) | verified | — |
+| Signed real-parameter complex-valued Taylor integral remainder | [`RMTFoundations.Taylor.remainder_eq_interval_integral`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Analysis/Taylor.lean) | verified | — |
+| Scalar binomial repeated-edge walk-count majorant; does not count walks itself | [`RMTFoundations.WalkMajorant.walk_count_majorant`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Combinatorics/WalkMajorant.lean) | verified | — |
+| Any two Airy ODE solutions with identical first-order initial data agree | [`RMTFoundations.Airy.airySolution_unique`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Airy/ODE.lean) | verified | — |
+| The finite-measure Stieltjes transform is analytic on the upper half-plane | [`RMTFoundations.Stieltjes.analyticOn_stieltjes`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Stieltjes/HalfPlane.lean) | verified | — |
+| For aspect ratio 0 &lt; y &lt; 1, the explicitly constructed MP measure is a probability law | [`RMTFoundations.MarchenkoPastur.mpMeasure_prob`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Measure/MarchenkoPastur.lean) | verified | — |
+| The MP law equals volume weighted by its explicit density for 0 &lt; y &lt; 1 | [`RMTFoundations.MarchenkoPastur.mpMeasure_density`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Measure/MarchenkoPastur.lean) | verified | — |
+| The genuine MP Stieltjes transform solves its covariance quadratic in the upper half-plane | [`RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Measure/MarchenkoPastur.lean) | verified | — |
+| Analytic subordination for compactly supported probability measures with explicit support hypotheses | [`RMTFoundations.FreeConvolution.subordination`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Measure/FreeConvolution.lean) | verified | — |
+| Finite Herglotz-Borel representation under upper-half-plane holomorphy, positivity and an inverse-height bound | [`RMTFoundations.HerglotzBorelProof.herglotzBorel`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Measure/HerglotzBorel.lean) | verified | — |
+| The interval Stieltjes inversion limit includes the exact half-endpoint atom terms | [`RMTFoundations.StieltjesInversion.tendsto_interval_im`](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/RMTFoundations/Measure/StieltjesInversion.lean) | verified | — |
 
 *verified*: `lean-pkg claims ledger` closes every claim of the row at the promote stage (gate and comparator receipts); any other word is the ledger's status.
 
@@ -208,8 +208,8 @@ What these checks do not establish: the gate checks the build, the `sorry` count
 - Mathlib: `8ab8a31c6565f9f71fe6c5ed91babd559e8deae4` (lake-manifest.json).
 
 ```bash
-git clone <repository URL>
-cd <checkout>
+git clone https://github.com/chenle02/rmt-foundations-lean
+cd rmt-foundations-lean
 git checkout 8edff84bb8b00441bf8b860b96547122103c0279   # the commit the gate receipt binds
 lake exe cache get
 lake build
