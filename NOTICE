@@ -1,0 +1,20 @@
+Third-party attributions
+
+Adam Benenson, compact-spectral, Apache-2.0.
+Adapted spectral results in RMTFoundations/Airy/Spectral.lean and
+RMTFoundations/TracyWidom/LeftTail.lean.
+Upstream revision: 72cd62db. See compact-spectral-LICENSE.
+
+Moritz Doll and Mathlib contributors, Apache-2.0.
+Mathlib-derived regularized hypergeometric material in
+RMTFoundations/Airy/Core.lean retains its original copyright and license header.
+
+The Tau Ceti contributors, TauCeti, Apache-2.0.
+Derivative and weighted-pairing proofs in
+RMTFoundations/TracyWidom/GUEHermiteFoundations.lean are adapted from
+https://github.com/TauCetiProject/TauCeti at revision
+197f368a2da83d4c66df6c5a27e52633c021afe3. See TauCeti-LICENSE.
+The source retains its copyright, attribution, and modification notice.
+
+Mathlib contributors, Apache-2.0.
+Dependency source and license are distributed by the pinned Mathlib package.

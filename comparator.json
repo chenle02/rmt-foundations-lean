@@ -1,0 +1,29 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "RMTFoundations.Airy.iteratedDeriv_two_airyAiReal",
+    "RMTFoundations.Airy.isTraceClass_airyKernelShift",
+    "RMTFoundations.Fredholm.fredholmSeries_entire",
+    "RMTFoundations.TWOneMonotone.monotone_TW1R",
+    "RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment",
+    "RMTFoundations.Resolvent.resolvent_identity",
+    "RMTFoundations.Taylor.remainder_eq_interval_integral",
+    "RMTFoundations.WalkMajorant.walk_count_majorant",
+    "RMTFoundations.Airy.airySolution_unique",
+    "RMTFoundations.Stieltjes.analyticOn_stieltjes",
+    "RMTFoundations.MarchenkoPastur.mpMeasure_prob",
+    "RMTFoundations.MarchenkoPastur.mpMeasure_density",
+    "RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic",
+    "RMTFoundations.FreeConvolution.subordination",
+    "RMTFoundations.HerglotzBorelProof.herglotzBorel",
+    "RMTFoundations.StieltjesInversion.tendsto_interval_im"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

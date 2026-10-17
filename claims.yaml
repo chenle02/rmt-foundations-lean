@@ -1,0 +1,3592 @@
+schema: claims/1
+package: rmt-foundations
+claims:
+- id: rmt-foundations/airy-ai
+  decl: RMTFoundations.Airy.complex_airyAi
+  kind: definition
+  summary: Entire Airy Ai with canonical regularized hypergeometric normalization.
+  aliases:
+  - airy ai
+  keywords:
+  - airy
+  - ai
+  file: RMTFoundations/Airy/Core.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/airy-ode
+  decl: RMTFoundations.Airy.iteratedDeriv_two_airyAiReal
+  kind: theorem
+  summary: The actual real Airy function satisfies its second-order ODE.
+  aliases:
+  - airy ode
+  keywords:
+  - airy
+  - ode
+  file: RMTFoundations/Airy/Core.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/airy-trace-class
+  decl: RMTFoundations.Airy.isTraceClass_airyKernelShift
+  kind: theorem
+  summary: The genuine shifted Airy kernel operator is trace class.
+  aliases:
+  - airy trace class
+  keywords:
+  - airy
+  - trace
+  - class
+  file: RMTFoundations/Airy/Core.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/kernel-fredholm
+  decl: RMTFoundations.AiryKernel.kernelFredholm
+  kind: definition
+  summary: Entire kernel Fredholm series on its explicit integration domain.
+  aliases:
+  - kernel fredholm
+  keywords:
+  - kernel
+  - fredholm
+  file: RMTFoundations/Airy/KernelDeterminant.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/fredholm-entire
+  decl: RMTFoundations.Fredholm.fredholmSeries_entire
+  kind: theorem
+  summary: Factorially bounded coefficients give an entire Fredholm power series.
+  aliases:
+  - fredholm entire
+  keywords:
+  - fredholm
+  - entire
+  file: RMTFoundations/Operator/Fredholm.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw1-monotone
+  decl: RMTFoundations.TWOneMonotone.monotone_TW1R
+  kind: theorem
+  summary: The canonical real order-one Airy kernel series is monotone.
+  aliases:
+  - tw1 monotone
+  keywords:
+  - tw1
+  - monotone
+  file: RMTFoundations/TracyWidom/OrderOneMonotone.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/moment-cumulant-recursion
+  decl: RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment
+  kind: theorem
+  summary: Analytic moment-cumulant recursion at zero on the interior of the exponential integrability
+    set.
+  aliases:
+  - moment cumulant recursion
+  keywords:
+  - moment
+  - cumulant
+  - recursion
+  file: RMTFoundations/Probability/Cumulants.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/first-resolvent-identity
+  decl: RMTFoundations.Resolvent.resolvent_identity
+  kind: theorem
+  summary: First resolvent identity for two invertible shifts of an arbitrary finite complex matrix.
+  aliases:
+  - first resolvent identity
+  keywords:
+  - first
+  - resolvent
+  - identity
+  file: RMTFoundations/Matrix/Resolvent.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/taylor-integral-remainder
+  decl: RMTFoundations.Taylor.remainder_eq_interval_integral
+  kind: theorem
+  summary: Signed real-parameter complex-valued Taylor integral remainder.
+  aliases:
+  - taylor integral remainder
+  keywords:
+  - taylor
+  - integral
+  - remainder
+  file: RMTFoundations/Analysis/Taylor.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/walk-defect-majorant
+  decl: RMTFoundations.WalkMajorant.walk_count_majorant
+  kind: theorem
+  summary: Scalar binomial repeated-edge walk-count majorant; does not count walks itself.
+  aliases:
+  - walk defect majorant
+  keywords:
+  - walk
+  - defect
+  - majorant
+  file: RMTFoundations/Combinatorics/WalkMajorant.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/airy-abstract-uniqueness
+  decl: RMTFoundations.Airy.airySolution_unique
+  kind: theorem
+  summary: Any two Airy ODE solutions with identical first-order initial data agree.
+  file: RMTFoundations/Airy/ODE.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/stieltjes-analytic
+  decl: RMTFoundations.Stieltjes.analyticOn_stieltjes
+  kind: theorem
+  summary: The finite-measure Stieltjes transform is analytic on the upper half-plane.
+  file: RMTFoundations/Stieltjes/HalfPlane.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/mp-probability
+  decl: RMTFoundations.MarchenkoPastur.mpMeasure_prob
+  kind: theorem
+  summary: For aspect ratio 0 < y < 1, the explicitly constructed MP measure is a probability law.
+  file: RMTFoundations/Measure/MarchenkoPastur.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/mp-density
+  decl: RMTFoundations.MarchenkoPastur.mpMeasure_density
+  kind: theorem
+  summary: The MP law equals volume weighted by its explicit density for 0 < y < 1.
+  file: RMTFoundations/Measure/MarchenkoPastur.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/mp-transform-quadratic
+  decl: RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic
+  kind: theorem
+  summary: The genuine MP Stieltjes transform solves its covariance quadratic in the upper half-plane.
+  file: RMTFoundations/Measure/MarchenkoPastur.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/free-convolution-subordination
+  decl: RMTFoundations.FreeConvolution.subordination
+  kind: theorem
+  summary: Analytic subordination for compactly supported probability measures with explicit support hypotheses.
+  file: RMTFoundations/Measure/FreeConvolution.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/herglotz-borel
+  decl: RMTFoundations.HerglotzBorelProof.herglotzBorel
+  kind: theorem
+  summary: Finite Herglotz-Borel representation under upper-half-plane holomorphy, positivity and an inverse-height
+    bound.
+  file: RMTFoundations/Measure/HerglotzBorel.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/stieltjes-inversion
+  decl: RMTFoundations.StieltjesInversion.tendsto_interval_im
+  kind: theorem
+  summary: The interval Stieltjes inversion limit includes the exact half-endpoint atom terms.
+  file: RMTFoundations/Measure/StieltjesInversion.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-monotone-tw1r
+  decl: RMTFoundations.TracyWidom.monotone_TW1R
+  kind: theorem
+  summary: Canonical order-one real Fredholm CDF is monotone on the whole real line.
+  aliases:
+  - monotone_TW1R
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-monotone-tw2r
+  decl: RMTFoundations.TracyWidom.monotone_TW2R
+  kind: theorem
+  summary: Canonical order-two real Fredholm CDF is monotone on the whole real line.
+  aliases:
+  - monotone_TW2R
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tendsto-tw1r-atbot
+  decl: RMTFoundations.TracyWidom.tendsto_TW1R_atBot
+  kind: theorem
+  summary: The real GOE function tends to zero at the left endpoint.
+  aliases:
+  - tendsto_TW1R_atBot
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tendsto-tw2r-atbot
+  decl: RMTFoundations.TracyWidom.tendsto_TW2R_atBot
+  kind: theorem
+  summary: The real GUE function tends to zero at the left endpoint.
+  aliases:
+  - tendsto_TW2R_atBot
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tendsto-tw1r-attop
+  decl: RMTFoundations.TracyWidom.tendsto_TW1R_atTop
+  kind: theorem
+  summary: The real GOE function tends to one at the right endpoint.
+  aliases:
+  - tendsto_TW1R_atTop
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tendsto-tw2r-attop
+  decl: RMTFoundations.TracyWidom.tendsto_TW2R_atTop
+  kind: theorem
+  summary: The real GUE function tends to one at the right endpoint.
+  aliases:
+  - tendsto_TW2R_atTop
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1r-bounds
+  decl: RMTFoundations.TracyWidom.TW1R_bounds
+  kind: theorem
+  summary: Strict GOE bounds at every finite cutoff.
+  aliases:
+  - TW1R_bounds
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2r-bounds
+  decl: RMTFoundations.TracyWidom.TW2R_bounds
+  kind: theorem
+  summary: GUE values lie in the closed unit interval.
+  aliases:
+  - TW2R_bounds
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1r-le-exp-tail
+  decl: RMTFoundations.TracyWidom.TW1R_le_exp_tail
+  kind: theorem
+  summary: Certified GOE exponential upper bound from the integrated Airy tail.
+  aliases:
+  - TW1R_le_exp_tail
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2r-le-exp-trace
+  decl: RMTFoundations.TracyWidom.TW2R_le_exp_trace
+  kind: theorem
+  summary: Certified GUE exponential trace bound; this is not a sharp tail asymptotic.
+  aliases:
+  - TW2R_le_exp_trace
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hasderivat-tw1r-canonical-resolvent
+  decl: RMTFoundations.TracyWidom.hasDerivAt_TW1R_canonical_resolvent
+  kind: theorem
+  summary: Canonical GOE derivative-resolvent identity in the actual Airy Hilbert space.
+  aliases:
+  - hasDerivAt_TW1R_canonical_resolvent
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Distribution.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1
+  decl: RMTFoundations.TracyWidom.TW1
+  kind: definition
+  summary: Canonical complex order-one Airy-Hankel Fredholm function.
+  aliases:
+  - TW1
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw2
+  decl: RMTFoundations.TracyWidom.TW2
+  kind: definition
+  summary: Canonical complex order-two Airy-kernel Fredholm function.
+  aliases:
+  - TW2
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw1r
+  decl: RMTFoundations.TracyWidom.TW1R
+  kind: definition
+  summary: Real canonical order-one Fredholm CDF.
+  aliases:
+  - TW1R
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw2r
+  decl: RMTFoundations.TracyWidom.TW2R
+  kind: definition
+  summary: Real canonical order-two Fredholm CDF.
+  aliases:
+  - TW2R
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw1r-coe
+  decl: RMTFoundations.TracyWidom.TW1R_coe
+  kind: theorem
+  summary: The real GOE function recovers the full complex Fredholm value.
+  aliases:
+  - TW1R_coe
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2r-coe
+  decl: RMTFoundations.TracyWidom.TW2R_coe
+  kind: theorem
+  summary: The real GUE function recovers the full complex Fredholm value.
+  aliases:
+  - TW2R_coe
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-continuous-tw1
+  decl: RMTFoundations.TracyWidom.continuous_TW1
+  kind: theorem
+  summary: TW1 is a continuous complex-valued function of the real cutoff.
+  aliases:
+  - continuous_TW1
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-continuous-tw2
+  decl: RMTFoundations.TracyWidom.continuous_TW2
+  kind: theorem
+  summary: TW2 is a continuous complex-valued function of the real cutoff.
+  aliases:
+  - continuous_TW2
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-continuous-tw1r
+  decl: RMTFoundations.TracyWidom.continuous_TW1R
+  kind: theorem
+  summary: The real GOE function is continuous on the entire real line.
+  aliases:
+  - continuous_TW1R
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-continuous-tw2r
+  decl: RMTFoundations.TracyWidom.continuous_TW2R
+  kind: theorem
+  summary: The real GUE function is continuous on the entire real line.
+  aliases:
+  - continuous_TW2R
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1-fredholm
+  decl: RMTFoundations.TracyWidom.TW1_fredholm
+  kind: theorem
+  summary: GOE Fredholm formula with the physical kernel Ai(x+y+s) on (0,infinity).
+  aliases:
+  - TW1_fredholm
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2-fredholm
+  decl: RMTFoundations.TracyWidom.TW2_fredholm
+  kind: theorem
+  summary: GUE Fredholm formula with the physical shifted Airy kernel on (0,infinity).
+  aliases:
+  - TW2_fredholm
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1-fredholm-halfline
+  decl: RMTFoundations.TracyWidom.TW1_fredholm_halfLine
+  kind: theorem
+  summary: GOE on the moving half-line (s/2,infinity); the half-shift is essential.
+  aliases:
+  - TW1_fredholm_halfLine
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2-fredholm-halfline
+  decl: RMTFoundations.TracyWidom.TW2_fredholm_halfLine
+  kind: theorem
+  summary: GUE on its physical moving half-line (s,infinity).
+  aliases:
+  - TW2_fredholm_halfLine
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Functions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1stieltjes
+  decl: RMTFoundations.TracyWidom.TW1Stieltjes
+  kind: definition
+  summary: The GOE CDF as Mathlib's monotone, right-continuous Stieltjes function.
+  aliases:
+  - TW1Stieltjes
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Measures.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw2stieltjes
+  decl: RMTFoundations.TracyWidom.TW2Stieltjes
+  kind: definition
+  summary: The GUE CDF as Mathlib's monotone, right-continuous Stieltjes function.
+  aliases:
+  - TW2Stieltjes
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Measures.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw1law
+  decl: RMTFoundations.TracyWidom.TW1Law
+  kind: definition
+  summary: Bundled probability measure of the canonical order-one Fredholm law.
+  aliases:
+  - TW1Law
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Measures.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw2law
+  decl: RMTFoundations.TracyWidom.TW2Law
+  kind: definition
+  summary: Bundled probability measure of the canonical order-two Fredholm law.
+  aliases:
+  - TW2Law
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Measures.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw1law-tomeasure
+  decl: RMTFoundations.TracyWidom.TW1Law_toMeasure
+  kind: theorem
+  summary: Literal agreement between the bundled GOE law and its measure.
+  aliases:
+  - TW1Law_toMeasure
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Measures.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2law-tomeasure
+  decl: RMTFoundations.TracyWidom.TW2Law_toMeasure
+  kind: theorem
+  summary: Literal agreement between the bundled GUE law and its measure.
+  aliases:
+  - TW2Law_toMeasure
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Measures.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-cdf-tw1measure
+  decl: RMTFoundations.TracyWidom.cdf_TW1Measure
+  kind: theorem
+  summary: Mathlib's canonical CDF of the GOE measure agrees with TW1R.
+  aliases:
+  - cdf_TW1Measure
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Measures.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-cdf-tw2measure
+  decl: RMTFoundations.TracyWidom.cdf_TW2Measure
+  kind: theorem
+  summary: Mathlib's canonical CDF of the GUE measure agrees with TW2R.
+  aliases:
+  - cdf_TW2Measure
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Measures.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1measure-iic-bounds
+  decl: RMTFoundations.TracyWidom.TW1Measure_Iic_bounds
+  kind: theorem
+  summary: The GOE measure gives strictly intermediate mass to each finite lower half-line.
+  aliases:
+  - TW1Measure_Iic_bounds
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Measures.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1cdf
+  decl: RMTFoundations.TracyWidom.TW1CDF
+  kind: definition
+  summary: Canonical order-one CDF as a monotone right-continuous Stieltjes function.
+  aliases:
+  - TW1CDF
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw2cdf
+  decl: RMTFoundations.TracyWidom.TW2CDF
+  kind: definition
+  summary: Canonical order-two CDF as a monotone right-continuous Stieltjes function.
+  aliases:
+  - TW2CDF
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw1measure
+  decl: RMTFoundations.TracyWidom.TW1Measure
+  kind: definition
+  summary: Probability measure constructed from the canonical order-one Fredholm CDF.
+  aliases:
+  - TW1Measure
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw2measure
+  decl: RMTFoundations.TracyWidom.TW2Measure
+  kind: definition
+  summary: Probability measure constructed from the canonical order-two Fredholm CDF.
+  aliases:
+  - TW2Measure
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw1measure-probability
+  decl: RMTFoundations.TracyWidom.TW1Measure_probability
+  kind: theorem
+  summary: The canonical order-one Stieltjes measure has total mass one.
+  aliases:
+  - TW1Measure_probability
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2measure-probability
+  decl: RMTFoundations.TracyWidom.TW2Measure_probability
+  kind: theorem
+  summary: The canonical order-two Stieltjes measure has total mass one.
+  aliases:
+  - TW2Measure_probability
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1measure-cdf
+  decl: RMTFoundations.TracyWidom.TW1Measure_cdf
+  kind: theorem
+  summary: The canonical order-one measure has CDF TW1R at every real cutoff.
+  aliases:
+  - TW1Measure_cdf
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2measure-cdf
+  decl: RMTFoundations.TracyWidom.TW2Measure_cdf
+  kind: theorem
+  summary: The canonical order-two measure has CDF TW2R at every real cutoff.
+  aliases:
+  - TW2Measure_cdf
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1measure-iic
+  decl: RMTFoundations.TracyWidom.TW1Measure_Iic
+  kind: theorem
+  summary: The canonical order-one lower closed half-line mass equals ofReal TW1R.
+  aliases:
+  - TW1Measure_Iic
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2measure-iic
+  decl: RMTFoundations.TracyWidom.TW2Measure_Iic
+  kind: theorem
+  summary: The canonical order-two lower closed half-line mass equals ofReal TW2R.
+  aliases:
+  - TW2Measure_Iic
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1measure-unique
+  decl: RMTFoundations.TracyWidom.TW1Measure_unique
+  kind: theorem
+  summary: A probability measure with CDF TW1R is the canonical order-one measure.
+  aliases:
+  - TW1Measure_unique
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2measure-unique
+  decl: RMTFoundations.TracyWidom.TW2Measure_unique
+  kind: theorem
+  summary: A probability measure with CDF TW2R is the canonical order-two measure.
+  aliases:
+  - TW2Measure_unique
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-continuous-cdf-quantile-exists
+  decl: RMTFoundations.TracyWidom.continuous_cdf_quantile_exists
+  kind: theorem
+  summary: A continuous monotone CDF with endpoints zero and one attains each q in (0,1).
+  aliases:
+  - continuous_cdf_quantile_exists
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1r-quantile-exists
+  decl: RMTFoundations.TracyWidom.TW1R_quantile_exists
+  kind: theorem
+  summary: The canonical order-one CDF attains each q in (0,1) at a finite real cutoff.
+  aliases:
+  - TW1R_quantile_exists
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2r-quantile-exists
+  decl: RMTFoundations.TracyWidom.TW2R_quantile_exists
+  kind: theorem
+  summary: The canonical order-two CDF attains each q in (0,1) at a finite real cutoff.
+  aliases:
+  - TW2R_quantile_exists
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1r-median-exists
+  decl: RMTFoundations.TracyWidom.TW1R_median_exists
+  kind: theorem
+  summary: The canonical order-one CDF has a finite cutoff of mass one half.
+  aliases:
+  - TW1R_median_exists
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2r-median-exists
+  decl: RMTFoundations.TracyWidom.TW2R_median_exists
+  kind: theorem
+  summary: The canonical order-two CDF has a finite cutoff of mass one half.
+  aliases:
+  - TW2R_median_exists
+  keywords:
+  - tracy-widom
+  - fredholm
+  - probability
+  file: RMTFoundations/TracyWidom/Probability.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-physicalpainleveii-hasderivat-derivativeresponsevector
+  decl: RMTFoundations.TracyWidom.PhysicalPainleveII.hasDerivAt_derivativeResponseVector
+  kind: theorem
+  summary: Actual derivative-source response calculus, before invoking the multiplication commutator.
+  aliases:
+  - hasDerivAt derivativeResponseVector
+  keywords:
+  - tracy-widom
+  - physicalpainleveii
+  file: RMTFoundations/TracyWidom/PhysicalPainleveII.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-physicalpainleveii-endpoint-weighted-response-pairing
+  decl: RMTFoundations.TracyWidom.PhysicalPainleveII.endpoint_weighted_response_pairing
+  kind: theorem
+  summary: Endpoint pairing with MQ is an actual weighted integral, never a formal application of an unbounded
+    multiplication operator to an arbitrary L2 vector.
+  aliases:
+  - endpoint weighted response pairing
+  keywords:
+  - tracy-widom
+  - physicalpainleveii
+  file: RMTFoundations/TracyWidom/PhysicalPainleveII.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-physicalpainleveii-hasderivat-resolventp
+  decl: RMTFoundations.TracyWidom.PhysicalPainleveII.hasDerivAt_resolventP
+  kind: theorem
+  summary: The physical endpoint-source derivative p'=sq+up-2vq follows from the genuine Airy ODE vector
+    and the multiplication-domain commutator.
+  aliases:
+  - hasDerivAt resolventP
+  keywords:
+  - tracy-widom
+  - physicalpainleveii
+  file: RMTFoundations/TracyWidom/PhysicalPainleveII.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-physicalpainleveii-hasderivat-deriv-resolventq
+  decl: RMTFoundations.TracyWidom.PhysicalPainleveII.hasDerivAt_deriv_resolventQ
+  kind: theorem
+  summary: The actual Fredholm endpoint coordinate satisfies Painleve II at every real shift. The relative
+    Airy asymptotic is a separate analytic theorem.
+  aliases:
+  - hasDerivAt deriv resolventQ
+  keywords:
+  - tracy-widom
+  - physicalpainleveii
+  file: RMTFoundations/TracyWidom/PhysicalPainleveII.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-physicalpainleveii-deriv-deriv-resolventq
+  decl: RMTFoundations.TracyWidom.PhysicalPainleveII.deriv_deriv_resolventQ
+  kind: theorem
+  summary: Unconditional PII for the canonical physical Fredholm coordinate.
+  aliases:
+  - deriv deriv resolventQ
+  keywords:
+  - tracy-widom
+  - physicalpainleveii
+  file: RMTFoundations/TracyWidom/PhysicalPainleveII.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-hmnormalization-resolventq-relative-airy-attop
+  decl: RMTFoundations.TracyWidom.HMNormalization.resolventQ_relative_Airy_atTop
+  kind: theorem
+  summary: The physical resolvent endpoint has the Airy normalization at plus infinity. This does not
+    assert global Hastings–McLeod ODE existence or uniqueness.
+  aliases:
+  - resolventQ relative Airy atTop
+  keywords:
+  - tracy-widom
+  - hmnormalization
+  file: RMTFoundations/TracyWidom/HMNormalization.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-integralrepresentations-resolventu-antitone
+  decl: RMTFoundations.TracyWidom.IntegralRepresentations.resolventU_antitone
+  kind: theorem
+  summary: The actual diagonal response decreases by the square of the physical endpoint response.
+  aliases:
+  - resolventU antitone
+  keywords:
+  - tracy-widom
+  - integralrepresentations
+  file: RMTFoundations/TracyWidom/IntegralRepresentations.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-integralrepresentations-log-tw2r-tendsto-zero
+  decl: RMTFoundations.TracyWidom.IntegralRepresentations.log_TW2R_tendsto_zero
+  kind: theorem
+  summary: The physical TW2 logarithm has its genuine normalized right limit.
+  aliases:
+  - log TW2R tendsto zero
+  keywords:
+  - tracy-widom
+  - integralrepresentations
+  file: RMTFoundations/TracyWidom/IntegralRepresentations.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-integralrepresentations-resolventq-square-tail-integrals
+  decl: RMTFoundations.TracyWidom.IntegralRepresentations.resolventQ_square_tail_integrals
+  kind: theorem
+  summary: Both square tail integrals are genuine Lebesgue integrals with proved integrability.
+  aliases:
+  - resolventQ square tail integrals
+  keywords:
+  - tracy-widom
+  - integralrepresentations
+  file: RMTFoundations/TracyWidom/IntegralRepresentations.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-integralrepresentations-tw2r-eq-exp-negative-weighted-square-tail
+  decl: RMTFoundations.TracyWidom.IntegralRepresentations.TW2R_eq_exp_negative_weighted_square_tail
+  kind: theorem
+  summary: Unconditional Tracy--Widom F2 integral representation for the physical Fredholm coordinate.
+  aliases:
+  - TW2R eq exp negative weighted square tail
+  keywords:
+  - tracy-widom
+  - integralrepresentations
+  file: RMTFoundations/TracyWidom/IntegralRepresentations.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-integralrepresentations-integral-resolventu-tail
+  decl: RMTFoundations.TracyWidom.IntegralRepresentations.integral_resolventU_tail
+  kind: theorem
+  summary: The diagonal tail is the negative genuine Fredholm logarithm.
+  aliases:
+  - integral resolventU tail
+  keywords:
+  - tracy-widom
+  - integralrepresentations
+  file: RMTFoundations/TracyWidom/IntegralRepresentations.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-integralrepresentations-resolventq-add-resolventu-nonneg
+  decl: RMTFoundations.TracyWidom.IntegralRepresentations.resolventQ_add_resolventU_nonneg
+  kind: theorem
+  summary: The actual positive and monotone F1 determinant gives a nonnegative logarithmic slope.
+  aliases:
+  - resolventQ add resolventU nonneg
+  keywords:
+  - tracy-widom
+  - integralrepresentations
+  file: RMTFoundations/TracyWidom/IntegralRepresentations.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-integralrepresentations-log-tw1r-sq-tendsto-zero
+  decl: RMTFoundations.TracyWidom.IntegralRepresentations.log_TW1R_sq_tendsto_zero
+  kind: theorem
+  summary: Genuine F1 right normalization for its squared logarithm.
+  aliases:
+  - log TW1R sq tendsto zero
+  keywords:
+  - tracy-widom
+  - integralrepresentations
+  file: RMTFoundations/TracyWidom/IntegralRepresentations.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-integralrepresentations-integral-resolventq-tail
+  decl: RMTFoundations.TracyWidom.IntegralRepresentations.integral_resolventQ_tail
+  kind: theorem
+  summary: The physical endpoint response has the genuine logarithmic-ratio tail integral.
+  aliases:
+  - integral resolventQ tail
+  keywords:
+  - tracy-widom
+  - integralrepresentations
+  file: RMTFoundations/TracyWidom/IntegralRepresentations.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-integralrepresentations-tw1r-sq-eq-tw2r-mul-exp-negative-tail
+  decl: RMTFoundations.TracyWidom.IntegralRepresentations.TW1R_sq_eq_TW2R_mul_exp_negative_tail
+  kind: theorem
+  summary: Unconditional Tracy--Widom F1 squared integral representation, with genuine q integrability.
+  aliases:
+  - TW1R sq eq TW2R mul exp negative tail
+  keywords:
+  - tracy-widom
+  - integralrepresentations
+  file: RMTFoundations/TracyWidom/IntegralRepresentations.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-canonicalpainlevewitness-canonical-painleveii-tracywidom-witness
+  decl: RMTFoundations.TracyWidom.CanonicalPainleveWitness.canonical_painleveII_tracyWidom_witness
+  kind: theorem
+  summary: The nonzero physical Fredholm source, derivative source and response jointly realize Painleve
+    II, relative Airy normalization and both genuine Tracy--Widom tail formulas; existence is proved without
+    uniqueness among arbitrary global Painleve II solutions.
+  aliases:
+  - canonical painleveII tracyWidom witness
+  keywords:
+  - tracy-widom
+  - canonicalpainlevewitness
+  file: RMTFoundations/TracyWidom/CanonicalPainleveWitness.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-canonicalpainlevewitness-canonical-painleveii-classical-tracywidom-witness
+  decl: RMTFoundations.TracyWidom.CanonicalPainleveWitness.canonical_painleveII_classical_tracyWidom_witness
+  kind: theorem
+  summary: The same actual witness with first differentiability explicitly exported.
+  aliases:
+  - canonical painleveII classical tracyWidom witness
+  keywords:
+  - tracy-widom
+  - canonicalpainlevewitness
+  file: RMTFoundations/TracyWidom/CanonicalPainleveWitness.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1density
+  decl: RMTFoundations.TracyWidom.TW1Density
+  kind: definition
+  summary: Reusable TW1Density; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW1Density
+  keywords:
+  - tracy-widom
+  - densitytail
+  file: RMTFoundations/TracyWidom/DensityTail.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1r-hasderivat
+  decl: RMTFoundations.TracyWidom.TW1R_hasDerivAt
+  kind: theorem
+  summary: Reusable TW1R hasDerivAt; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW1R hasDerivAt
+  keywords:
+  - tracy-widom
+  - densitytail
+  file: RMTFoundations/TracyWidom/DensityTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1r-differentiable
+  decl: RMTFoundations.TracyWidom.TW1R_differentiable
+  kind: theorem
+  summary: Reusable TW1R differentiable; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW1R differentiable
+  keywords:
+  - tracy-widom
+  - densitytail
+  file: RMTFoundations/TracyWidom/DensityTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1r-log-derivative
+  decl: RMTFoundations.TracyWidom.TW1R_log_derivative
+  kind: theorem
+  summary: Reusable TW1R log derivative; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW1R log derivative
+  keywords:
+  - tracy-widom
+  - densitytail
+  file: RMTFoundations/TracyWidom/DensityTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1density-nonneg
+  decl: RMTFoundations.TracyWidom.TW1Density_nonneg
+  kind: theorem
+  summary: The committed global sign theorem gives nonnegative density everywhere.
+  aliases:
+  - TW1Density nonneg
+  keywords:
+  - tracy-widom
+  - densitytail
+  file: RMTFoundations/TracyWidom/DensityTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1density-pos-nonnegative
+  decl: RMTFoundations.TracyWidom.TW1Density_pos_nonnegative
+  kind: theorem
+  summary: This declaration gives strict density positivity on the nonnegative half-line; the committed
+    TW1Density_positive theorem gives positivity globally.
+  aliases:
+  - TW1Density pos nonnegative
+  keywords:
+  - tracy-widom
+  - densitytail
+  file: RMTFoundations/TracyWidom/DensityTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-linear-left-tail
+  decl: RMTFoundations.TracyWidom.TW2R_linear_left_tail
+  kind: theorem
+  summary: A faithful linear left-tail bound; the cubic tail requires additional analysis.
+  aliases:
+  - TW2R linear left tail
+  keywords:
+  - tracy-widom
+  - densitytail
+  file: RMTFoundations/TracyWidom/DensityTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1density-continuous
+  decl: RMTFoundations.TracyWidom.TW1Density_continuous
+  kind: theorem
+  summary: Reusable TW1Density continuous; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW1Density continuous
+  keywords:
+  - tracy-widom
+  - c1
+  file: RMTFoundations/TracyWidom/C1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1r-contdiff-one
+  decl: RMTFoundations.TracyWidom.TW1R_contDiff_one
+  kind: theorem
+  summary: Reusable TW1R contDiff one; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW1R contDiff one
+  keywords:
+  - tracy-widom
+  - c1
+  file: RMTFoundations/TracyWidom/C1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-airy-canonical-boundary-positive
+  decl: RMTFoundations.TracyWidom.airy_canonical_boundary_positive
+  kind: theorem
+  summary: The physical GOE boundary resolvent is strictly positive on the entire line.
+  aliases:
+  - airy canonical boundary positive
+  keywords:
+  - tracy-widom
+  - strictdensity
+  file: RMTFoundations/TracyWidom/StrictDensity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1density-positive
+  decl: RMTFoundations.TracyWidom.TW1Density_positive
+  kind: theorem
+  summary: The actual GOE CDF density is strictly positive at every real shift.
+  aliases:
+  - TW1Density positive
+  keywords:
+  - tracy-widom
+  - strictdensity
+  file: RMTFoundations/TracyWidom/StrictDensity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1r-strictmono
+  decl: RMTFoundations.TracyWidom.TW1R_strictMono
+  kind: theorem
+  summary: Reusable TW1R strictMono; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW1R strictMono
+  keywords:
+  - tracy-widom
+  - strictdensity
+  file: RMTFoundations/TracyWidom/StrictDensity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1r-quantile-exists-unique
+  decl: RMTFoundations.TracyWidom.TW1R_quantile_exists_unique
+  kind: theorem
+  summary: Every interior probability has exactly one GOE quantile.
+  aliases:
+  - TW1R quantile exists unique
+  keywords:
+  - tracy-widom
+  - strictdensity
+  file: RMTFoundations/TracyWidom/StrictDensity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1r-median-exists-unique
+  decl: RMTFoundations.TracyWidom.TW1R_median_exists_unique
+  kind: theorem
+  summary: Reusable TW1R median exists unique; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW1R median exists unique
+  keywords:
+  - tracy-widom
+  - strictdensity
+  file: RMTFoundations/TracyWidom/StrictDensity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2density
+  decl: RMTFoundations.TracyWidom.TW2Density
+  kind: definition
+  summary: The density of the actual GUE Fredholm distribution, with canonical square resolvent.
+  aliases:
+  - TW2Density
+  keywords:
+  - tracy-widom
+  - ordertwoc1
+  file: RMTFoundations/TracyWidom/OrderTwoC1.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-hasderivat
+  decl: RMTFoundations.TracyWidom.TW2R_hasDerivAt
+  kind: theorem
+  summary: Reusable TW2R hasDerivAt; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW2R hasDerivAt
+  keywords:
+  - tracy-widom
+  - ordertwoc1
+  file: RMTFoundations/TracyWidom/OrderTwoC1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-differentiable
+  decl: RMTFoundations.TracyWidom.TW2R_differentiable
+  kind: theorem
+  summary: Reusable TW2R differentiable; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW2R differentiable
+  keywords:
+  - tracy-widom
+  - ordertwoc1
+  file: RMTFoundations/TracyWidom/OrderTwoC1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2density-positive
+  decl: RMTFoundations.TracyWidom.TW2Density_positive
+  kind: theorem
+  summary: All shifts have strictly positive density, since the physical boundary vector is nonzero.
+  aliases:
+  - TW2Density positive
+  keywords:
+  - tracy-widom
+  - ordertwoc1
+  file: RMTFoundations/TracyWidom/OrderTwoC1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-log-derivative
+  decl: RMTFoundations.TracyWidom.TW2R_log_derivative
+  kind: theorem
+  summary: Reusable TW2R log derivative; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW2R log derivative
+  keywords:
+  - tracy-widom
+  - ordertwoc1
+  file: RMTFoundations/TracyWidom/OrderTwoC1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2density-continuous
+  decl: RMTFoundations.TracyWidom.TW2Density_continuous
+  kind: theorem
+  summary: Reusable TW2Density continuous; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW2Density continuous
+  keywords:
+  - tracy-widom
+  - ordertwoc1
+  file: RMTFoundations/TracyWidom/OrderTwoC1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-contdiff-one
+  decl: RMTFoundations.TracyWidom.TW2R_contDiff_one
+  kind: theorem
+  summary: The actual GUE CDF is continuously differentiable at every real shift.
+  aliases:
+  - TW2R contDiff one
+  keywords:
+  - tracy-widom
+  - ordertwoc1
+  file: RMTFoundations/TracyWidom/OrderTwoC1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-strictmono
+  decl: RMTFoundations.TracyWidom.TW2R_strictMono
+  kind: theorem
+  summary: Reusable TW2R strictMono; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW2R strictMono
+  keywords:
+  - tracy-widom
+  - ordertwoc1
+  file: RMTFoundations/TracyWidom/OrderTwoC1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-quantile-exists-unique
+  decl: RMTFoundations.TracyWidom.TW2R_quantile_exists_unique
+  kind: theorem
+  summary: Every interior probability has exactly one actual GUE quantile.
+  aliases:
+  - TW2R quantile exists unique
+  keywords:
+  - tracy-widom
+  - ordertwoc1
+  file: RMTFoundations/TracyWidom/OrderTwoC1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-median-exists-unique
+  decl: RMTFoundations.TracyWidom.TW2R_median_exists_unique
+  kind: theorem
+  summary: Reusable TW2R median exists unique; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW2R median exists unique
+  keywords:
+  - tracy-widom
+  - ordertwoc1
+  file: RMTFoundations/TracyWidom/OrderTwoC1.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-realoperatordet-square-factorization
+  decl: RMTFoundations.TracyWidom.realOperatorDet_square_factorization
+  kind: theorem
+  summary: Reusable realOperatorDet square factorization; exact hypotheses and normalization are in the
+    named declaration.
+  aliases:
+  - realOperatorDet square factorization
+  keywords:
+  - tracy-widom
+  - detfactor
+  file: RMTFoundations/TracyWidom/DetFactor.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-hankeldetplus
+  decl: RMTFoundations.TracyWidom.hankelDetPlus
+  kind: definition
+  summary: Reusable hankelDetPlus; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - hankelDetPlus
+  keywords:
+  - tracy-widom
+  - detfactor
+  file: RMTFoundations/TracyWidom/DetFactor.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-factorization
+  decl: RMTFoundations.TracyWidom.TW2R_factorization
+  kind: theorem
+  summary: Reusable TW2R factorization; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW2R factorization
+  keywords:
+  - tracy-widom
+  - detfactor
+  file: RMTFoundations/TracyWidom/DetFactor.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2-factorization
+  decl: RMTFoundations.TracyWidom.TW2_factorization
+  kind: theorem
+  summary: The same factorization at the original complex-valued Fredholm definitions.
+  aliases:
+  - TW2 factorization
+  keywords:
+  - tracy-widom
+  - detfactor
+  file: RMTFoundations/TracyWidom/DetFactor.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-hankeldetplus-eq-realoperatordet
+  decl: RMTFoundations.TracyWidom.hankelDetPlus_eq_realOperatorDet
+  kind: theorem
+  summary: The plus factor is the genuine operator determinant in any countable Hilbert basis.
+  aliases:
+  - hankelDetPlus eq realOperatorDet
+  keywords:
+  - tracy-widom
+  - detfactor
+  file: RMTFoundations/TracyWidom/DetFactor.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-positive
+  decl: RMTFoundations.TracyWidom.TW2R_positive
+  kind: theorem
+  summary: Reusable TW2R positive; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW2R positive
+  keywords:
+  - tracy-widom
+  - detfactor
+  file: RMTFoundations/TracyWidom/DetFactor.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-hankeldetplus-positive
+  decl: RMTFoundations.TracyWidom.hankelDetPlus_positive
+  kind: theorem
+  summary: Reusable hankelDetPlus positive; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - hankelDetPlus positive
+  keywords:
+  - tracy-widom
+  - detfactor
+  file: RMTFoundations/TracyWidom/DetFactor.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-le-tw1r-iff
+  decl: RMTFoundations.TracyWidom.TW2R_le_TW1R_iff
+  kind: theorem
+  summary: Reusable TW2R le TW1R iff; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW2R le TW1R iff
+  keywords:
+  - tracy-widom
+  - detfactor
+  file: RMTFoundations/TracyWidom/DetFactor.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw1r-le-tw2r-iff
+  decl: RMTFoundations.TracyWidom.TW1R_le_TW2R_iff
+  kind: theorem
+  summary: Reusable TW1R le TW2R iff; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - TW1R le TW2R iff
+  keywords:
+  - tracy-widom
+  - detfactor
+  file: RMTFoundations/TracyWidom/DetFactor.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-airy-actual-operator-factorization
+  decl: RMTFoundations.TracyWidom.airy_actual_operator_factorization
+  kind: theorem
+  summary: The genuine Airy operator supplies every diagonal-basis and trace-class input to the general
+    determinant multiplicativity API.
+  aliases:
+  - airy actual operator factorization
+  keywords:
+  - tracy-widom
+  - actualfactorization
+  file: RMTFoundations/TracyWidom/ActualFactorization.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-positive-product-tail-bounds
+  decl: RMTFoundations.TracyWidom.Tails.positive_product_tail_bounds
+  kind: theorem
+  summary: Reusable positive product tail bounds; exact hypotheses and normalization are in the named
+    declaration.
+  aliases:
+  - positive product tail bounds
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-signed-product-lower
+  decl: RMTFoundations.TracyWidom.Tails.signed_product_lower
+  kind: theorem
+  summary: Reusable signed product lower; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - signed product lower
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-signed-product-tail-bounds
+  decl: RMTFoundations.TracyWidom.Tails.signed_product_tail_bounds
+  kind: theorem
+  summary: Reusable signed product tail bounds; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - signed product tail bounds
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-lowerairyconstant
+  decl: RMTFoundations.TracyWidom.Tails.lowerAiryConstant
+  kind: definition
+  summary: Reusable lowerAiryConstant; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - lowerAiryConstant
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-lowerairyrate
+  decl: RMTFoundations.TracyWidom.Tails.lowerAiryRate
+  kind: definition
+  summary: Reusable lowerAiryRate; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - lowerAiryRate
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-lowerairyenvelope
+  decl: RMTFoundations.TracyWidom.Tails.lowerAiryEnvelope
+  kind: definition
+  summary: Reusable lowerAiryEnvelope; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - lowerAiryEnvelope
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-ai-lower-envelope
+  decl: RMTFoundations.TracyWidom.Tails.Ai_lower_envelope
+  kind: theorem
+  summary: Explicit positive lower envelope, proved from the committed Schlaefli integral.
+  aliases:
+  - Ai lower envelope
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-tw2r-right-tail-trace-bounds
+  decl: RMTFoundations.TracyWidom.Tails.TW2R_right_tail_trace_bounds
+  kind: theorem
+  summary: 'Actual physical TW2 determinant: the lower and upper right-tail bounds share the literal Airy
+    trace. No imported spectral/trace fields are premises.'
+  aliases:
+  - TW2R right tail trace bounds
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-tw1r-right-tail-trace-bounds
+  decl: RMTFoundations.TracyWidom.Tails.TW1R_right_tail_trace_bounds
+  kind: theorem
+  summary: A small literal Airy trace forces the constructed Hankel eigenvalues below 1/2, giving explicit
+    constants 1 and 2 in the signed tail estimate.
+  aliases:
+  - TW1R right tail trace bounds
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-tw2r-left-tail-linear
+  decl: RMTFoundations.TracyWidom.Tails.TW2R_left_tail_linear
+  kind: theorem
+  summary: Faithful quantitative left estimate obtained from the committed trace bound.
+  aliases:
+  - TW2R left tail linear
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-tw1r-left-tail-linear
+  decl: RMTFoundations.TracyWidom.Tails.TW1R_left_tail_linear
+  kind: theorem
+  summary: 'Faithful signed quantitative left estimate: the floor is a committed explicit Airy-data constant;
+    cubic decay is not asserted here.'
+  aliases:
+  - TW1R left tail linear
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-trace-interface-cubic-counterinstance
+  decl: RMTFoundations.TracyWidom.Tails.trace_interface_cubic_counterinstance
+  kind: theorem
+  summary: Counterinstance to extracting a cubic estimate solely from the scalar product/trace interfaces.
+    This is not a counterexample for the actual Airy kernel. A strict rank-N contraction has trace N/2
+    but determinant 2^(-N).
+  aliases:
+  - trace interface cubic counterinstance
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-tracetailthreshold
+  decl: RMTFoundations.TracyWidom.Tails.traceTailThreshold
+  kind: definition
+  summary: Reusable traceTailThreshold; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - traceTailThreshold
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-tw-right-tail-bounds-of-envelope
+  decl: RMTFoundations.TracyWidom.Tails.TW_right_tail_bounds_of_envelope
+  kind: theorem
+  summary: Fully quantitative two-sided right bounds at the literal physical determinants. All constants
+    are explicit multiples of one committed Airy-envelope witness; the threshold is an explicit logarithm
+    of that witness.
+  aliases:
+  - TW right tail bounds of envelope
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tails-tw-right-tail-bounds
+  decl: RMTFoundations.TracyWidom.Tails.TW_right_tail_bounds
+  kind: theorem
+  summary: 'Unconditional family: the Airy witness is constructed by a committed result, never taken from
+    a consumer bundle or an unregistered import.'
+  aliases:
+  - TW right tail bounds
+  keywords:
+  - tracy-widom
+  - tailbounds
+  file: RMTFoundations/TracyWidom/TailBounds.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-hankel-square-kernel
+  decl: RMTFoundations.TracyWidom.hankel_square_kernel
+  kind: theorem
+  summary: Reusable hankel square kernel; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - hankel square kernel
+  keywords:
+  - tracy-widom
+  - operatorcore
+  file: RMTFoundations/TracyWidom/OperatorCore.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-hankel-selfadjoint-traceclass-strict
+  decl: RMTFoundations.TracyWidom.hankel_selfAdjoint_traceClass_strict
+  kind: theorem
+  summary: Reusable hankel selfAdjoint traceClass strict; exact hypotheses and normalization are in the
+    named declaration.
+  aliases:
+  - hankel selfAdjoint traceClass strict
+  keywords:
+  - tracy-widom
+  - operatorcore
+  file: RMTFoundations/TracyWidom/OperatorCore.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-kernel-positive-traceclass-strict
+  decl: RMTFoundations.TracyWidom.kernel_positive_traceClass_strict
+  kind: theorem
+  summary: Reusable kernel positive traceClass strict; exact hypotheses and normalization are in the named
+    declaration.
+  aliases:
+  - kernel positive traceClass strict
+  keywords:
+  - tracy-widom
+  - operatorcore
+  file: RMTFoundations/TracyWidom/OperatorCore.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-hankel-eigenvalue-strict
+  decl: RMTFoundations.TracyWidom.hankel_eigenvalue_strict
+  kind: theorem
+  summary: Reusable hankel eigenvalue strict; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - hankel eigenvalue strict
+  keywords:
+  - tracy-widom
+  - operatorcore
+  file: RMTFoundations/TracyWidom/OperatorCore.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-hankel-spectrum-subset
+  decl: RMTFoundations.TracyWidom.hankel_spectrum_subset
+  kind: theorem
+  summary: Reusable hankel spectrum subset; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - hankel spectrum subset
+  keywords:
+  - tracy-widom
+  - spectrum
+  file: RMTFoundations/TracyWidom/Spectrum.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-kernel-spectrum-subset
+  decl: RMTFoundations.TracyWidom.kernel_spectrum_subset
+  kind: theorem
+  summary: Reusable kernel spectrum subset; exact hypotheses and normalization are in the named declaration.
+  aliases:
+  - kernel spectrum subset
+  keywords:
+  - tracy-widom
+  - spectrum
+  file: RMTFoundations/TracyWidom/Spectrum.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-physicalfirstordersystem-resolventv-eq-first-integral
+  decl: RMTFoundations.TracyWidom.PhysicalFirstOrderSystem.resolventV_eq_first_integral
+  kind: theorem
+  summary: The genuine first integral solves the second scalar coordinate algebraically.
+  aliases:
+  - resolventV eq first integral
+  keywords:
+  - tracy-widom
+  - physicalfirstordersystem
+  file: RMTFoundations/TracyWidom/PhysicalFirstOrderSystem.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-physicalfirstordersystem-hasderivat-resolventv
+  decl: RMTFoundations.TracyWidom.PhysicalFirstOrderSystem.hasDerivAt_resolventV
+  kind: theorem
+  summary: Differentiating the actual first integral gives the physical v derivative, without a further
+    regularity assumption on the second response.
+  aliases:
+  - hasDerivAt resolventV
+  keywords:
+  - tracy-widom
+  - physicalfirstordersystem
+  file: RMTFoundations/TracyWidom/PhysicalFirstOrderSystem.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-physicalfirstordersystem-physical-first-order-system
+  decl: RMTFoundations.TracyWidom.PhysicalFirstOrderSystem.physical_first_order_system
+  kind: theorem
+  summary: The three genuine scalar first-order equations and first integral hold together.
+  aliases:
+  - physical first order system
+  keywords:
+  - tracy-widom
+  - physicalfirstordersystem
+  file: RMTFoundations/TracyWidom/PhysicalFirstOrderSystem.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-painleve-q
+  decl: RMTFoundations.TracyWidom.Painleve.q
+  kind: definition
+  summary: The actual endpoint response of the inverse physical Airy-kernel operator.
+  aliases:
+  - q
+  keywords:
+  - tracy-widom
+  - painleve
+  file: RMTFoundations/TracyWidom/Painleve.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-painleve-differentiable-q
+  decl: RMTFoundations.TracyWidom.Painleve.differentiable_q
+  kind: theorem
+  summary: The canonical response is differentiable on the entire real line.
+  aliases:
+  - differentiable q
+  keywords:
+  - tracy-widom
+  - painleve
+  file: RMTFoundations/TracyWidom/Painleve.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-painleve-hasderivat-deriv-q
+  decl: RMTFoundations.TracyWidom.Painleve.hasDerivAt_deriv_q
+  kind: theorem
+  summary: The canonical Fredholm response solves Painleve II at every real cutoff.
+  aliases:
+  - hasDerivAt deriv q
+  keywords:
+  - tracy-widom
+  - painleve
+  file: RMTFoundations/TracyWidom/Painleve.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-painleve-tendsto-q-div-ai-attop
+  decl: RMTFoundations.TracyWidom.Painleve.tendsto_q_div_Ai_atTop
+  kind: theorem
+  summary: Relative Airy normalization holds at the positive endpoint.
+  aliases:
+  - tendsto q div Ai atTop
+  keywords:
+  - tracy-widom
+  - painleve
+  file: RMTFoundations/TracyWidom/Painleve.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-painleve-integrable-tails
+  decl: RMTFoundations.TracyWidom.Painleve.integrable_tails
+  kind: theorem
+  summary: The canonical response and its two square tails are absolutely integrable.
+  aliases:
+  - integrable tails
+  keywords:
+  - tracy-widom
+  - painleve
+  file: RMTFoundations/TracyWidom/Painleve.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-painleve-tw2r-integral-formula
+  decl: RMTFoundations.TracyWidom.Painleve.TW2R_integral_formula
+  kind: theorem
+  summary: The genuine GUE Fredholm CDF is the weighted-square Painleve tail exponential.
+  aliases:
+  - TW2R integral formula
+  keywords:
+  - tracy-widom
+  - painleve
+  file: RMTFoundations/TracyWidom/Painleve.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-painleve-tw1r-squared-integral-formula
+  decl: RMTFoundations.TracyWidom.Painleve.TW1R_squared_integral_formula
+  kind: theorem
+  summary: The squared GOE CDF is the GUE CDF times the unweighted response tail exponential.
+  aliases:
+  - TW1R squared integral formula
+  keywords:
+  - tracy-widom
+  - painleve
+  file: RMTFoundations/TracyWidom/Painleve.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-contdiff-tw1r
+  decl: RMTFoundations.TracyWidom.contDiff_TW1R
+  kind: theorem
+  summary: The GOE CDF is continuously differentiable on the entire real line.
+  aliases:
+  - contDiff TW1R
+  keywords:
+  - tracy-widom
+  - regularity
+  file: RMTFoundations/TracyWidom/Regularity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-contdiff-tw2r
+  decl: RMTFoundations.TracyWidom.contDiff_TW2R
+  kind: theorem
+  summary: The GUE CDF is continuously differentiable on the entire real line.
+  aliases:
+  - contDiff TW2R
+  keywords:
+  - tracy-widom
+  - regularity
+  file: RMTFoundations/TracyWidom/Regularity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-strictmono-tw1r
+  decl: RMTFoundations.TracyWidom.strictMono_TW1R
+  kind: theorem
+  summary: The GOE CDF increases strictly at every pair of ordered cutoffs.
+  aliases:
+  - strictMono TW1R
+  keywords:
+  - tracy-widom
+  - regularity
+  file: RMTFoundations/TracyWidom/Regularity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-strictmono-tw2r
+  decl: RMTFoundations.TracyWidom.strictMono_TW2R
+  kind: theorem
+  summary: The GUE CDF increases strictly at every pair of ordered cutoffs.
+  aliases:
+  - strictMono TW2R
+  keywords:
+  - tracy-widom
+  - regularity
+  file: RMTFoundations/TracyWidom/Regularity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-expansion-rmtfoundations-tracywidom-tw2r-strict-bounds
+  decl: RMTFoundations.TracyWidom.TW2R_strict_bounds
+  kind: theorem
+  summary: The actual GUE Fredholm CDF is strictly between zero and one at finite cutoffs.
+  aliases:
+  - TW2R strict bounds
+  keywords:
+  - tracy-widom
+  - regularity
+  file: RMTFoundations/TracyWidom/Regularity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-exponential-absolute-integrable-of-tail
+  decl: RMTFoundations.TracyWidom.exponential_absolute_integrable_of_tail
+  kind: theorem
+  summary: Reusable exponential absolute integrable of tail with the exact hypotheses of the named declaration.
+  aliases:
+  - exponential absolute integrable of tail
+  keywords:
+  - tracy-widom
+  - exponentialmoments
+  file: RMTFoundations/TracyWidom/ExponentialMoments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-all-absolute-moments-of-exponential-integrable
+  decl: RMTFoundations.TracyWidom.all_absolute_moments_of_exponential_integrable
+  kind: theorem
+  summary: Reusable all absolute moments of exponential integrable with the exact hypotheses of the named
+    declaration.
+  aliases:
+  - all absolute moments of exponential integrable
+  keywords:
+  - tracy-widom
+  - exponentialmoments
+  file: RMTFoundations/TracyWidom/ExponentialMoments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-mean-eq-cdf-tail-integrals
+  decl: RMTFoundations.TracyWidom.mean_eq_cdf_tail_integrals
+  kind: theorem
+  summary: Reusable mean eq cdf tail integrals with the exact hypotheses of the named declaration.
+  aliases:
+  - mean eq cdf tail integrals
+  keywords:
+  - tracy-widom
+  - meantailintegral
+  file: RMTFoundations/TracyWidom/MeanTailIntegral.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-variance-eq-second-moment-sub-mean-square
+  decl: RMTFoundations.TracyWidom.variance_eq_second_moment_sub_mean_square
+  kind: theorem
+  summary: Reusable variance eq second moment sub mean square with the exact hypotheses of the named declaration.
+  aliases:
+  - variance eq second moment sub mean square
+  keywords:
+  - tracy-widom
+  - meantailintegral
+  file: RMTFoundations/TracyWidom/MeanTailIntegral.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1-tw2-exponential-absolute-integrable
+  decl: RMTFoundations.TracyWidom.TW1_TW2_exponential_absolute_integrable
+  kind: theorem
+  summary: Both actual TW1/TW2 laws have a common positive exponential absolute moment.
+  aliases:
+  - TW1 TW2 exponential absolute integrable
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1-absolute-moment-integrable
+  decl: RMTFoundations.TracyWidom.TW1_absolute_moment_integrable
+  kind: theorem
+  summary: All absolute real moments of TW1Measure are integrable for p >= 0.
+  aliases:
+  - TW1 absolute moment integrable
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2-absolute-moment-integrable
+  decl: RMTFoundations.TracyWidom.TW2_absolute_moment_integrable
+  kind: theorem
+  summary: All absolute real moments of TW2Measure are integrable for p >= 0.
+  aliases:
+  - TW2 absolute moment integrable
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1-moment-integrable
+  decl: RMTFoundations.TracyWidom.TW1_moment_integrable
+  kind: theorem
+  summary: Reusable TW1 moment integrable with the exact hypotheses of the named declaration.
+  aliases:
+  - TW1 moment integrable
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2-moment-integrable
+  decl: RMTFoundations.TracyWidom.TW2_moment_integrable
+  kind: theorem
+  summary: Reusable TW2 moment integrable with the exact hypotheses of the named declaration.
+  aliases:
+  - TW2 moment integrable
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1mean
+  decl: RMTFoundations.TracyWidom.TW1Mean
+  kind: definition
+  summary: The real first-moment integral of the actual TW1 law.
+  aliases:
+  - TW1Mean
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw2mean
+  decl: RMTFoundations.TracyWidom.TW2Mean
+  kind: definition
+  summary: The real first-moment integral of the actual TW2 law.
+  aliases:
+  - TW2Mean
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw1variance
+  decl: RMTFoundations.TracyWidom.TW1Variance
+  kind: definition
+  summary: The variance of the identity random variable under the actual TW1 law.
+  aliases:
+  - TW1Variance
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw2variance
+  decl: RMTFoundations.TracyWidom.TW2Variance
+  kind: definition
+  summary: The variance of the identity random variable under the actual TW2 law.
+  aliases:
+  - TW2Variance
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw1mean-eq-tail-integrals
+  decl: RMTFoundations.TracyWidom.TW1Mean_eq_tail_integrals
+  kind: theorem
+  summary: Reusable TW1Mean eq tail integrals with the exact hypotheses of the named declaration.
+  aliases:
+  - TW1Mean eq tail integrals
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2mean-eq-tail-integrals
+  decl: RMTFoundations.TracyWidom.TW2Mean_eq_tail_integrals
+  kind: theorem
+  summary: Reusable TW2Mean eq tail integrals with the exact hypotheses of the named declaration.
+  aliases:
+  - TW2Mean eq tail integrals
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1variance-eq-centered-integral
+  decl: RMTFoundations.TracyWidom.TW1Variance_eq_centered_integral
+  kind: theorem
+  summary: Reusable TW1Variance eq centered integral with the exact hypotheses of the named declaration.
+  aliases:
+  - TW1Variance eq centered integral
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2variance-eq-centered-integral
+  decl: RMTFoundations.TracyWidom.TW2Variance_eq_centered_integral
+  kind: theorem
+  summary: Reusable TW2Variance eq centered integral with the exact hypotheses of the named declaration.
+  aliases:
+  - TW2Variance eq centered integral
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1variance-eq-second-moment
+  decl: RMTFoundations.TracyWidom.TW1Variance_eq_second_moment
+  kind: theorem
+  summary: Reusable TW1Variance eq second moment with the exact hypotheses of the named declaration.
+  aliases:
+  - TW1Variance eq second moment
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2variance-eq-second-moment
+  decl: RMTFoundations.TracyWidom.TW2Variance_eq_second_moment
+  kind: theorem
+  summary: Reusable TW2Variance eq second moment with the exact hypotheses of the named declaration.
+  aliases:
+  - TW2Variance eq second moment
+  keywords:
+  - tracy-widom
+  - moments
+  file: RMTFoundations/TracyWidom/Moments.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4airyr
+  decl: RMTFoundations.TracyWidom.TW4AiryR
+  kind: definition
+  summary: The GSE determinant average at the raw Airy cutoff; monotonicity is not asserted.
+  aliases:
+  - TW4AiryR
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw4r
+  decl: RMTFoundations.TracyWidom.TW4R
+  kind: definition
+  summary: The determinant average with TW96 equation (54) scaling TW4AiryR(sqrt(2)*s); no measure is
+    constructed.
+  aliases:
+  - TW4R
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-tw4airyr-fredholm
+  decl: RMTFoundations.TracyWidom.TW4AiryR_fredholm
+  kind: theorem
+  summary: Reusable TW4AiryR fredholm with the exact hypotheses of the named declaration.
+  aliases:
+  - TW4AiryR fredholm
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4airyr-positive
+  decl: RMTFoundations.TracyWidom.TW4AiryR_positive
+  kind: theorem
+  summary: Reusable TW4AiryR positive with the exact hypotheses of the named declaration.
+  aliases:
+  - TW4AiryR positive
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4r-positive
+  decl: RMTFoundations.TracyWidom.TW4R_positive
+  kind: theorem
+  summary: Reusable TW4R positive with the exact hypotheses of the named declaration.
+  aliases:
+  - TW4R positive
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hankeldetplus-eq-ratio
+  decl: RMTFoundations.TracyWidom.hankelDetPlus_eq_ratio
+  kind: theorem
+  summary: Reusable hankelDetPlus eq ratio with the exact hypotheses of the named declaration.
+  aliases:
+  - hankelDetPlus eq ratio
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4airyr-eq-ratio
+  decl: RMTFoundations.TracyWidom.TW4AiryR_eq_ratio
+  kind: theorem
+  summary: Reusable TW4AiryR eq ratio with the exact hypotheses of the named declaration.
+  aliases:
+  - TW4AiryR eq ratio
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4airyr-square-gap
+  decl: RMTFoundations.TracyWidom.TW4AiryR_square_gap
+  kind: theorem
+  summary: Reusable TW4AiryR square gap with the exact hypotheses of the named declaration.
+  aliases:
+  - TW4AiryR square gap
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2r-le-tw4airyr-square
+  decl: RMTFoundations.TracyWidom.TW2R_le_TW4AiryR_square
+  kind: theorem
+  summary: Reusable TW2R le TW4AiryR square with the exact hypotheses of the named declaration.
+  aliases:
+  - TW2R le TW4AiryR square
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-continuous-hankeldetplus
+  decl: RMTFoundations.TracyWidom.continuous_hankelDetPlus
+  kind: theorem
+  summary: Reusable continuous hankelDetPlus with the exact hypotheses of the named declaration.
+  aliases:
+  - continuous hankelDetPlus
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-continuous-tw4airyr
+  decl: RMTFoundations.TracyWidom.continuous_TW4AiryR
+  kind: theorem
+  summary: Reusable continuous TW4AiryR with the exact hypotheses of the named declaration.
+  aliases:
+  - continuous TW4AiryR
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-continuous-tw4r
+  decl: RMTFoundations.TracyWidom.continuous_TW4R
+  kind: theorem
+  summary: Reusable continuous TW4R with the exact hypotheses of the named declaration.
+  aliases:
+  - continuous TW4R
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tendsto-hankeldetplus-attop
+  decl: RMTFoundations.TracyWidom.tendsto_hankelDetPlus_atTop
+  kind: theorem
+  summary: Reusable tendsto hankelDetPlus atTop with the exact hypotheses of the named declaration.
+  aliases:
+  - tendsto hankelDetPlus atTop
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tendsto-tw4airyr-attop
+  decl: RMTFoundations.TracyWidom.tendsto_TW4AiryR_atTop
+  kind: theorem
+  summary: Reusable tendsto TW4AiryR atTop with the exact hypotheses of the named declaration.
+  aliases:
+  - tendsto TW4AiryR atTop
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4r-raw-scaling
+  decl: RMTFoundations.TracyWidom.TW4R_raw_scaling
+  kind: theorem
+  summary: Reusable TW4R raw scaling with the exact hypotheses of the named declaration.
+  aliases:
+  - TW4R raw scaling
+  keywords:
+  - tracy-widom
+  - orderfourfredholm
+  file: RMTFoundations/TracyWidom/OrderFourFredholm.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tendsto-tw4airyr-atbot
+  decl: RMTFoundations.TracyWidom.tendsto_TW4AiryR_atBot
+  kind: theorem
+  summary: Reusable tendsto TW4AiryR atBot with the exact hypotheses of the named declaration.
+  aliases:
+  - tendsto TW4AiryR atBot
+  keywords:
+  - tracy-widom
+  - orderfourendpoints
+  file: RMTFoundations/TracyWidom/OrderFourEndpoints.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tendsto-tw4r-attop
+  decl: RMTFoundations.TracyWidom.tendsto_TW4R_atTop
+  kind: theorem
+  summary: Reusable tendsto TW4R atTop with the exact hypotheses of the named declaration.
+  aliases:
+  - tendsto TW4R atTop
+  keywords:
+  - tracy-widom
+  - orderfourendpoints
+  file: RMTFoundations/TracyWidom/OrderFourEndpoints.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tendsto-tw4r-atbot
+  decl: RMTFoundations.TracyWidom.tendsto_TW4R_atBot
+  kind: theorem
+  summary: Reusable tendsto TW4R atBot with the exact hypotheses of the named declaration.
+  aliases:
+  - tendsto TW4R atBot
+  keywords:
+  - tracy-widom
+  - orderfourendpoints
+  file: RMTFoundations/TracyWidom/OrderFourEndpoints.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-continuous-endpoints-level-exists
+  decl: RMTFoundations.TracyWidom.continuous_endpoints_level_exists
+  kind: theorem
+  summary: Continuity and opposite endpoint limits give every interior level, without requiring a monotonicity
+    hypothesis. This does not construct a probability law.
+  aliases:
+  - continuous endpoints level exists
+  keywords:
+  - tracy-widom
+  - orderfourendpoints
+  file: RMTFoundations/TracyWidom/OrderFourEndpoints.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4r-level-exists
+  decl: RMTFoundations.TracyWidom.TW4R_level_exists
+  kind: theorem
+  summary: Every interior level is attained by the continuous TW4 formula; uniqueness and monotonicity
+    are not asserted.
+  aliases:
+  - TW4R level exists
+  keywords:
+  - tracy-widom
+  - orderfourendpoints
+  file: RMTFoundations/TracyWidom/OrderFourEndpoints.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4r-half-level-exists
+  decl: RMTFoundations.TracyWidom.TW4R_half_level_exists
+  kind: theorem
+  summary: Reusable TW4R half level exists with the exact hypotheses of the named declaration.
+  aliases:
+  - TW4R half level exists
+  keywords:
+  - tracy-widom
+  - orderfourendpoints
+  file: RMTFoundations/TracyWidom/OrderFourEndpoints.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-extendedairykernel
+  decl: RMTFoundations.TracyWidom.Airy2.extendedAiryKernel
+  kind: definition
+  summary: The physical extended Airy kernel with separate positive/negative spectral branches.
+  aliases:
+  - extendedAiryKernel
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-airy2-extendedairykernel-forward
+  decl: RMTFoundations.TracyWidom.Airy2.extendedAiryKernel_forward
+  kind: theorem
+  summary: The forward branch is stated without changing its exponential weight.
+  aliases:
+  - extendedAiryKernel forward
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-extendedairykernel-backward
+  decl: RMTFoundations.TracyWidom.Airy2.extendedAiryKernel_backward
+  kind: theorem
+  summary: The backward branch retains the essential minus sign.
+  aliases:
+  - extendedAiryKernel backward
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-extendedairykernel-equal-time
+  decl: RMTFoundations.TracyWidom.Airy2.extendedAiryKernel_equal_time
+  kind: theorem
+  summary: At equal times the physical scalar Airy kernel is recovered.
+  aliases:
+  - extendedAiryKernel equal time
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-extendedairykernel-time-translate
+  decl: RMTFoundations.TracyWidom.Airy2.extendedAiryKernel_time_translate
+  kind: theorem
+  summary: Common time translation leaves both branches unchanged.
+  aliases:
+  - extendedAiryKernel time translate
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-timespace
+  decl: RMTFoundations.TracyWidom.Airy2.TimeSpace
+  kind: definition
+  summary: Positive-half-line coordinates for the finite disjoint union of time slices.
+  aliases:
+  - TimeSpace
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-airy2-timespacemeasure
+  decl: RMTFoundations.TracyWidom.Airy2.timeSpaceMeasure
+  kind: definition
+  summary: Counting measure on time labels, Lebesgue measure on the shifted tail coordinates.
+  aliases:
+  - timeSpaceMeasure
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-airy2-timespacel2
+  decl: RMTFoundations.TracyWidom.Airy2.TimeSpaceL2
+  kind: definition
+  summary: The Hilbert space on which the proposed block kernel is to be realized.
+  aliases:
+  - TimeSpaceL2
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-airy2-shiftedextendedkernel
+  decl: RMTFoundations.TracyWidom.Airy2.shiftedExtendedKernel
+  kind: definition
+  summary: Thresholds are translated independently on each time slice.
+  aliases:
+  - shiftedExtendedKernel
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-airy2-airy2fredholmcandidate
+  decl: RMTFoundations.TracyWidom.Airy2.airy2FredholmCandidate
+  kind: definition
+  summary: The finite multi-time extended-Airy Fredholm series candidate; no convergence or probability
+    assertion is made.
+  aliases:
+  - airy2FredholmCandidate
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-airy2-airy2fredholmcandidate-time-translate
+  decl: RMTFoundations.TracyWidom.Airy2.airy2FredholmCandidate_time_translate
+  kind: theorem
+  summary: Time translation of the whole formal finite-dimensional expression.
+  aliases:
+  - airy2FredholmCandidate time translate
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-onetimefredholm
+  decl: RMTFoundations.TracyWidom.Airy2.oneTimeFredholm
+  kind: definition
+  summary: The physical one-time scalar kernel formula, before relabeling into TimeSpace 1.
+  aliases:
+  - oneTimeFredholm
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-airy2-onetimefredholm-eq-tw2
+  decl: RMTFoundations.TracyWidom.Airy2.oneTimeFredholm_eq_TW2
+  kind: theorem
+  summary: This one-time expression equals the committed TW2 Fredholm function.
+  aliases:
+  - oneTimeFredholm eq TW2
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-two-site-determinant
+  decl: RMTFoundations.TracyWidom.Airy2.two_site_determinant
+  kind: theorem
+  summary: Exact finite-block determinant accounting; diagonal bounds omit the mixed product.
+  aliases:
+  - two site determinant
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-diagonal-contractions-joint-counterinstance
+  decl: RMTFoundations.TracyWidom.Airy2.diagonal_contractions_joint_counterinstance
+  kind: theorem
+  summary: A symmetric block with individually positive strictly contractive diagonal slices. Its full
+    determinant is negative. This is not a physical Airy-kernel instance.
+  aliases:
+  - diagonal contractions joint counterinstance
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-singletonequiv
+  decl: RMTFoundations.TracyWidom.Airy2.singletonEquiv
+  kind: definition
+  summary: Exact relabeling of the singleton time slice; no probability assertion is encoded.
+  aliases:
+  - singletonEquiv
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-airy2-singleton-measurepreserving
+  decl: RMTFoundations.TracyWidom.Airy2.singleton_measurePreserving
+  kind: theorem
+  summary: Counting measure on a singleton is exactly its Dirac mass.
+  aliases:
+  - singleton measurePreserving
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-kernelcoefficient-singleton
+  decl: RMTFoundations.TracyWidom.Airy2.kernelCoefficient_singleton
+  kind: theorem
+  summary: The relabeling acts at every integration variable of the Fredholm coefficient.
+  aliases:
+  - kernelCoefficient singleton
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-kernelfredholm-singleton
+  decl: RMTFoundations.TracyWidom.Airy2.kernelFredholm_singleton
+  kind: theorem
+  summary: The same exact relabeling holds for the formal Fredholm series.
+  aliases:
+  - kernelFredholm singleton
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-airy2fredholmcandidate-one-time
+  decl: RMTFoundations.TracyWidom.Airy2.airy2FredholmCandidate_one_time
+  kind: theorem
+  summary: The singleton-labelled candidate equals the actual TW2 Fredholm function.
+  aliases:
+  - airy2FredholmCandidate one time
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-ai-global-bounded
+  decl: RMTFoundations.TracyWidom.Airy2.Ai_global_bounded
+  kind: theorem
+  summary: The negative-half bound and positive-half decay give a single physical global bound.
+  aliases:
+  - Ai global bounded
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-ai-weighted-product-integrable
+  decl: RMTFoundations.TracyWidom.Airy2.Ai_weighted_product_integrable
+  kind: theorem
+  summary: Both positive and negative spectral branches are absolutely integrable at a strict time gap;
+    the oscillatory negative branch uses global boundedness.
+  aliases:
+  - Ai weighted product integrable
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-extendedairyintegrand
+  decl: RMTFoundations.TracyWidom.Airy2.extendedAiryIntegrand
+  kind: definition
+  summary: The signed integrand of the physical extended kernel.
+  aliases:
+  - extendedAiryIntegrand
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-airy2-extendedairyintegrand-integrable
+  decl: RMTFoundations.TracyWidom.Airy2.extendedAiryIntegrand_integrable
+  kind: theorem
+  summary: The physical integrands are integrable, including the equal-time and strict-gap branches.
+  aliases:
+  - extendedAiryIntegrand integrable
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-extendedairykernel-eq-integral
+  decl: RMTFoundations.TracyWidom.Airy2.extendedAiryKernel_eq_integral
+  kind: theorem
+  summary: The signed-integrand realization is literally the defined extended Airy kernel.
+  aliases:
+  - extendedAiryKernel eq integral
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airy2-duplicated-slice-joint-counterinstance
+  decl: RMTFoundations.TracyWidom.Airy2.duplicated_slice_joint_counterinstance
+  kind: theorem
+  summary: Merely duplicating the same finite time slice changes its gap determinant. A repeated-time
+    process law instead reduces to the single slice with minimum cutoff.
+  aliases:
+  - duplicated slice joint counterinstance
+  keywords:
+  - tracy-widom
+  - airy2
+  file: RMTFoundations/TracyWidom/Airy2.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermite-derivative-succ
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermite_derivative_succ
+  kind: theorem
+  summary: The derivative lowering rule, derived from Mathlib's defining recursion.
+  aliases:
+  - hermite derivative succ
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermite-three-term
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermite_three_term
+  kind: theorem
+  summary: Probabilists' three-term recurrence; this convention has edge 2 sqrt(N).
+  aliases:
+  - hermite three term
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-realhermite
+  decl: RMTFoundations.TracyWidom.GUEHermite.realHermite
+  kind: definition
+  summary: Real monic Hermite polynomial, with all integer coefficients retained.
+  aliases:
+  - realHermite
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-guehermite-hpoly
+  decl: RMTFoundations.TracyWidom.GUEHermite.hpoly
+  kind: definition
+  summary: Reusable hpoly with the exact hypotheses of the named declaration.
+  aliases:
+  - hpoly
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-guehermite-polynomialkernel
+  decl: RMTFoundations.TracyWidom.GUEHermite.polynomialKernel
+  kind: definition
+  summary: Polynomial part of the Hermite projection kernel.
+  aliases:
+  - polynomialKernel
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-guehermite-christoffel-darboux-cross
+  decl: RMTFoundations.TracyWidom.GUEHermite.christoffel_darboux_cross
+  kind: theorem
+  summary: 'Christoffel-Darboux without division by x-y: valid even on the diagonal.'
+  aliases:
+  - christoffel darboux cross
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-christoffel-darboux
+  decl: RMTFoundations.TracyWidom.GUEHermite.christoffel_darboux
+  kind: theorem
+  summary: The off-diagonal quotient, with the nonzero denominator stated explicitly.
+  aliases:
+  - christoffel darboux
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermite-evaluation-determinant
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermite_evaluation_determinant
+  kind: theorem
+  summary: Monicity and degree provide the literal Vandermonde determinant.
+  aliases:
+  - hermite evaluation determinant
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-gram-determinant
+  decl: RMTFoundations.TracyWidom.GUEHermite.gram_determinant
+  kind: theorem
+  summary: 'Finite determinantal structure: a square feature Gram determinant is a square.'
+  aliases:
+  - gram determinant
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-gram-determinant-nonneg
+  decl: RMTFoundations.TracyWidom.GUEHermite.gram_determinant_nonneg
+  kind: theorem
+  summary: A nonnegative finite density numerator, before normalization/integration.
+  aliases:
+  - gram determinant nonneg
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-gaussianweight
+  decl: RMTFoundations.TracyWidom.GUEHermite.gaussianWeight
+  kind: definition
+  summary: Gaussian weight in the requested 2 sqrt(N) convention.
+  aliases:
+  - gaussianWeight
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermitenormalizer
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermiteNormalizer
+  kind: definition
+  summary: Reusable hermiteNormalizer with the exact hypotheses of the named declaration.
+  aliases:
+  - hermiteNormalizer
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermitemode
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermiteMode
+  kind: definition
+  summary: The actual normalized probabilists' Hermite oscillator functions.
+  aliases:
+  - hermiteMode
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermitekernel
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermiteKernel
+  kind: definition
+  summary: Reusable hermiteKernel with the exact hypotheses of the named declaration.
+  aliases:
+  - hermiteKernel
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermite-christoffel-darboux-cross
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermite_christoffel_darboux_cross
+  kind: theorem
+  summary: Literal normalized Hermite CD, including the diagonal cross identity.
+  aliases:
+  - hermite christoffel darboux cross
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermite-christoffel-darboux
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermite_christoffel_darboux
+  kind: theorem
+  summary: Reusable hermite christoffel darboux with the exact hypotheses of the named declaration.
+  aliases:
+  - hermite christoffel darboux
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermite-mode-determinant
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermite_mode_determinant
+  kind: theorem
+  summary: The finite Hermite feature determinant, with Gaussian/factorial factors.
+  aliases:
+  - hermite mode determinant
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermitedensity
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermiteDensity
+  kind: definition
+  summary: The finite Hermite Gram-determinant expression; no probabilistic ensemble identification is
+    asserted.
+  aliases:
+  - hermiteDensity
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-guehermite-hermite-density-formula
+  decl: RMTFoundations.TracyWidom.GUEHermite.hermite_density_formula
+  kind: theorem
+  summary: Finite Hermite determinant/Vandermonde identity; no large-N asymptotic limit is asserted.
+  aliases:
+  - hermite density formula
+  keywords:
+  - tracy-widom
+  - guehermite
+  file: RMTFoundations/TracyWidom/GUEHermite.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-gueidentification-guemeasure
+  decl: RMTFoundations.TracyWidom.GUEIdentification.gueMeasure
+  kind: definition
+  summary: Literal independent standard real Gaussian source. Redundant entries give one simple source
+    law; the Hermitian symmetrization below discards redundancy.
+  aliases:
+  - gueMeasure
+  keywords:
+  - tracy-widom
+  - gueidentification
+  file: RMTFoundations/TracyWidom/GUEIdentification.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-gueidentification-guematrix
+  decl: RMTFoundations.TracyWidom.GUEIdentification.gueMatrix
+  kind: definition
+  summary: 'GUE with diagonal variance 1 and independent off-diagonal real/imaginary parts of variance
+    1/2: H=(X+X^T)/2 + i(Y-Y^T)/2. Edge is 2 sqrt(N).'
+  aliases:
+  - gueMatrix
+  keywords:
+  - tracy-widom
+  - gueidentification
+  file: RMTFoundations/TracyWidom/GUEIdentification.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-gueidentification-gueidentitycoordinates
+  decl: RMTFoundations.TracyWidom.GUEIdentification.gueIdentityCoordinates
+  kind: definition
+  summary: A full-rank deterministic instance of the same literal source map.
+  aliases:
+  - gueIdentityCoordinates
+  keywords:
+  - tracy-widom
+  - gueidentification
+  file: RMTFoundations/TracyWidom/GUEIdentification.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-gueidentification-guecdf
+  decl: RMTFoundations.TracyWidom.GUEIdentification.gueCDF
+  kind: definition
+  summary: 'Literal maximum event: no ordering convention or good-flow event appears.'
+  aliases:
+  - gueCDF
+  keywords:
+  - tracy-widom
+  - gueidentification
+  file: RMTFoundations/TracyWidom/GUEIdentification.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-gueidentification-guelimit
+  decl: RMTFoundations.TracyWidom.GUEIdentification.GUELimit
+  kind: definition
+  summary: Convergence of the literal GUE maximum CDF under edge 2sqrt(N)+s*N^(-1/6), stated as a predicate.
+  aliases:
+  - GUELimit
+  keywords:
+  - tracy-widom
+  - gueidentification
+  file: RMTFoundations/TracyWidom/GUEIdentification.lean
+  status: reusable
+  citation: null
+- id: rmt-foundations/tw-gueidentification-gaussian-unitary-limit-eq-tw2r
+  decl: RMTFoundations.TracyWidom.GUEIdentification.gaussian_unitary_limit_eq_TW2R
+  kind: theorem
+  summary: Uniqueness identifies an existing GUE limit with TW2R under the explicit GUELimit TW2R hypothesis.
+  aliases:
+  - gaussian unitary limit eq TW2R
+  keywords:
+  - tracy-widom
+  - gueidentification
+  file: RMTFoundations/TracyWidom/GUEIdentification.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-gueidentification-gaussian-unitary-limit-eq-physical-fredholm
+  decl: RMTFoundations.TracyWidom.GUEIdentification.gaussian_unitary_limit_eq_physical_fredholm
+  kind: theorem
+  summary: Conditional GUE identification with the complex physical Fredholm function; GUELimit TW2R remains
+    a hypothesis.
+  aliases:
+  - gaussian unitary limit eq physical fredholm
+  keywords:
+  - tracy-widom
+  - gueidentification
+  file: RMTFoundations/TracyWidom/GUEIdentification.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-gueidentification-application-cdf-at-tw2r
+  decl: RMTFoundations.TracyWidom.GUEIdentification.application_cdf_at_TW2R
+  kind: theorem
+  summary: Transport of a source already converging to the same GUE limit, conditional on GUELimit TW2R.
+  aliases:
+  - application cdf at TW2R
+  keywords:
+  - tracy-widom
+  - gueidentification
+  file: RMTFoundations/TracyWidom/GUEIdentification.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmlinearode-pii-initial-value-unique
+  decl: RMTFoundations.TracyWidom.HMLinearODE.pii_initial_value_unique
+  kind: theorem
+  summary: Global initial-value uniqueness for real classical cubic Painleve II solutions.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMPainleveContinuation.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmlinearode-pii-tail-unique
+  decl: RMTFoundations.TracyWidom.HMLinearODE.pii_tail_unique
+  kind: theorem
+  summary: Equality of two global classical PII solutions on an open tail implies global equality.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMPainleveContinuation.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmgreenrepresentation-convex-derivative-nonpos
+  decl: RMTFoundations.TracyWidom.HMGreenRepresentation.convex_derivative_nonpos
+  kind: theorem
+  summary: A differentiable convex function with finite right limit has nonpositive slope on the tail.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMGreenRepresentation.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmgreenrepresentation-convex-derivative-attop-zero
+  decl: RMTFoundations.TracyWidom.HMGreenRepresentation.convex_derivative_atTop_zero
+  kind: theorem
+  summary: The derivative of a differentiable convex function with finite right limit tends to zero.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMGreenRepresentation.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmgreenrepresentation-normalized-derivative-boundary
+  decl: RMTFoundations.TracyWidom.HMGreenRepresentation.normalized_derivative_boundary
+  kind: theorem
+  summary: PII and relative Airy normalization imply that the derivative tends to zero.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMGreenRepresentation.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmgreenrepresentation-normalized-wronskian-boundary
+  decl: RMTFoundations.TracyWidom.HMGreenRepresentation.normalized_wronskian_boundary
+  kind: theorem
+  summary: Relative Airy normalization constructs the zero Airy Wronskian boundary for classical PII.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMGreenRepresentation.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmgreenrepresentation-normalized-nested-green-representation
+  decl: RMTFoundations.TracyWidom.HMGreenRepresentation.normalized_nested_green_representation
+  kind: theorem
+  summary: Classical normalized PII constructs both nested Green integrals and their absolute integrability.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMGreenRepresentation.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmvolterra-cubic-lipschitz
+  decl: RMTFoundations.TracyWidom.HMVolterra.cubic_lipschitz
+  kind: theorem
+  summary: The elementary cubic map has Lipschitz bound 3 M squared on the real interval of radius M.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMVolterra.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmvolterra-cubic-volterra-unique
+  decl: RMTFoundations.TracyWidom.HMVolterra.cubic_volterra_unique
+  kind: theorem
+  summary: Bounded cubic Volterra solutions coincide when the stated absolute kernel mass contracts.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMVolterra.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmairysmallness-eventually-airy-cubic-coefficient-small
+  decl: RMTFoundations.TracyWidom.HMAirySmallness.eventually_airy_cubic_coefficient_small
+  kind: theorem
+  summary: The actual positive Airy function supplies a sufficiently small cubic tail coefficient.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMAirySmallness.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmairypowertail-airy-fourth-tail-bound
+  decl: RMTFoundations.TracyWidom.HMAiryPowerTail.airy_fourth_tail_bound
+  kind: theorem
+  summary: The fourth power tail of the actual Airy function has the stated explicit positive-half-line
+    bound.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMAiryPowerTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmtailcontraction-nested-green-unique
+  decl: RMTFoundations.TracyWidom.HMTailContraction.nested_green_unique
+  kind: theorem
+  summary: Bounded relative responses satisfying the stated nested physical Green equations agree on the
+    tail.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMTailContraction.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmuniqueness-hastings-mcleod-unique
+  decl: RMTFoundations.TracyWidom.HMUniqueness.hastings_mcleod_unique
+  kind: theorem
+  summary: Real global classical PII solutions with relative Airy normalization coincide.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMUniqueness.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmuniqueness-normalized-classical-eq-fredholm
+  decl: RMTFoundations.TracyWidom.HMUniqueness.normalized_classical_eq_fredholm
+  kind: theorem
+  summary: Every real global classical Airy-normalized PII solution equals the canonical Fredholm response.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMUniqueness.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hmuniqueness-exists-unique-hastings-mcleod
+  decl: RMTFoundations.TracyWidom.HMUniqueness.exists_unique_hastings_mcleod
+  kind: theorem
+  summary: Unique existence of a real global classical Airy-normalized PII solution.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HMUniqueness.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hastingsmcleod-unique
+  decl: RMTFoundations.TracyWidom.HastingsMcLeod.unique
+  kind: theorem
+  summary: 'Public API: real global classical PII solutions with relative Airy normalization coincide.'
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HastingsMcLeod.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hastingsmcleod-eq-canonical
+  decl: RMTFoundations.TracyWidom.HastingsMcLeod.eq_canonical
+  kind: theorem
+  summary: 'Public API: a real global classical Airy-normalized PII solution is the Fredholm response.'
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HastingsMcLeod.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hm-hastingsmcleod-exists-unique
+  decl: RMTFoundations.TracyWidom.HastingsMcLeod.exists_unique
+  kind: theorem
+  summary: 'Public API: exactly one real global classical Airy-normalized PII solution exists.'
+  aliases: []
+  keywords:
+  - tracy-widom
+  - painleve-ii
+  - hastings-mcleod
+  file: RMTFoundations/TracyWidom/HastingsMcLeod.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1-righttail-isequivalent
+  decl: RMTFoundations.TracyWidom.TW1_rightTail_isEquivalent
+  kind: theorem
+  summary: Sharp order-one right-tail equivalence with exact canonical Airy exponential rate and prefactor.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW1SharpRightTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1-righttail-ratio-tendsto-one
+  decl: RMTFoundations.TracyWidom.TW1_rightTail_ratio_tendsto_one
+  kind: theorem
+  summary: The actual TW1 upper tail divided by its exact exponential-power leading term tends to one.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW1SharpRightTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw1-righttail-sharp-bounds
+  decl: RMTFoundations.TracyWidom.TW1_rightTail_sharp_bounds
+  kind: theorem
+  summary: Every positive relative tolerance gives eventual two-sided sharp TW1 right-tail bounds.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW1SharpRightTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2-righttail-isequivalent
+  decl: RMTFoundations.TracyWidom.TW2_rightTail_isEquivalent
+  kind: theorem
+  summary: Sharp order-two right-tail equivalence with exact canonical Airy exponential rate and prefactor.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW2RightTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2-righttail-ratio-tendsto-one
+  decl: RMTFoundations.TracyWidom.TW2_rightTail_ratio_tendsto_one
+  kind: theorem
+  summary: The actual TW2 upper tail divided by its exact exponential-power leading term tends to one.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW2RightTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2-righttail-sharp-bounds
+  decl: RMTFoundations.TracyWidom.TW2_rightTail_sharp_bounds
+  kind: theorem
+  summary: Every positive relative tolerance gives eventual two-sided sharp TW2 right-tail bounds.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW2RightTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw2-righttail-logdet-quadratic
+  decl: RMTFoundations.TracyWidom.TW2_rightTail_logdet_quadratic
+  kind: theorem
+  summary: The stated physical small-trace condition bounds the TW2 logarithmic determinant error by twice
+    trace squared.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW2RightTail.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airyderivativeasymptotics-airy-deriv-isequivalent
+  decl: RMTFoundations.TracyWidom.AiryDerivativeAsymptotics.airy_deriv_isEquivalent
+  kind: theorem
+  summary: The actual Airy derivative has its exact conventional positive-infinity leading term.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/AiryDerivativeAsymptotics.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airyquantitativeasymptotics-airy-relative-error
+  decl: RMTFoundations.TracyWidom.AiryQuantitativeAsymptotics.airy_relative_error
+  kind: theorem
+  summary: For every positive x, the actual Ai relative leading-term error is at most 5 divided by 48
+    x to the three-halves.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/AiryQuantitativeAsymptotics.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airynegativeamplitude-airy-negative-bound
+  decl: RMTFoundations.TracyWidom.AiryNegativeAmplitude.airy_negative_bound
+  kind: theorem
+  summary: The actual negative Airy amplitude is bounded by the constructed energy constant times the
+    negative argument to minus one-quarter.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/AiryNegativeAmplitude.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-gueprojection-hermitefunction-orthogonality
+  decl: RMTFoundations.TracyWidom.GUEProjection.hermiteFunction_orthogonality
+  kind: theorem
+  summary: The normalized probabilists Hermite functions have exact Lebesgue orthogonality.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/GUEHermiteFunctions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-gueprojection-hermitevector-orthonormal
+  decl: RMTFoundations.TracyWidom.GUEProjection.hermiteVector_orthonormal
+  kind: theorem
+  summary: The actual normalized Hermite L2 vectors form an orthonormal family.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/GUEHermiteFunctions.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-gueprojection-hermitekernel-cd
+  decl: RMTFoundations.TracyWidom.GUEProjection.hermiteKernel_cd
+  kind: theorem
+  summary: The physical normalized Hermite projection kernel obeys the Christoffel-Darboux identity.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/GUEHermiteKernel.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-gueprojection-hermitekernel-projection
+  decl: RMTFoundations.TracyWidom.GUEProjection.hermiteKernel_projection
+  kind: theorem
+  summary: The finite normalized Hermite kernel is an integral projection.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/GUEHermiteKernel.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-gueprojection-gue-density-integrable
+  decl: RMTFoundations.TracyWidom.GUEProjection.gue_density_integrable
+  kind: theorem
+  summary: The explicit finite labeled GUE eigenvalue density is integrable under product Lebesgue measure.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/GUEDensity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-gueprojection-gue-density-integral
+  decl: RMTFoundations.TracyWidom.GUEProjection.gue_density_integral
+  kind: theorem
+  summary: The explicit finite labeled GUE eigenvalue density has integral one.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/GUEDensity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-gueprojection-gue-projection-determinantal-ensemble
+  decl: RMTFoundations.TracyWidom.GUEProjection.gue_projection_determinantal_ensemble
+  kind: theorem
+  summary: The explicit finite GUE eigenvalue density is nonnegative, normalized, determinantal, with
+    a projection kernel of trace N.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/GUEDensity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-andreief-orthonormal-determinant-integral
+  decl: RMTFoundations.TracyWidom.Andreief.orthonormal_determinant_integral
+  kind: theorem
+  summary: The squared determinant of an integrable orthonormal family has product integral N factorial.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/GUEAndreief.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hermiteedgereduction-edgeslope-hasderivat
+  decl: RMTFoundations.TracyWidom.HermiteEdgeReduction.edgeSlope_hasDerivAt
+  kind: theorem
+  summary: The genuinely normalized Hermite edge mode obeys its exact rescaled second-order equation.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/HermiteEdgeReduction.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-hermiteedgekernel-scaled-kernel-slope
+  decl: RMTFoundations.TracyWidom.HermiteEdgeKernel.scaled_kernel_slope
+  kind: theorem
+  summary: The actual finite Hermite edge kernel has the proved scaled Christoffel-Darboux slope formula.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/HermiteEdgeKernel.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-airynormalizationobstacle-positive-airy-ode-does-not-fix-amplitude
+  decl: RMTFoundations.TracyWidom.AiryNormalizationObstacle.positive_airy_ode_does_not_fix_amplitude
+  kind: theorem
+  summary: A nonzero positive Airy-equation solution can have a different amplitude; ODE positivity alone
+    does not select the edge normalization.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/AiryNormalizationObstacle.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4r-contdiff-one
+  decl: RMTFoundations.TracyWidom.TW4R_contDiff_one
+  kind: theorem
+  summary: The actual TW96-scaled determinant-average TW4 function is C1.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW4Regularity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4airyr-contdiff-one
+  decl: RMTFoundations.TracyWidom.TW4AiryR_contDiff_one
+  kind: theorem
+  summary: The actual raw Airy determinant-average TW4 function is C1.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW4Regularity.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4airyr-eq-sqrt-tw2r-cosh-tail
+  decl: RMTFoundations.TracyWidom.TW4AiryR_eq_sqrt_TW2R_cosh_tail
+  kind: theorem
+  summary: The actual raw TW4 determinant average equals the positive TW2 square root times the Painleve
+    tail cosh factor.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW4IntegralFormula.lean
+  status: internal
+  citation: null
+- id: rmt-foundations/tw-tw4airyr-monotone-iff-resolvent-sign
+  decl: RMTFoundations.TracyWidom.TW4AiryR_monotone_iff_resolvent_sign
+  kind: theorem
+  summary: Monotonicity of the physical raw TW4 function is equivalent to the exact stated resolvent sign
+    inequality.
+  aliases: []
+  keywords:
+  - tracy-widom
+  - airy
+  - gue
+  - gse
+  file: RMTFoundations/TracyWidom/TW4Regularity.lean
+  status: internal
+  citation: null

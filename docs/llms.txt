@@ -1,0 +1,42 @@
+# rmt-foundations 0.1.0
+
+> Lean 4 library (package `RMTFoundations`) of Tracy–Widom, Airy, Painlevé II,
+> finite GUE and analytic random-matrix results. Proved: TW1/TW2 distribution
+> functions, measures, densities, quantiles, moments and tail bounds;
+> Hastings–McLeod; TW4 function identities; extended Airy kernel with its
+> one-time TW2 reduction. Not established: TW4 monotonicity or TW4 measure;
+> GUE edge limit without the hypothesis `GUELimit TW2R`; multi-time Airy2
+> convergence or probability properties; sharp cubic left-tail asymptotics;
+> C^1 regularity of TW1/TW2 densities.
+
+Declarations and their hypotheses outrank all prose, including this file.
+Links point to branch `main`; for release `v0.1.0`, read the same paths at
+that tag.
+
+## Required context
+
+- [Agent contract](https://github.com/chenle02/rmt-foundations-lean/blob/main/AGENTS.md): authority order, claim boundary, change rules
+- [Claim inventory](https://github.com/chenle02/rmt-foundations-lean/blob/main/claims.yaml): curated declarations with file and status
+- [Formalization record](https://github.com/chenle02/rmt-foundations-lean/blob/main/formalization.yaml)
+- [Module inventory](https://github.com/chenle02/rmt-foundations-lean/blob/main/MODULES.tsv)
+- [Umbrella imports](https://github.com/chenle02/rmt-foundations-lean/blob/main/RMTFoundations.lean)
+- [Toolchain](https://github.com/chenle02/rmt-foundations-lean/blob/main/lean-toolchain): Lean v4.35.0-rc2
+- [Verification entrypoint](https://github.com/chenle02/rmt-foundations-lean/blob/main/scripts/verify.sh)
+
+## Guided documentation
+
+- [Getting started](https://chenle02.github.io/rmt-foundations-lean/getting-started.html)
+- [Status and boundary](https://chenle02.github.io/rmt-foundations-lean/status.html)
+- [Using as a dependency](https://chenle02.github.io/rmt-foundations-lean/dependency.html)
+- [Module map](https://chenle02.github.io/rmt-foundations-lean/modules.html)
+- [Declaration index](https://chenle02.github.io/rmt-foundations-lean/declarations.html)
+- [Trust and reproducibility](https://chenle02.github.io/rmt-foundations-lean/trust.html)
+
+## Optional
+
+- [Contributing](https://github.com/chenle02/rmt-foundations-lean/blob/main/CONTRIBUTING.md)
+- [Citation metadata](https://github.com/chenle02/rmt-foundations-lean/blob/main/CITATION.cff)
+- [Examples](https://github.com/chenle02/rmt-foundations-lean/tree/main/examples)
+
+Build: `lake exe cache get`, `lake build`, then `bash scripts/verify.sh`.
+Axioms: only `propext`, `Classical.choice`, `Quot.sound`.

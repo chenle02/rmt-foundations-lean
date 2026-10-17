@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below and record the source commit you used."
+type: software
+title: "rmt-foundations: random-matrix and analytic foundations in Lean"
+abstract: "A Lean 4 library of Tracy-Widom distributions, Airy and Painleve II theory, finite GUE identities and analytic random-matrix tools. Every result is kernel-checked."
+authors:
+  - family-names: Chen
+    given-names: Le
+    affiliation: "Department of Mathematics and Statistics, Auburn University"
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/chenle02/rmt-foundations-lean"
+url: "https://chenle02.github.io/rmt-foundations-lean/"
+keywords:
+  - random matrices
+  - Tracy-Widom
+  - Painleve II
+  - Airy function
+  - Lean
+  - formal verification

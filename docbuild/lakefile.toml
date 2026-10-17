@@ -1,0 +1,14 @@
+name = "docbuild"
+reservoir = false
+version = "0.1.0"
+packagesDir = "../.lake/packages"
+
+[[require]]
+name = "doc-gen4"
+git = "https://github.com/leanprover/doc-gen4.git"
+# v4.35.0-rc2; matches the root lean-toolchain.
+rev = "d736b237948ab1bdf316407a575f0d3c7f6ba772"
+
+[[require]]
+name = "RMTFoundations"
+path = "../"

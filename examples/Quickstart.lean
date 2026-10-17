@@ -1,0 +1,14 @@
+import RMTFoundations
+open RMTFoundations.Resolvent RMTFoundations.Airy RMTFoundations.TWOneMonotone
+#check resolvent_identity
+#check iteratedDeriv_two_airyAiReal
+#check monotone_TW1R
+#check RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment
+#check RMTFoundations.Taylor.remainder_eq_interval_integral
+#check RMTFoundations.ResolventProbe.joint
+#check RMTFoundations.CumulantsProbe.joint
+#check RMTFoundations.Airy.airyAiReal_isAirySolution
+#check RMTFoundations.MarchenkoPastur.mpMeasure_prob
+#check RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic
+#check RMTFoundations.FreeConvolutionProbe.shift_bounds_joint
+#check RMTFoundations.StructureProbe.bernstein_gaussian

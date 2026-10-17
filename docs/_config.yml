@@ -1,0 +1,11 @@
+title: rmt-foundations
+description: Random-matrix and analytic foundations checked in Lean
+url: https://chenle02.github.io
+baseurl: /rmt-foundations-lean
+markdown: kramdown
+theme: null
+plugins: []
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

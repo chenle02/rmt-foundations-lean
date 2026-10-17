@@ -1,0 +1,10 @@
+.lake/
+*.log
+checker/
+verification-output/
+build/
+docbuild/.lake/
+__pycache__/
+*.pyc
+
+!.lean-receipts/*.log

@@ -1,0 +1,45 @@
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      LEAN_NUM_THREADS: 4
+    steps:
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+      - uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865 # v1.6.1
+        with:
+          auto-config: "false"
+          build: "true"
+          test: "false"
+          lint: "false"
+          use-mathlib-cache: "true"
+      - name: Cold verification of source, axioms, tests, examples and kernel replay
+        run: |
+          # The verifier requires an empty project build directory.
+          rm -rf -- .lake/build
+          bash scripts/verify.sh
+  docs-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+      - name: Check generated inventories and machine entrypoints
+        run: python3 scripts/build_docs.py --check
+      - name: Build main:/docs with GitHub Pages Jekyll
+        uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1.0.13
+        with:
+          source: docs
+          destination: build/site
+      - name: Check rendered links and assets
+        run: python3 scripts/build_docs.py --site build/site
