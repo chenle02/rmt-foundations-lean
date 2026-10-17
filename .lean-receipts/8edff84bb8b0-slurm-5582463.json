@@ -1,0 +1,23 @@
+{
+  "commit": "8edff84bb8b00441bf8b860b96547122103c0279",
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_rev": "8ab8a31c6565f9f71fe6c5ed91babd559e8deae4",
+  "sorry_count": 0,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "report_sha256": "426aac29b319c2734e1f04ab06910f06bf03ce2c5fd74bca042bb272350b9ab5",
+  "job_id": "slurm-5582463",
+  "checker": "verify.sbatch (lean-pkg receipt slurm --template) running python3 scripts/verify.py: cold standalone build of all 215 production/test/reference modules; all 212 kernel selectors replayed by lake env leanchecker -v; standard-axiom audit; six examples",
+  "generated_at": "2026-10-17T14:19:45Z",
+  "job_stdout_sha256": "6c0dad9f98e5e6dd5d5e459a67b7c0b990ff4f9927b18a9110829157cf540c45",
+  "manifest_sha256": "f1cbced8c0e07e3f2b98701286a04b56cfa96a171be6f9ac744ea36c204e914a",
+  "log_commit_bound": true,
+  "report_compressed": {
+    "format": "gzip",
+    "sha256": "61c7bb45316c0c768973c18bce20a6b22393c9b3d0c4652fc67b2dc73bdc000b",
+    "bytes": 58585197
+  }
+}
