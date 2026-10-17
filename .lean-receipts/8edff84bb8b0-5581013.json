@@ -1,0 +1,15 @@
+{
+  "commit": "8edff84bb8b00441bf8b860b96547122103c0279",
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_rev": "8ab8a31c6565f9f71fe6c5ed91babd559e8deae4",
+  "sorry_count": 0,
+  "axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "report_sha256": "b498dae6cfb9033be078a4c614f505b2a96edf14e1c0b2fef90beafbcc543d86",
+  "job_id": "5581013",
+  "checker": "cold standalone build of all 215 production/test/reference modules; all 212 kernel selectors replayed by lake env leanchecker -v; standard-axiom audit; six examples",
+  "generated_at": "2026-10-17T01:01:27.607482+00:00"
+}
