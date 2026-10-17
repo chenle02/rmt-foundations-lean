@@ -1,0 +1,14 @@
+commit=c90d3cc383cc25c0d5f3533620521b9b39d89ee2
+tree=807b4e7d4478c3a2764274de25c5d9cb0418c1f4
+slurm_job_id=5572122
+node=node037
+lean=Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)
+lake=Lake version 5.0.0-src+11acb17 (Lean version 4.35.0-rc2)
+toolchain_tar=<cluster-scratch>/lean-4.35.0-rc2-linux.tar.zst sha256=b67d0e0ba959fc74e186f1b44aebca32d6ecb6a28f8e9a029fc4e9f73398a049
+mathlib_cache_tar=<cluster-scratch>/cache-0056411fdd2cff16c9168abef5399658eb53d886e43073db1d788b013f9a1e57.tar sha256=0056411fdd2cff16c9168abef5399658eb53d886e43073db1d788b013f9a1e57
+source_tar_sha256=488c74588a46ad269d02d63b94b2c16f7f6177a2cc04d311a8cf9f6a8334e65f
+lean_num_threads=4
+pack=rmt-foundations-c90d3cc383cc-lake-build.tar.zst bytes=645860850 sha256=6271474ad480719254d17dd8c13904233efef31e4f415d518767bf0e95c50837
+pack_contents=.lake/build only (lib, ir, *.olean/*.ilean/*.trace/*.hash); .lake/packages excluded
+olean_count=206
+finished=2026-10-15T23:39:15Z

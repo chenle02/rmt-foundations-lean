@@ -46,7 +46,7 @@ status:
   evidence:
     commit: 8edff84bb8b00441bf8b860b96547122103c0279
     gate_receipt: .lean-receipts/8edff84bb8b0-5581013.json
-    comparator_receipt: null
+    comparator_receipt: .lean-receipts/8edff84bb8b0-comparator.json
   main_results:
   - comparator_config: comparator.json
     declaration: RMTFoundations.Airy.iteratedDeriv_two_airyAiReal

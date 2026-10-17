@@ -1,0 +1,200 @@
+{
+  "build_provenance": {
+    "cache_reused": 196,
+    "compiled": false,
+    "modules_built": 0,
+    "prebuilt": true,
+    "source": "easley job 5572122 node037 v4.35.0-rc2 sha256 6271474ad480719254d17dd8c13904233efef31e4f415d518767bf0e95c50837 (built from tree 807b4e7d; X4 differs only in claims.yaml, docs/declarations.html, README.md, docs/citation.html and formalization.yaml)"
+  },
+  "commit": "8edff84bb8b00441bf8b860b96547122103c0279",
+  "configs": [
+    {
+      "challenge_module": "Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/8edff84bb8b0-comparator-comparator.log",
+      "log_sha256": "a67af1a09074231861284b018c4788343c1c745f6d91effec1e2992262a4bae1",
+      "path": "comparator.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "b93890000b81620894f9451584cc92fc896149d4c16a5b830297ee0058dfc5b5",
+      "solution_module": "Solution",
+      "theorem_names": [
+        "RMTFoundations.Airy.iteratedDeriv_two_airyAiReal",
+        "RMTFoundations.Airy.isTraceClass_airyKernelShift",
+        "RMTFoundations.Fredholm.fredholmSeries_entire",
+        "RMTFoundations.TWOneMonotone.monotone_TW1R",
+        "RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment",
+        "RMTFoundations.Resolvent.resolvent_identity",
+        "RMTFoundations.Taylor.remainder_eq_interval_integral",
+        "RMTFoundations.WalkMajorant.walk_count_majorant",
+        "RMTFoundations.Airy.airySolution_unique",
+        "RMTFoundations.Stieltjes.analyticOn_stieltjes",
+        "RMTFoundations.MarchenkoPastur.mpMeasure_prob",
+        "RMTFoundations.MarchenkoPastur.mpMeasure_density",
+        "RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic",
+        "RMTFoundations.FreeConvolution.subordination",
+        "RMTFoundations.HerglotzBorelProof.herglotzBorel",
+        "RMTFoundations.StieltjesInversion.tendsto_interval_im"
+      ],
+      "units": [
+        {
+          "log_sha256": "214691a04384ea188aab9b60cfd27bceacdf9ac7f7bb2271cac2e5c2a357b3c4",
+          "slots": [
+            "RMTFoundations.Airy.iteratedDeriv_two_airyAiReal"
+          ]
+        },
+        {
+          "log_sha256": "a9a7c4a437a3569823edbca021c6baf03e3a85c575f9c7f51324a999b24c59a5",
+          "slots": [
+            "RMTFoundations.Airy.isTraceClass_airyKernelShift"
+          ]
+        },
+        {
+          "log_sha256": "c4ccc39aa2cd00e08faf7ff886997dcf64da6bf969a098dbc1a1778143fd38df",
+          "slots": [
+            "RMTFoundations.Fredholm.fredholmSeries_entire"
+          ]
+        },
+        {
+          "log_sha256": "349f3927e57097286a2c05d88c1f9c5267d8189f98ba64b31020ed64256b7bb6",
+          "slots": [
+            "RMTFoundations.TWOneMonotone.monotone_TW1R"
+          ]
+        },
+        {
+          "log_sha256": "48ad7747b4b6deec825a025427ada7ee1195b2ff54aafd1b4cb64622ab0fb7c7",
+          "slots": [
+            "RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment"
+          ]
+        },
+        {
+          "log_sha256": "e72cda21484e0655c30bb79f1925d8ddcc1da8fedc56137238a8c8456bb4ba8a",
+          "slots": [
+            "RMTFoundations.Resolvent.resolvent_identity"
+          ]
+        },
+        {
+          "log_sha256": "bcf88457a5d953fc4ef3000719ebe4bee675223655bd1cb573dc1b16388cf91d",
+          "slots": [
+            "RMTFoundations.Taylor.remainder_eq_interval_integral"
+          ]
+        },
+        {
+          "log_sha256": "0dcce749cd07ae86846c25affcd7b33c96720c6dc64e71067dd27942ab018579",
+          "slots": [
+            "RMTFoundations.WalkMajorant.walk_count_majorant"
+          ]
+        },
+        {
+          "log_sha256": "b67d9f1bb69471afb769cd2404636d4b7c280bf7610ee619282f21be414b016e",
+          "slots": [
+            "RMTFoundations.Airy.airySolution_unique"
+          ]
+        },
+        {
+          "log_sha256": "c57f1b0f4778488f027ed1ae560952b7e4332d5c041fd6b79efde04f9437ccfe",
+          "slots": [
+            "RMTFoundations.Stieltjes.analyticOn_stieltjes"
+          ]
+        },
+        {
+          "log_sha256": "67125b88c50c90e248dfd4d2ffa4f036ea73477658476d4316b9172412bca3ab",
+          "slots": [
+            "RMTFoundations.MarchenkoPastur.mpMeasure_prob"
+          ]
+        },
+        {
+          "log_sha256": "8436c9524ec4b48c4f622f2347ec7dc7aaae161791a0a1d3dc491c3259cbf722",
+          "slots": [
+            "RMTFoundations.MarchenkoPastur.mpMeasure_density"
+          ]
+        },
+        {
+          "log_sha256": "232610d7948f4b6323dba99ceb4172067699af2dacdca0c1335f78dbfdd48fd0",
+          "slots": [
+            "RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic"
+          ]
+        },
+        {
+          "log_sha256": "42aa6fe5613c67666efec36b1bc284a878744c65e3797788d0b159928bf8c78d",
+          "slots": [
+            "RMTFoundations.FreeConvolution.subordination"
+          ]
+        },
+        {
+          "log_sha256": "ff950adab865e7cc2ea48a3ebfe928a4ac07d7bbe876bf558ab4148001224b5f",
+          "slots": [
+            "RMTFoundations.HerglotzBorelProof.herglotzBorel"
+          ]
+        },
+        {
+          "log_sha256": "ed98664c963a3ef2c6ff9f66554e49f7cc976d3e052f4d25dcd5f220c4ca3277",
+          "slots": [
+            "RMTFoundations.StieltjesInversion.tendsto_interval_im"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-10-17T08:36:54+00:00",
+  "host": "lab-workstation",
+  "host_label": "lab-workstation",
+  "host_policy": "allowed by COMPARATOR_RECEIPT_ALLOW_HOST=1",
+  "job_id": "local-lab-workstation-2640628-20261017T083654Z",
+  "judges": 1,
+  "lean_threads": null,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mechanism": "toolchain",
+  "result": "pass",
+  "resumed_slots": 16,
+  "schema": "comparator-receipt/2",
+  "stack_limit": {
+    "hard_kb": "unlimited",
+    "soft_kb": "unlimited",
+    "source": "COMPARATOR_RECEIPT_STACK"
+  },
+  "stages": [
+    {
+      "exit": 0,
+      "stage": "checkout",
+      "status": "prepared",
+      "wall_s": 8.88
+    },
+    {
+      "exit": 0,
+      "stage": "cache-get",
+      "status": "prepared",
+      "wall_s": 3.605
+    },
+    {
+      "exit": 0,
+      "stage": "build",
+      "status": "prepared",
+      "wall_s": 6.965
+    },
+    {
+      "exit": 0,
+      "stage": "comparator",
+      "status": "ok",
+      "wall_s": 0.29
+    }
+  ],
+  "toolchain_resolution": {
+    "lake": "<home>/rmt-release/lake-j1",
+    "source": "env",
+    "version": null
+  },
+  "tools": {
+    "con-ron_sha256": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef",
+    "lake_sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+    "leanchecker_sha256": "9e36e955a251b1313c8eb5b7fa101282d51df109d34d8bb7c1cfdf51985aba29",
+    "leanexport_sha256": "c5bc1a10a21e22cbb3671d65987cdef2076833b14182d823ccb2153adf2fa954",
+    "nanoda_bin_sha256": "8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8"
+  },
+  "unit_size": 1
+}
