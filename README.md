@@ -178,7 +178,12 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.Airy.iteratedDeriv_two_airyAiReal` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.Airy.iteratedDeriv_two_airyAiReal` in [Challenge/Reference/Airy/Core.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Airy/Core.lean#L1147): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem iteratedDeriv_two_airyAiReal (x : ℝ /- [definition] -/ ) :
+    iteratedDeriv 2 airyAiReal x = x * airyAiReal x
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -186,7 +191,12 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.Airy.isTraceClass_airyKernelShift` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.Airy.isTraceClass_airyKernelShift` in [Challenge/Reference/Airy/Core.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Airy/Core.lean#L8894): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem isTraceClass_airyKernelShift (s : ℝ /- [definition] -/) :
+    IsTraceClass (airyKernelShift s)
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -194,7 +204,16 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.Fredholm.fredholmSeries_entire` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.Fredholm.fredholmSeries_entire` in [Challenge/Reference/Operator/Fredholm.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Operator/Fredholm.lean#L92): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem fredholmSeries_entire
+    (c : ℕ → ℂ /- [definition] -/ )
+    (M : ℝ /- [definition] -/ )
+    (hM : 0 ≤ M /- [standing] -/ )
+    (hc : ∀ n, ‖c n‖ ≤ M ^ n / (n.factorial : ℝ)  /- [standing] -/ )
+    : AnalyticOnNhd ℂ (fredholmSeries c) Set.univ
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -202,7 +221,11 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.TWOneMonotone.monotone_TW1R` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.TWOneMonotone.monotone_TW1R` in [Challenge/Reference/TracyWidom/OrderOneMonotone.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/TracyWidom/OrderOneMonotone.lean#L51791): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem monotone_TW1R : Monotone TW1R
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -210,7 +233,14 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment` in [Challenge/Reference/Probability/Cumulants.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Probability/Cumulants.lean#L63): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem moment_succ_eq_sum_cumulant_mul_moment [NeZero μ /- [standing] -/ ]
+    (h : (0 : ℝ) ∈ interior (integrableExpSet X μ)  /- [standing] -/ ) (n : ℕ /- [definition] -/ ) :
+    μ[X ^ (n + 1)] = ∑ j ∈ Finset.range (n + 1),
+      (n.choose j : ℝ) * cumulant (j + 1) X μ * μ[X ^ (n - j)]
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -218,7 +248,15 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.Resolvent.resolvent_identity` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.Resolvent.resolvent_identity` in [Challenge/Reference/Matrix/Resolvent.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Matrix/Resolvent.lean#L23): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem resolvent_identity (H : Matrix n n ℂ /- [definition] -/ ) (z₁ z₂ : ℂ /- [definition] -/ )
+    (h₁ : IsUnit (H - z₁ • (1 : Matrix n n ℂ)).det /- [standing] -/ )
+    (h₂ : IsUnit (H - z₂ • (1 : Matrix n n ℂ)).det /- [standing] -/ ) :
+    (H - z₁ • (1 : Matrix n n ℂ))⁻¹ - (H - z₂ • (1 : Matrix n n ℂ))⁻¹
+      = (z₁ - z₂) • ((H - z₁ • (1 : Matrix n n ℂ))⁻¹ * (H - z₂ • (1 : Matrix n n ℂ))⁻¹)
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -226,7 +264,14 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.Taylor.remainder_eq_interval_integral` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.Taylor.remainder_eq_interval_integral` in [Challenge/Reference/Analysis/Taylor.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Analysis/Taylor.lean#L37): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem remainder_eq_interval_integral (F : ℝ → ℂ /- [definition] -/ ) (K : ℕ /- [definition] -/ )
+    (hF : ContDiff ℝ (K+1 : ℕ) F /- [standing] -/ ) (h : ℝ /- [standing] -/ ) :
+    remainder F K h = ∫ t in (0:ℝ)..h,
+      ((h-t)^K / (K.factorial : ℝ)) • iteratedDeriv (K+1) F t
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -234,7 +279,13 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.WalkMajorant.walk_count_majorant` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.WalkMajorant.walk_count_majorant` in [Challenge/Reference/Combinatorics/WalkMajorant.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Combinatorics/WalkMajorant.lean#L17): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem walk_count_majorant (k v s : ℕ /- [definition] -/ ) (hv : 1 ≤ v /- [standing] -/ ) (hk : k + 2 = 2 * v + s /- [standing] -/ ) :
+    (k.choose (2 * v - 2) : ℝ) * (v : ℝ) ^ (2 * s) * 2 ^ (2 * v - 2)
+      ≤ 2 ^ k * (k : ℝ) ^ (3 * s)
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -242,7 +293,12 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.Airy.airySolution_unique` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.Airy.airySolution_unique` in [Challenge/Reference/Airy/ODE.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Airy/ODE.lean#L221): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem airySolution_unique (hf : IsAirySolution f f' /- [standing] -/ ) (hg : IsAirySolution g g' /- [standing] -/ ) {t₀ : ℝ /- [definition] -/ }
+    (h0 : f t₀ = g t₀ /- [standing] -/ ) (h1 : f' t₀ = g' t₀ /- [standing] -/ ) : f = g
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -250,7 +306,12 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.Stieltjes.analyticOn_stieltjes` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.Stieltjes.analyticOn_stieltjes` in [Challenge/Reference/Stieltjes/HalfPlane.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Stieltjes/HalfPlane.lean#L86): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem analyticOn_stieltjes (μ : Measure ℝ /- [definition] -/ ) [IsFiniteMeasure μ /- [standing] -/ ] :
+    AnalyticOn ℂ (stieltjes μ) {w : ℂ | 0 < w.im}
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -258,7 +319,14 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_prob` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_prob` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/MarchenkoPastur.lean#L535): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem mpMeasure_prob (y : ℝ 
+     /- [definition] -/ ) (hy : 0 < y 
+     /- [standing] -/ ) (hlt : y < 1 
+     /- [standing] -/ ) : IsProbabilityMeasure (mpMeasure y)
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -266,7 +334,14 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_density` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_density` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/MarchenkoPastur.lean#L526): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem mpMeasure_density (y : ℝ 
+     /- [definition] -/ ) (hy : 0 < y 
+     /- [standing] -/ ) (hlt : y < 1 
+     /- [standing] -/ ) : mpMeasure y = volume.withDensity (fun x => ENNReal.ofReal (mpDensity y x))
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -274,7 +349,17 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/MarchenkoPastur.lean#L632): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem mpMeasure_transform_quadratic (y : ℝ 
+     /- [definition] -/ ) (hy : 0 < y 
+     /- [standing] -/ ) (hlt : y < 1 
+     /- [standing] -/ ) (z : ℂ 
+     /- [definition] -/ ) (hz : 0 < z.im 
+     /- [standing] -/ ) : (y : ℂ)*z*(stieltjes (mpMeasure y) z)^2+
+      (z+y-1)*stieltjes (mpMeasure y) z+1 = 0
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -282,7 +367,15 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.FreeConvolution.subordination` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.FreeConvolution.subordination` in [Challenge/Reference/Measure/FreeConvolution.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/FreeConvolution.lean#L1200): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem subordination (h1 : SupportedIn μ1 R /- [standing] -/ ) (h2 : SupportedIn μ2 R /- [standing] -/ ) (hR : 0 < R /- [standing] -/ ) {z : ℂ /- [definition] -/ }
+    (hz : 0 < z.im /- [standing] -/ ) :
+    z.im ≤ (omega1 μ1 μ2 z).im ∧ z.im ≤ (omega2 μ1 μ2 z).im
+      ∧ -(stieltjes μ1 (omega1 μ1 μ2 z))⁻¹ = omega1 μ1 μ2 z + omega2 μ1 μ2 z - z
+      ∧ -(stieltjes μ2 (omega2 μ1 μ2 z))⁻¹ = omega1 μ1 μ2 z + omega2 μ1 μ2 z - z
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -290,7 +383,11 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.HerglotzBorelProof.herglotzBorel` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.HerglotzBorelProof.herglotzBorel` in [Challenge/Reference/Measure/HerglotzBorel.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/HerglotzBorel.lean#L516): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem herglotzBorel : RMTFoundations.AnalyticHalfPlane.HerglotzBorel
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
@@ -298,7 +395,13 @@ Kernel-checked foundations for random matrix theory (Airy function and kernel, F
 
 **Verified.** Lean accepts the proof, and lean-pkg's record shows every check of this result passed (the build, and the statement comparison).
 
-**In Lean.** `RMTFoundations.StieltjesInversion.tendsto_interval_im` in [Challenge.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge.lean): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this). Its statement could not be read reliably from the source; open the file to read it.
+**In Lean.** `RMTFoundations.StieltjesInversion.tendsto_interval_im` in [Challenge/Reference/Measure/StieltjesInversion.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/StieltjesInversion.lean#L190): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+
+```lean
+theorem tendsto_interval_im (ν : Measure ℝ /- [definition] -/ ) [IsFiniteMeasure ν /- [standing] -/ ] (a b : ℝ /- [definition] -/ ) (hab : a < b /- [standing] -/ ) :
+    Tendsto (fun η : ℝ => ∫ x in a..b, (stieltjes ν ((x : ℂ) + (η : ℂ) * Complex.I)).im)
+      (𝓝[>] 0) (𝓝 (π * (ν.real (Ioo a b) + ν.real {a} / 2 + ν.real {b} / 2)))
+```
 
 **Axioms.** At most `Classical.choice`, `Quot.sound`, `propext` (what the build check records for the whole package).
 
