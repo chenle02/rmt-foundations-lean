@@ -1,0 +1,61 @@
+schema: coverage/1
+package: rmt-foundations
+kind: library
+summary: Kernel-checked foundations for random matrix theory (Airy function and kernel, Fredholm series,
+  order-one Tracy-Widom monotonicity, moment-cumulant recursion, resolvent identity, Marchenko-Pastur
+  law, Stieltjes transform and inversion, Herglotz-Borel representation, free-convolution subordination);
+  16 main results compared.
+rows:
+- title: The actual real Airy function satisfies its second-order ODE
+  claims:
+  - rmt-foundations/airy-ode
+- title: The genuine shifted Airy kernel operator is trace class
+  claims:
+  - rmt-foundations/airy-trace-class
+- title: Factorially bounded coefficients give an entire Fredholm power series
+  claims:
+  - rmt-foundations/fredholm-entire
+- title: The canonical real order-one Airy kernel series is monotone
+  claims:
+  - rmt-foundations/tw1-monotone
+- title: Analytic moment-cumulant recursion at zero on the interior of the exponential integrability set
+  claims:
+  - rmt-foundations/moment-cumulant-recursion
+- title: First resolvent identity for two invertible shifts of an arbitrary finite complex matrix
+  claims:
+  - rmt-foundations/first-resolvent-identity
+- title: Signed real-parameter complex-valued Taylor integral remainder
+  claims:
+  - rmt-foundations/taylor-integral-remainder
+- title: Scalar binomial repeated-edge walk-count majorant; does not count walks itself
+  claims:
+  - rmt-foundations/walk-defect-majorant
+- title: Any two Airy ODE solutions with identical first-order initial data agree
+  claims:
+  - rmt-foundations/airy-abstract-uniqueness
+- title: The finite-measure Stieltjes transform is analytic on the upper half-plane
+  claims:
+  - rmt-foundations/stieltjes-analytic
+- title: For aspect ratio 0 < y < 1, the explicitly constructed MP measure is a probability law
+  claims:
+  - rmt-foundations/mp-probability
+- title: The MP law equals volume weighted by its explicit density for 0 < y < 1
+  claims:
+  - rmt-foundations/mp-density
+- title: The genuine MP Stieltjes transform solves its covariance quadratic in the upper half-plane
+  claims:
+  - rmt-foundations/mp-transform-quadratic
+- title: Analytic subordination for compactly supported probability measures with explicit support hypotheses
+  claims:
+  - rmt-foundations/free-convolution-subordination
+- title: Finite Herglotz-Borel representation under upper-half-plane holomorphy, positivity and an inverse-height
+    bound
+  claims:
+  - rmt-foundations/herglotz-borel
+- title: The interval Stieltjes inversion limit includes the exact half-endpoint atom terms
+  claims:
+  - rmt-foundations/stieltjes-inversion
+compute:
+- cluster: easley
+  jobs:
+  - slurm-5582463
