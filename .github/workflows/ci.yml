@@ -10,7 +10,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 340
     env:
       LEAN_NUM_THREADS: 4
     steps:
@@ -18,14 +18,17 @@ jobs:
       - uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865 # v1.6.1
         with:
           auto-config: "false"
-          build: "true"
+          build: "false"
           test: "false"
           lint: "false"
           use-mathlib-cache: "true"
       - name: Cold verification of source, axioms, tests, examples and kernel replay
         run: |
-          # The verifier requires an empty project build directory.
+          # The verifier does the one cold build itself (lean-action above only installs the toolchain and
+          # the Mathlib cache) and requires an empty project build directory.
           rm -rf -- .lake/build
+          # Lean recurses deeply on the largest modules; the runner's default 8 MiB stack is not enough.
+          ulimit -s unlimited
           bash scripts/verify.sh
   docs-check:
     runs-on: ubuntu-latest
