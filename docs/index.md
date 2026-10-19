@@ -46,3 +46,5 @@ permalink: /index.html
 <a class="card" href="citation.html"><strong>Citation</strong><span>How to cite; acknowledgments.</span></a>
 <a class="card" href="agents.html"><strong>Agents</strong><span>Authority order and rules.</span></a>
 </div>
+
+**Verification.** The [verification page](verification.md) shows each of the 16 compared main results beside its Lean statement, with the checks and receipts behind it; [coverage](coverage.md) lists every result with its claims.
