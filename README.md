@@ -60,7 +60,7 @@ relative to the namespace `RMTFoundations`.
   Marchenko–Pastur measure has density
   $\sqrt{(b-x)(x-a)}/(2\pi y x)$ on $[a,b]$ with $a=(1-\sqrt y)^2$, $b=(1+\sqrt y)^2$
   (`MarchenkoPastur.mpMeasure_density`), and for a finite measure $\nu$ and $a<b$,
-  $\lim_{\eta\downarrow0}\int_a^b \operatorname{Im} S_\nu(x+i\eta)\,dx=\pi\big(\nu((a,b))+\tfrac12\nu(\lbrace a\rbrace)+\tfrac12\nu(\lbrace b\rbrace)\big)$
+  $`\lim_{\eta\downarrow0}\int_a^b \operatorname{Im} S_\nu(x+i\eta)\,dx=\pi\big(\nu((a,b))+\tfrac12\nu(\lbrace a\rbrace)+\tfrac12\nu(\lbrace b\rbrace)\big)`$
   (`StieltjesInversion.tendsto_interval_im`).
 
 The 16 main results of [`coverage.yaml`](coverage.yaml), each with its Lean
