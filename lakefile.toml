@@ -1,11 +1,13 @@
 name = "RMTFoundations"
-version = "0.1.0"
+version = "0.2.0"
 license = "Apache-2.0"
 description = "Airy functions, Fredholm determinants, Tracy-Widom laws and random-matrix analytic foundations"
 keywords = ["random-matrix", "tracy-widom", "airy", "fredholm", "probability"]
 versionTags = ["v*"]
 homepage = "https://chenle02.github.io/rmt-foundations-lean/"
 defaultTargets = ["RMTFoundations"]
+# Bound compiler workers explicitly; Lean defaults to hardware concurrency.
+weakLeanArgs = ["-j3"]
 
 [[require]]
 name = "mathlib"

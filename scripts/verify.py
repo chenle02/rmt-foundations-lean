@@ -39,7 +39,7 @@ buildlogs=out/'build';buildlogs.mkdir(exist_ok=True)
 def build(n):
  begin=time.monotonic()
  with (buildlogs/(n+'.log')).open('w') as f:
-  r=subprocess.run(['lake','build',n],stdout=f,stderr=subprocess.STDOUT,env=dict(os.environ,LEAN_NUM_THREADS=str(max(1,threads//workers))))
+  r=subprocess.run(['lake','build',n],stdout=f,stderr=subprocess.STDOUT,env=dict(os.environ,LEAN_NUM_THREADS=str(threads)))
  return dict(module=n,exit_code=r.returncode,seconds=time.monotonic()-begin)
 with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
  while pending or running:
@@ -59,7 +59,7 @@ if a.build_only:
  print('SCRATCH_PASS',len(finished),flush=True);raise SystemExit(0)
 for f in sorted((root/'examples').rglob('*.lean')):
  with (out/(f.stem+'.log')).open('w') as log:
-  subprocess.run(['lake','env','lean',str(f.relative_to(root))],stdout=log,stderr=subprocess.STDOUT,check=True)
+  subprocess.run(['lake','env','lean',f'-j{threads}',str(f.relative_to(root))],stdout=log,stderr=subprocess.STDOUT,check=True)
  print('EXAMPLE_PASS '+f.stem,flush=True)
 with (out/'axiom-output.log').open('wb') as log:
  for f in sorted(buildlogs.glob('*.log')):log.write(f.read_bytes())

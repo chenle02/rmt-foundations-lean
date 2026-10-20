@@ -13,10 +13,10 @@ entrances: README, the Pages site in `docs/`, and `llms.txt`.
 
 Resolve any inconsistency in favour of the declarations.
 
-## Claim boundary of version 0.1.0
+## Claim boundary of version 0.2.0
 
 Established: TW1/TW2 distribution functions, measures, densities, quantiles,
-moments and tail bounds; Painlevé II and Hastings–McLeod; TW4 function
+moments, smooth CDFs/densities and tail bounds; Painlevé II and Hastings–McLeod; TW4 function
 identities, regularity and endpoints; the extended Airy kernel and its one-time
 reduction to TW2; finite GUE Hermite and determinantal identities; Stieltjes,
 concentration, cumulant and resolvent tools.
@@ -27,9 +27,10 @@ Not established:
   (`TW4AiryR_monotone_iff_resolvent_sign` is an equivalence only);
 - the GUE edge limit without the hypothesis `GUELimit TW2R`;
 - that the finite-N density is the eigenvalue law of the GUE matrix model;
-- convergence or probability properties of the multi-time Airy2 expression;
+- unconditional distinct-time convergence for the multi-time Airy2 expression;
+  probability limits retain explicit finite-law and coordinate-limit hypotheses;
 - sharp cubic left-tail asymptotics;
-- C^1 regularity of the TW1/TW2 densities.
+- a global TW4 compact-window sign certificate.
 
 Do not write documentation that weakens a hypothesis or moves an item across
 this boundary.

@@ -35,9 +35,10 @@ status:
     GSE determinant average with proved global C1 regularity, endpoints and interior levels; extended
     Airy kernel and one-time TW2 identity; finite Hermite Christoffel-Darboux/Vandermonde identities.
     GUE identification is conditional on GUELimit; the finite-N density is not proved to be the eigenvalue
-    law of the matrix model. TW4 monotonicity/measure remain open. Multi-time Airy2 is a candidate only;
-    convergence, operator realization and probability properties remain open. TW1 and TW2 density C1 regularity
-    remains open; CDF C1 and density continuity/positivity are proved.
+    law of the matrix model. TW4 monotonicity/measure remain open. Multi-time Airy2 probability limits retain explicit finite-law joint-limit and scalar coordinate-limit
+    producers; the unconditional distinct-time producer remains open. TW1/TW2 CDFs and positive densities
+    are globally smooth. Hermite-to-Airy and one-time Fredholm limits, finite stationary Dyson/OU laws,
+    and TW4 two-tail positivity are proved; compact-window sign certificates remain explicit inputs.
   sorry_count: 0
   axioms:
   - Classical.choice

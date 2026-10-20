@@ -21,7 +21,7 @@ inside this directory and review the resulting manifest diff. Normal builds
 use the committed lock.
 
 The normal doc-gen4 facet documents transitive imports, including Mathlib and
-Lean core. Version 0.1.0 does not commit generated API pages or Mathlib documentation.
+Lean core. Version 0.2.0 does not commit generated API pages or Mathlib documentation.
 The guided site uses `docs/declarations.html` and `docs/modules.html` as its
 lightweight source-linked reference, generated from `claims.yaml` and
 `MODULES.tsv`. Full API documentation remains a local build option.
