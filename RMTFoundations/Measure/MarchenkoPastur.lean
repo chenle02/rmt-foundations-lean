@@ -655,6 +655,7 @@ theorem edge_constants_pos (y : ℝ
      /- [standing] -/ ) : 0 < edgeLower y ∧ 0 < edgeUpper y ∧ 0 < radius y/2 := by
   have hr := radius_pos y hy hlt
   have hs : 0 < shift y := by unfold shift; positivity
+  have he : 0 < scEdge y := hr
   unfold edgeLower edgeUpper scCoef
   constructor
   · positivity
