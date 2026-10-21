@@ -8,17 +8,21 @@ Tracy–Widom distributions, Airy and Painlevé II theory, finite GUE identities
 and analytic random-matrix tools, formalized in Lean 4.
 
 [![CI](https://github.com/chenle02/rmt-foundations-lean/actions/workflows/ci.yml/badge.svg)](https://github.com/chenle02/rmt-foundations-lean/actions/workflows/ci.yml)
-[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-153e63)](https://chenle02.github.io/rmt-foundations-lean/)
-[![Version](https://img.shields.io/badge/version-0.2.0-153e63)](CITATION.cff)
 [![Lean](https://img.shields.io/badge/Lean-v4.35.0-153e63)](lean-toolchain)
+[![Mathlib](https://img.shields.io/badge/Mathlib-56a0058-153e63)](https://github.com/leanprover-community/mathlib4/tree/56a005855ea17e0b0958f73ec801ae140b0a1679)
+[![Version](https://img.shields.io/badge/version-v0.2.0-153e63)](https://github.com/chenle02/rmt-foundations-lean/tree/v0.2.0)
 [![License](https://img.shields.io/badge/license-Apache--2.0-153e63)](LICENSE)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-153e63)](https://chenle02.github.io/rmt-foundations-lean/)
+
+[What is proved](#what-is-proved) · [Verification page](docs/verification.md) · [Build](#build-and-verify) · [Cite](#citation)
 
 </div>
 
-## What version 0.2.0 proves
+## What is proved
 
 Every item below is a Lean declaration checked by the kernel. The hypotheses
-of each declaration are part of the claim.
+of each declaration are part of the claim. Declaration names are given
+relative to the namespace `RMTFoundations`.
 
 - **TW1 and TW2 (GOE and GUE).** The distribution functions, defined as
   Fredholm determinants of Airy kernels, are globally smooth and
@@ -27,26 +31,47 @@ of each declaration are part of the claim.
   quantiles, an exponential moment and all absolute moments. Both have sharp
   right-tail asymptotics, left-tail bounds of linear exponential order, and
   the Painlevé II integral representations of $F_2$ and $F_1^2$.
+  (`TracyWidom.strictMono_TW1R`, `TracyWidom.TW1Measure_unique`,
+  `TracyWidom.TW2_rightTail_isEquivalent`, `TracyWidom.Painleve.TW2R_integral_formula`.)
 - **Hastings–McLeod.** Painlevé II has exactly one real global solution with
   relative Airy normalization at $+\infty$, and it equals the Fredholm
-  response.
+  response. (`TracyWidom.HastingsMcLeod.exists_unique`,
+  `TracyWidom.HastingsMcLeod.eq_canonical`.)
 - **TW4 (GSE).** The determinant-average function is positive and $C^1$, has
   limits 0 and 1, attains every level in $(0,1)$, and has a closed formula in
-  terms of TW2 and the Painlevé II solution.
+  terms of TW2 and the Painlevé II solution. (`TracyWidom.TW4R_positive`,
+  `TracyWidom.TW4AiryR_eq_sqrt_TW2R_cosh_tail`.)
 - **Airy2.** The extended Airy kernel, its integral realization, and the
   reduction of the one-time expression to TW2.
+  (`TracyWidom.Airy2.extendedAiryKernel_eq_integral`,
+  `TracyWidom.Airy2.airy2FredholmCandidate_one_time`.)
 - **Finite GUE.** Hermite Christoffel–Darboux identities, the normalized
   determinantal eigenvalue density with its projection kernel, and the GUE
   matrix model with the distribution function of its largest eigenvalue.
+  (`TracyWidom.GUEHermite.hermite_christoffel_darboux`,
+  `TracyWidom.GUEProjection.gue_projection_determinantal_ensemble`,
+  `TracyWidom.GUEIdentification.gueCDF`.)
 - **Analytic tools.** The Airy function and its asymptotics, Fredholm series,
   Stieltjes transforms (analyticity, inversion, Herglotz–Borel
   representation), the Marchenko–Pastur law, semicircle moments, free
   convolution subordination, Bernstein and Chernoff bounds, the
   moment–cumulant recursion, resolvent identities, and simple stochastic
-  integrals against Brownian motion.
+  integrals against Brownian motion. For example, for $0<y<1$ the
+  Marchenko–Pastur measure has density
+  $\sqrt{(b-x)(x-a)}/(2\pi y x)$ on $[a,b]$ with $a=(1-\sqrt y)^2$, $b=(1+\sqrt y)^2$
+  (`MarchenkoPastur.mpMeasure_density`), and for a finite measure $\nu$ and $a<b$,
+  $`\lim_{\eta\downarrow0}\int_a^b \operatorname{Im} S_\nu(x+i\eta)\,dx=\pi\big(\nu((a,b))+\tfrac12\nu(\lbrace a\rbrace)+\tfrac12\nu(\lbrace b\rbrace)\big)`$
+  (`StieltjesInversion.tendsto_interval_im`).
+
+The 16 main results of [`coverage.yaml`](coverage.yaml), each with its Lean
+statement and a plain-language statement beside it, are on the
+[verification page](docs/verification.md); the same page is rendered
+[below](#verification-at-a-glance). The
+[status page](https://chenle02.github.io/rmt-foundations-lean/status.html)
+names the declaration behind each item above.
 
 > [!IMPORTANT]
-> **Not established in this release.**
+> **Not proved here.**
 > - **TW4:** monotonicity, and hence a TW4 probability measure. On this point
 >   the library proves only that monotonicity is equivalent to a resolvent
 >   sign condition.
@@ -70,11 +95,24 @@ certificate hypotheses remain explicit.
 The [status page](https://chenle02.github.io/rmt-foundations-lean/status.html)
 names the declaration behind each item.
 
-## Quick start
+## Paper and references
+
+Standalone library; a motivating paper is in preparation.
+
+Some proofs are adapted from other Apache-2.0 Lean sources, recorded in
+[NOTICE](NOTICE): spectral results from Adam Benenson's *compact-spectral*
+(license bundled as [compact-spectral-LICENSE](compact-spectral-LICENSE)),
+derivative and weighted-pairing proofs from the
+[Tau Ceti](https://github.com/TauCetiProject/TauCeti) project (license bundled
+as [TauCeti-LICENSE](TauCeti-LICENSE)), and regularized hypergeometric
+material derived from [Mathlib](https://github.com/leanprover-community/mathlib4).
+
+## Build and verify
 
 Install [elan](https://github.com/leanprover/elan). The toolchain is the
-stable release **Lean v4.35.0**, pinned in `lean-toolchain`. Mathlib is
-pinned in `lake-manifest.json`.
+stable release **Lean v4.35.0**, pinned in [`lean-toolchain`](lean-toolchain).
+Mathlib is pinned to `56a005855ea17e0b0958f73ec801ae140b0a1679` (tag `v4.35.0`) in
+[`lake-manifest.json`](lake-manifest.json).
 
 ```sh
 git clone https://github.com/chenle02/rmt-foundations-lean.git
@@ -84,10 +122,19 @@ lake build
 ```
 
 [`examples/Quickstart.lean`](examples/Quickstart.lean) is a small consumer.
+The full verification is one script:
 
-## Use as a Lake dependency
+```sh
+bash scripts/verify.sh
+```
 
-Use the same `lean-toolchain` in your project and add to `lakefile.toml`:
+It checks the source policy, builds every module, test and example from a
+clean project build, compares the `#print axioms` output with
+[`EXPECTED-AXIOMS.txt`](EXPECTED-AXIOMS.txt), and replays each compiled module
+through `leanchecker`. It needs the pinned toolchain and Python 3.
+
+To use the library from another Lake project, use the same `lean-toolchain`
+and add to `lakefile.toml`:
 
 ```toml
 [[require]]
@@ -101,34 +148,8 @@ and write `import RMTFoundations`. The
 [dependency guide](https://chenle02.github.io/rmt-foundations-lean/dependency.html)
 covers narrower imports and version pinning.
 
-## Where to go next
-
-| If you want to | Start here |
-|---|---|
-| Use the library | [Getting started](https://chenle02.github.io/rmt-foundations-lean/getting-started.html) · [examples/](examples/) |
-| Find a theorem | [Module map](https://chenle02.github.io/rmt-foundations-lean/modules.html) · [Declaration index](https://chenle02.github.io/rmt-foundations-lean/declarations.html) · [claims.yaml](claims.yaml) |
-| Check the evidence | [Trust and reproducibility](https://chenle02.github.io/rmt-foundations-lean/trust.html) · [formalization.yaml](formalization.yaml) · [EXPECTED-AXIOMS.txt](EXPECTED-AXIOMS.txt) |
-| Contribute or use an agent | [CONTRIBUTING.md](CONTRIBUTING.md) · [AGENTS.md](AGENTS.md) · [llms.txt](llms.txt) |
-
-## Trust and reproducibility
-
-Proofs use only the standard axioms `propext`, `Classical.choice` and
-`Quot.sound`. There is no `sorry`, `admit`, custom axiom or `native_decide`.
-
-```sh
-bash scripts/verify.sh
-```
-
-This script checks the source policy, builds every module, test and example
-from a clean project build, compares the `#print axioms` output with
-`EXPECTED-AXIOMS.txt`, and replays each compiled module through
-`leanchecker`. It needs the pinned toolchain and Python 3. A kernel check
-confirms a proof; it does not remove any hypothesis from the statement.
-
-## Documentation
-
-GitHub Pages publishes the guided site from branch `main`, folder `/docs`,
-with its built-in Jekyll build. The pinned package in
+**Documentation.** GitHub Pages publishes the guided site from branch `main`,
+folder `/docs`, with its built-in Jekyll build. The pinned package in
 [`docbuild/`](docbuild/README.md) builds the full API reference locally:
 
 ```sh
@@ -138,33 +159,64 @@ lake -R -Kenv=dev build RMTFoundations:docs
 python3 -m http.server --directory .lake/build/doc 8000
 ```
 
-## Author
+## Find your way
+
+| If you want to | Start here |
+|---|---|
+| Use the library | [Getting started](https://chenle02.github.io/rmt-foundations-lean/getting-started.html) · [examples/](examples/) |
+| Find a theorem | [Module map](https://chenle02.github.io/rmt-foundations-lean/modules.html) · [Declaration index](https://chenle02.github.io/rmt-foundations-lean/declarations.html) · [claims.yaml](claims.yaml) |
+| Check the evidence | [Verification page](docs/verification.md) · [Coverage](docs/coverage.md) · [Trust and reproducibility](https://chenle02.github.io/rmt-foundations-lean/trust.html) · [formalization.yaml](formalization.yaml) · [EXPECTED-AXIOMS.txt](EXPECTED-AXIOMS.txt) |
+| Contribute or use an agent | [CONTRIBUTING.md](CONTRIBUTING.md) · [AGENTS.md](AGENTS.md) · [llms.txt](llms.txt) |
+
+## Trust and axioms
+
+Proofs use only the standard axioms `propext`, `Classical.choice` and
+`Quot.sound`. There is no `sorry`, `admit`, custom axiom or `native_decide`.
+The recorded build check at commit `8edff84bb8b0` found `sorry` count 0 and
+exactly these three axioms, and lean-pkg's claims ledger closes all 66
+required claims of [`claims.yaml`](claims.yaml). For the 16 main results of
+[`coverage.yaml`](coverage.yaml), the comparator confirmed that the proof in
+[`Solution.lean`](Solution.lean) proves exactly the statement in
+[`Challenge.lean`](Challenge.lean) (the reference statements under
+[`Challenge/`](Challenge/)), with only the permitted axioms, and independent
+kernels replayed it. The other declarations listed above are covered by the
+build check and the axiom comparison of `scripts/verify.sh`, not by the
+comparator. The build check ran on stable Lean `v4.35.0` with Mathlib `v4.35.0`,
+the lean-pkg stack `lts-2026.10` (see [How this was checked](#how-this-was-checked)).
+A kernel check confirms a proof; it does not remove any hypothesis from the
+statement. Details and receipts:
+[What the checks establish](#what-the-checks-establish).
+
+## Built with lean-pkg
+
+Developed and verified with [lean-pkg](https://github.com/lean-pkg/lean-pkg) ([doi:10.5281/zenodo.23272098](https://doi.org/10.5281/zenodo.23272098)).
+The receipts under [`.lean-receipts/`](.lean-receipts/) bind the checks to a
+source commit, and the verification section below is rendered by
+`lean-pkg page` from [`coverage.yaml`](coverage.yaml),
+[`claims.yaml`](claims.yaml) and those receipts;
+`lean-pkg page rmt-foundations --check --site docs` confirms that it and
+[`docs/verification.md`](docs/verification.md) are current.
+
+## Authors and AI disclosure
 
 **Le Chen**, Associate Professor, Department of Mathematics and Statistics,
 Auburn University.
 
-## AI disclosure
+Haoran Li — co-author of the research paper that motivated this library and proposer of the problem.
 
 Development used OpenAI Codex (gpt-6.1-sol) workers, with Anthropic Claude for
 orchestration and independent audits. Every result is kernel-checked and
 depends only on `propext`, `Classical.choice` and `Quot.sound`. Hypotheses and
 limitations are stated explicitly in the theorem statements.
 
-## Acknowledgments
+Released under [Apache-2.0](LICENSE). See [NOTICE](NOTICE) for third-party
+attributions and the bundled [compact-spectral](compact-spectral-LICENSE) and
+[Tau Ceti](TauCeti-LICENSE) licenses. Please cite *rmt-foundations*, version
+0.2.0, by Le Chen, and record the source commit you used. Metadata is in
+[CITATION.cff](CITATION.cff). See also the
+[citation page](https://chenle02.github.io/rmt-foundations-lean/citation.html).
 
-Haoran Li — co-author of the research paper that motivated this library and proposer of the problem.
-
-## License and citation
-
-[Apache-2.0](LICENSE). See [NOTICE](NOTICE) for third-party attributions and
-the bundled [compact-spectral](compact-spectral-LICENSE) and
-[Tau Ceti](TauCeti-LICENSE) licenses.
-
-Please cite *rmt-foundations*, version 0.2.0, by Le Chen, and record the
-source commit you used. Metadata is in [CITATION.cff](CITATION.cff). See also
-the [citation page](https://chenle02.github.io/rmt-foundations-lean/citation.html).
-
-The generated verification record below describes the published v0.1.0
+The generated verification record below describes the published v0.2.0
 release. Commit-specific build evidence is stored in `.lean-receipts/`.
 
 <!-- lean-pkg:page:begin -->
