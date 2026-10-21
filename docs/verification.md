@@ -6,7 +6,7 @@
 
 **How to read this page.** Lean has checked every step of the proofs listed here. Each result is exactly its Lean statement: read the statements below to see what is proved. The titles, the words and the notes are the authors' description, which Lean does not check.
 
-Kernel-checked foundations for random matrix theory (Airy function and kernel, Fredholm series, order-one Tracy-Widom monotonicity, moment-cumulant recursion, resolvent identity, Marchenko-Pastur law, Stieltjes transform and inversion, Herglotz-Borel representation, free-convolution subordination); 16 main results compared.
+Kernel-checked foundations for random matrix theory (Airy function and kernel, Fredholm series, order-one Tracy-Widom monotonicity, moment-cumulant recursion, resolvent identity, Marchenko-Pastur law, Stieltjes transform and inversion, Herglotz-Borel representation, free-convolution subordination); 16 main results compared. Version 0.2.0 adds Tracy-Widom smoothness and Hermite-Airy limits.
 
 - Main results: 16; verified: 16 of 16.
 
@@ -24,7 +24,7 @@ For every real $x$, the real Airy function satisfies
 Here $\operatorname{Ai}$ on $\mathbb{R}$ is the real part of the complex Airy function.
 ```
 
-**In Lean.** `RMTFoundations.Airy.iteratedDeriv_two_airyAiReal` in [Challenge/Reference/Airy/Core.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Airy/Core.lean#L1147): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.Airy.iteratedDeriv_two_airyAiReal` in [Challenge/Reference/Airy/Core.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Airy/Core.lean#L1147): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem iteratedDeriv_two_airyAiReal (x : ℝ /- [definition] -/ ) :
@@ -45,7 +45,7 @@ $\operatorname{Ai}(x+y+s)$. Then $K_s = A_s \circ A_s$ is trace class, that is, 
 Hilbert--Schmidt operators.
 ```
 
-**In Lean.** `RMTFoundations.Airy.isTraceClass_airyKernelShift` in [Challenge/Reference/Airy/Core.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Airy/Core.lean#L8894): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.Airy.isTraceClass_airyKernelShift` in [Challenge/Reference/Airy/Core.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Airy/Core.lean#L8894): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem isTraceClass_airyKernelShift (s : ℝ /- [definition] -/) :
@@ -66,7 +66,7 @@ Let $c_n \in \mathbb{C}$ and $M \ge 0$ satisfy $|c_n| \le M^n / n!$ for all $n \
 is analytic on all of $\mathbb{C}$.
 ```
 
-**In Lean.** `RMTFoundations.Fredholm.fredholmSeries_entire` in [Challenge/Reference/Operator/Fredholm.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Operator/Fredholm.lean#L92): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.Fredholm.fredholmSeries_entire` in [Challenge/Reference/Operator/Fredholm.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Operator/Fredholm.lean#L92): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem fredholmSeries_entire
@@ -91,7 +91,7 @@ $\operatorname{Ai}(x+y+s)$ on $(0,\infty)$ (formally $\det(I - A_s)$). Then $s \
 nondecreasing on $\mathbb{R}$.
 ```
 
-**In Lean.** `RMTFoundations.TWOneMonotone.monotone_TW1R` in [Challenge/Reference/TracyWidom/OrderOneMonotone.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/TracyWidom/OrderOneMonotone.lean#L51791): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.TWOneMonotone.monotone_TW1R` in [Challenge/Reference/TracyWidom/OrderOneMonotone.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/TracyWidom/OrderOneMonotone.lean#L51791): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem monotone_TW1R : Monotone TW1R
@@ -112,7 +112,7 @@ interior of the set of $t$ for which $e^{tX}$ is $\mu$-integrable. Then for ever
 where $\kappa_m$ is the $m$-th derivative at $0$ of the cumulant generating function of $X$.
 ```
 
-**In Lean.** `RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment` in [Challenge/Reference/Probability/Cumulants.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Probability/Cumulants.lean#L63): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment` in [Challenge/Reference/Probability/Cumulants.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Probability/Cumulants.lean#L63): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem moment_succ_eq_sum_cumulant_mul_moment [NeZero μ /- [standing] -/ ]
@@ -135,7 +135,7 @@ are invertible. Then
 \[ (H - z_1 I)^{-1} - (H - z_2 I)^{-1} = (z_1 - z_2)\,(H - z_1 I)^{-1}(H - z_2 I)^{-1}. \]
 ```
 
-**In Lean.** `RMTFoundations.Resolvent.resolvent_identity` in [Challenge/Reference/Matrix/Resolvent.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Matrix/Resolvent.lean#L23): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.Resolvent.resolvent_identity` in [Challenge/Reference/Matrix/Resolvent.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Matrix/Resolvent.lean#L23): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem resolvent_identity (H : Matrix n n ℂ /- [definition] -/ ) (z₁ z₂ : ℂ /- [definition] -/ )
@@ -159,7 +159,7 @@ of either sign,
 \[ F(h) - \sum_{j=0}^{K} \frac{h^j}{j!}\, F^{(j)}(0) = \int_0^h \frac{(h-t)^K}{K!}\, F^{(K+1)}(t)\,dt. \]
 ```
 
-**In Lean.** `RMTFoundations.Taylor.remainder_eq_interval_integral` in [Challenge/Reference/Analysis/Taylor.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Analysis/Taylor.lean#L37): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.Taylor.remainder_eq_interval_integral` in [Challenge/Reference/Analysis/Taylor.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Analysis/Taylor.lean#L37): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem remainder_eq_interval_integral (F : ℝ → ℂ /- [definition] -/ ) (K : ℕ /- [definition] -/ )
@@ -182,7 +182,7 @@ For natural numbers $k, v, s$ with $v \ge 1$ and $k + 2 = 2v + s$,
 This is the scalar inequality used to bound walk counts; it does not itself count walks.
 ```
 
-**In Lean.** `RMTFoundations.WalkMajorant.walk_count_majorant` in [Challenge/Reference/Combinatorics/WalkMajorant.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Combinatorics/WalkMajorant.lean#L17): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.WalkMajorant.walk_count_majorant` in [Challenge/Reference/Combinatorics/WalkMajorant.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Combinatorics/WalkMajorant.lean#L17): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem walk_count_majorant (k v s : ℕ /- [definition] -/ ) (hv : 1 ≤ v /- [standing] -/ ) (hk : k + 2 = 2 * v + s /- [standing] -/ ) :
@@ -204,7 +204,7 @@ and $f'$ has derivative $x f(x)$ at every $x$, and likewise for $g$ and $g'$. If
 $f'(t_0) = g'(t_0)$ at some point $t_0$, then $f = g$.
 ```
 
-**In Lean.** `RMTFoundations.Airy.airySolution_unique` in [Challenge/Reference/Airy/ODE.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Airy/ODE.lean#L221): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.Airy.airySolution_unique` in [Challenge/Reference/Airy/ODE.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Airy/ODE.lean#L221): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem airySolution_unique (hf : IsAirySolution f f' /- [standing] -/ ) (hg : IsAirySolution g g' /- [standing] -/ ) {t₀ : ℝ /- [definition] -/ }
@@ -225,7 +225,7 @@ For every finite measure $\mu$ on $\mathbb{R}$, the Stieltjes transform
 is analytic on the upper half-plane $\{ z : \operatorname{Im} z > 0 \}$.
 ```
 
-**In Lean.** `RMTFoundations.Stieltjes.analyticOn_stieltjes` in [Challenge/Reference/Stieltjes/HalfPlane.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Stieltjes/HalfPlane.lean#L86): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.Stieltjes.analyticOn_stieltjes` in [Challenge/Reference/Stieltjes/HalfPlane.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Stieltjes/HalfPlane.lean#L86): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem analyticOn_stieltjes (μ : Measure ℝ /- [definition] -/ ) [IsFiniteMeasure μ /- [standing] -/ ] :
@@ -245,7 +245,7 @@ For $0 < y < 1$, the Marchenko--Pastur measure $\mu_y$ constructed in the librar
 measure.
 ```
 
-**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_prob` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/MarchenkoPastur.lean#L535): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_prob` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Measure/MarchenkoPastur.lean#L535): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem mpMeasure_prob (y : ℝ 
@@ -268,7 +268,7 @@ For $0 < y < 1$, the Marchenko--Pastur measure $\mu_y$ has the density
 with respect to Lebesgue measure, where $a = (1 - \sqrt{y})^2$ and $b = (1 + \sqrt{y})^2$.
 ```
 
-**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_density` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/MarchenkoPastur.lean#L526): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_density` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Measure/MarchenkoPastur.lean#L526): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem mpMeasure_density (y : ℝ 
@@ -291,7 +291,7 @@ Marchenko--Pastur measure satisfies
 \[ y z\, m(z)^2 + (z + y - 1)\, m(z) + 1 = 0. \]
 ```
 
-**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/MarchenkoPastur.lean#L632): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic` in [Challenge/Reference/Measure/MarchenkoPastur.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Measure/MarchenkoPastur.lean#L632): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem mpMeasure_transform_quadratic (y : ℝ 
@@ -318,7 +318,7 @@ $\operatorname{Im} \omega_j(z) \ge \operatorname{Im} z$ for $j = 1, 2$ and
 \[ -\frac{1}{S_{\mu_1}(\omega_1(z))} = -\frac{1}{S_{\mu_2}(\omega_2(z))} = \omega_1(z) + \omega_2(z) - z. \]
 ```
 
-**In Lean.** `RMTFoundations.FreeConvolution.subordination` in [Challenge/Reference/Measure/FreeConvolution.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/FreeConvolution.lean#L1200): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.FreeConvolution.subordination` in [Challenge/Reference/Measure/FreeConvolution.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Measure/FreeConvolution.lean#L1200): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem subordination (h1 : SupportedIn μ1 R /- [standing] -/ ) (h2 : SupportedIn μ2 R /- [standing] -/ ) (hR : 0 < R /- [standing] -/ ) {z : ℂ /- [definition] -/ }
@@ -342,7 +342,7 @@ $|F(z)| \le M / \operatorname{Im} z$ there. Then there is a finite measure $\mu$
 mass at most $M$ such that $F(z) = S_\mu(z)$ for every $z$ in the upper half-plane.
 ```
 
-**In Lean.** `RMTFoundations.HerglotzBorelProof.herglotzBorel` in [Challenge/Reference/Measure/HerglotzBorel.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/HerglotzBorel.lean#L516): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.HerglotzBorelProof.herglotzBorel` in [Challenge/Reference/Measure/HerglotzBorel.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Measure/HerglotzBorel.lean#L516): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem herglotzBorel : RMTFoundations.AnalyticHalfPlane.HerglotzBorel
@@ -362,7 +362,7 @@ For a finite measure $\nu$ on $\mathbb{R}$ and real $a < b$,
    = \pi \Big( \nu\big((a,b)\big) + \tfrac12\, \nu(\{a\}) + \tfrac12\, \nu(\{b\}) \Big). \]
 ```
 
-**In Lean.** `RMTFoundations.StieltjesInversion.tendsto_interval_im` in [Challenge/Reference/Measure/StieltjesInversion.lean](https://github.com/chenle02/rmt-foundations-lean/blob/8edff84bb8b00441bf8b860b96547122103c0279/Challenge/Reference/Measure/StieltjesInversion.lean#L190): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `RMTFoundations.StieltjesInversion.tendsto_interval_im` in [Challenge/Reference/Measure/StieltjesInversion.lean](https://github.com/chenle02/rmt-foundations-lean/blob/df8d037ff7db61ec172188bf20d85e7078199c70/Challenge/Reference/Measure/StieltjesInversion.lean#L190): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem tendsto_interval_im (ν : Measure ℝ /- [definition] -/ ) [IsFiniteMeasure ν /- [standing] -/ ] (a b : ℝ /- [definition] -/ ) (hab : a < b /- [standing] -/ ) :
@@ -384,30 +384,33 @@ The full account of what each check covers and what it takes on trust is lean-pk
 
 ## How this was checked
 
-- lean-pkg's claims ledger: **ready**, every required claim is closed by the recorded receipts; 66 of 66 required claim(s) verified (`sha256:7d6032bb246b6275…`).
-- Build check (`lean-pkg gate`) at commit `8edff84bb8b0`: `sorry` count 0; axioms used: `Classical.choice`, `Quot.sound`, `propext`.
-- Toolchain advisory: the build check ran on Lean `leanprover/lean4:v4.35.0-rc2`, which has a known soundness bug fixed in `v4.34.1` ([lean-v4.34.1-runtime-refcounts](https://lean-lang.org/doc/reference/latest/releases/v4.34.1/); lean-pkg's [toolchain advisories](https://github.com/lean-pkg/lean-pkg/blob/main/src/lean_pkg/data/toolchain-advisories.yaml)).
-- Statement comparison (comparator) at commit `8edff84bb8b0`: 1 configuration(s), 16 theorem(s) compared (each Challenge statement against its Solution proof); permitted axioms: `Classical.choice`, `Quot.sound`, `propext`; definitions compared by name only: none.
+- lean-pkg's claims ledger: **ready**, every required claim is closed by the recorded receipts; 66 of 66 required claim(s) verified (`sha256:0623031714fb83ce…`).
+- Build check (`lean-pkg gate`) at commit `df8d037ff7db`: `sorry` count 0; axioms used: `Classical.choice`, `Quot.sound`, `propext`; run in a container (Singularity), SIF SHA-256 `0639ce71c13d479d456499b53f1efd887055123fe67573873170b7d1d9bba36a`.
+- Axioms of every claim: read from the built environment (Lean's `collectAxioms`) for all 384 claim(s) in `claims.yaml`, not only the theorems the build prints; none uses an axiom beyond `propext`, `Quot.sound` and `Classical.choice`.
+- Statement comparison (comparator) at commit `df8d037ff7db`: 1 configuration(s), 16 theorem(s) compared (each Challenge statement against its Solution proof); permitted axioms: `Classical.choice`, `Quot.sound`, `propext`; definitions compared by name only: none.
+- Built on lean-pkg stack [lts-2026.10](https://github.com/lean-pkg/lean-pkg/blob/main/docs/stacks/lts-2026.10.md) (Lean `v4.35.0`, Mathlib `v4.35.0`), supported until 2028-04-30.
 
 ### Receipts
 
 | Receipt | Check | Commit | Date | Job | SHA-256 |
 |---|---|---|---|---|---|
 | `.lean-receipts/8edff84bb8b0-5581013.json` | build | `8edff84bb8b0` | 2026-10-17 | — | `56c95df82c4d5fb39d84a8a1c1b1cc526049a8733f872c94bf1b1330d236f066` |
-| `.lean-receipts/8edff84bb8b0-comparator.json` (used here) | statement comparison | `8edff84bb8b0` | 2026-10-17 | — | `901709b417ac6c2edf00000a88645ec90b3d7377075f95f02fb94be7b83ea459` |
-| `.lean-receipts/8edff84bb8b0-slurm-5582463.json` (used here) | build | `8edff84bb8b0` | 2026-10-17 | slurm-5582463 | `4a582767900357f534b12f851e0a3fcbb38432ada76eb2f1b8a19c65efd28036` |
+| `.lean-receipts/8edff84bb8b0-comparator.json` | statement comparison | `8edff84bb8b0` | 2026-10-17 | — | `901709b417ac6c2edf00000a88645ec90b3d7377075f95f02fb94be7b83ea459` |
+| `.lean-receipts/8edff84bb8b0-slurm-5582463.json` | build | `8edff84bb8b0` | 2026-10-17 | slurm-5582463 | `4a582767900357f534b12f851e0a3fcbb38432ada76eb2f1b8a19c65efd28036` |
+| `.lean-receipts/df8d037ff7db-comparator.json` (used here) | statement comparison | `df8d037ff7db` | 2026-10-21 | — | `d434eaaa24572bbc1ec0f762fa30313c2d84697c0e7d22766094c9b01122f209` |
+| `.lean-receipts/df8d037ff7db-slurm-5588758.json` (used here) | build | `df8d037ff7db` | 2026-10-20 | slurm-5588758 | `fee03ee58ec07b574e9b30e4af136576f1681909fa45c1ae6924c955570ae2e8` |
 
 *(used here)*: the receipt the lean-pkg registry holds for this package, which the lines above read. SHA-256 is of the file as committed.
 
 ### Reproduce
 
-- Lean toolchain: `leanprover/lean4:v4.35.0-rc2`.
-- Mathlib: `8ab8a31c6565f9f71fe6c5ed91babd559e8deae4` (lake-manifest.json).
+- Lean toolchain: `leanprover/lean4:v4.35.0`.
+- Mathlib: `56a005855ea17e0b0958f73ec801ae140b0a1679` (lake-manifest.json).
 
 ```bash
 git clone https://github.com/chenle02/rmt-foundations-lean
 cd rmt-foundations-lean
-git checkout 8edff84bb8b00441bf8b860b96547122103c0279   # the commit the build check binds
+git checkout df8d037ff7db61ec172188bf20d85e7078199c70   # the commit the build check binds
 lake exe cache get
 lake build
 ```
@@ -416,7 +419,7 @@ Expected: `#print axioms` on any declaration above reports a subset of {`Classic
 
 ## Citation
 
-Le Chen. *rmt-foundations: random-matrix and analytic foundations in Lean*. Version 0.1.0.
+Le Chen. *rmt-foundations: random-matrix and analytic foundations in Lean*. Version 0.2.0. [doi:10.5281/zenodo.23539485](https://doi.org/10.5281/zenodo.23539485).
 
 See [CITATION.cff](https://github.com/chenle02/rmt-foundations-lean/blob/HEAD/CITATION.cff).
 

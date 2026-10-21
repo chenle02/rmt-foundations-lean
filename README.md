@@ -8,10 +8,11 @@ Tracy–Widom distributions, Airy and Painlevé II theory, finite GUE identities
 and analytic random-matrix tools, formalized in Lean 4.
 
 [![CI](https://github.com/chenle02/rmt-foundations-lean/actions/workflows/ci.yml/badge.svg)](https://github.com/chenle02/rmt-foundations-lean/actions/workflows/ci.yml)
-[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-153e63)](https://chenle02.github.io/rmt-foundations-lean/)
-[![Version](https://img.shields.io/badge/version-0.2.0-153e63)](CITATION.cff)
 [![Lean](https://img.shields.io/badge/Lean-v4.35.0-153e63)](lean-toolchain)
+[![Mathlib](https://img.shields.io/badge/Mathlib-56a0058-153e63)](https://github.com/leanprover-community/mathlib4/tree/56a005855ea17e0b0958f73ec801ae140b0a1679)
+[![Version](https://img.shields.io/badge/version-v0.2.0-153e63)](https://github.com/chenle02/rmt-foundations-lean/tree/v0.2.0)
 [![License](https://img.shields.io/badge/license-Apache--2.0-153e63)](LICENSE)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-153e63)](https://chenle02.github.io/rmt-foundations-lean/)
 
 [What is proved](#what-is-proved) · [Verification page](docs/verification.md) · [Build](#build-and-verify) · [Cite](#citation)
 
@@ -86,8 +87,6 @@ names the declaration behind each item above.
 > General local laws, universality and general Itô integration are outside
 > the scope of this library.
 
-## Paper and references
-
 The [Tracy–Widom guide](docs/tracy-widom.md) covers smoothness, Hermite-to-Airy
 limits, finite stationary Dyson laws, conditional Airy2 probability limits and
 TW4 tail and compact-window certificates. Distinct-time convergence and all
@@ -96,7 +95,9 @@ certificate hypotheses remain explicit.
 The [status page](https://chenle02.github.io/rmt-foundations-lean/status.html)
 names the declaration behind each item.
 
-Standalone library; the motivating paper (with Haoran Li) is in preparation.
+## Paper and references
+
+Standalone library; a motivating paper is in preparation.
 
 Some proofs are adapted from other Apache-2.0 Lean sources, recorded in
 [NOTICE](NOTICE): spectral results from Adam Benenson's *compact-spectral*
@@ -109,8 +110,9 @@ material derived from [Mathlib](https://github.com/leanprover-community/mathlib4
 ## Build and verify
 
 Install [elan](https://github.com/leanprover/elan). The toolchain is the
-stable release **Lean v4.35.0**, pinned in `lean-toolchain`. Mathlib is
-pinned in `lake-manifest.json`.
+stable release **Lean v4.35.0**, pinned in [`lean-toolchain`](lean-toolchain).
+Mathlib is pinned to `56a005855ea17e0b0958f73ec801ae140b0a1679` (tag `v4.35.0`) in
+[`lake-manifest.json`](lake-manifest.json).
 
 ```sh
 git clone https://github.com/chenle02/rmt-foundations-lean.git
@@ -170,18 +172,17 @@ python3 -m http.server --directory .lake/build/doc 8000
 
 Proofs use only the standard axioms `propext`, `Classical.choice` and
 `Quot.sound`. There is no `sorry`, `admit`, custom axiom or `native_decide`.
-The recorded build check at commit `df8d037ff7db` found `sorry` count 0 and
+The recorded build check at commit `8edff84bb8b0` found `sorry` count 0 and
 exactly these three axioms, and lean-pkg's claims ledger closes all 66
-required claims of [`claims.yaml`]; its axiom check covers all 384 claims.
-For the 16 main results of
+required claims of [`claims.yaml`](claims.yaml). For the 16 main results of
 [`coverage.yaml`](coverage.yaml), the comparator confirmed that the proof in
 [`Solution.lean`](Solution.lean) proves exactly the statement in
 [`Challenge.lean`](Challenge.lean) (the reference statements under
 [`Challenge/`](Challenge/)), with only the permitted axioms, and independent
 kernels replayed it. The other declarations listed above are covered by the
 build check and the axiom comparison of `scripts/verify.sh`, not by the
-comparator. The build check ran on Lean `v4.35.0` (see
-[How this was checked](#how-this-was-checked)).
+comparator. The build check ran on stable Lean `v4.35.0` with Mathlib `v4.35.0`,
+the lean-pkg stack `lts-2026.10` (see [How this was checked](#how-this-was-checked)).
 A kernel check confirms a proof; it does not remove any hypothesis from the
 statement. Details and receipts:
 [What the checks establish](#what-the-checks-establish).
@@ -201,8 +202,7 @@ source commit, and the verification section below is rendered by
 **Le Chen**, Associate Professor, Department of Mathematics and Statistics,
 Auburn University.
 
-Haoran Li — co-author of the research paper that motivated this library and
-proposer of the problem.
+Haoran Li — co-author of the research paper that motivated this library and proposer of the problem.
 
 Development used OpenAI Codex (gpt-6.1-sol) workers, with Anthropic Claude for
 orchestration and independent audits. Every result is kernel-checked and
@@ -216,7 +216,7 @@ attributions and the bundled [compact-spectral](compact-spectral-LICENSE) and
 [CITATION.cff](CITATION.cff). See also the
 [citation page](https://chenle02.github.io/rmt-foundations-lean/citation.html).
 
-The generated verification record below describes the published v0.1.0
+The generated verification record below describes the published v0.2.0
 release. Commit-specific build evidence is stored in `.lean-receipts/`.
 
 <!-- lean-pkg:page:begin -->
