@@ -35,19 +35,20 @@ status:
     GSE determinant average with proved global C1 regularity, endpoints and interior levels; extended
     Airy kernel and one-time TW2 identity; finite Hermite Christoffel-Darboux/Vandermonde identities.
     GUE identification is conditional on GUELimit; the finite-N density is not proved to be the eigenvalue
-    law of the matrix model. TW4 monotonicity/measure remain open. Multi-time Airy2 probability limits retain explicit finite-law joint-limit and scalar coordinate-limit
-    producers; the unconditional distinct-time producer remains open. TW1/TW2 CDFs and positive densities
-    are globally smooth. Hermite-to-Airy and one-time Fredholm limits, finite stationary Dyson/OU laws,
-    and TW4 two-tail positivity are proved; compact-window sign certificates remain explicit inputs.
+    law of the matrix model. TW4 monotonicity/measure remain open. Multi-time Airy2 probability limits
+    retain explicit finite-law joint-limit and scalar coordinate-limit producers; the unconditional distinct-time
+    producer remains open. TW1/TW2 CDFs and positive densities are globally smooth. Hermite-to-Airy and
+    one-time Fredholm limits, finite stationary Dyson/OU laws, and TW4 two-tail positivity are proved;
+    compact-window sign certificates remain explicit inputs.
   sorry_count: 0
   axioms:
   - Classical.choice
   - Quot.sound
   - propext
   evidence:
-    commit: 8edff84bb8b00441bf8b860b96547122103c0279
-    gate_receipt: .lean-receipts/8edff84bb8b0-slurm-5582463.json
-    comparator_receipt: .lean-receipts/8edff84bb8b0-comparator.json
+    commit: df8d037ff7db61ec172188bf20d85e7078199c70
+    gate_receipt: .lean-receipts/df8d037ff7db-slurm-5588758.json
+    comparator_receipt: .lean-receipts/df8d037ff7db-comparator.json
   main_results:
   - comparator_config: comparator.json
     declaration: RMTFoundations.Airy.iteratedDeriv_two_airyAiReal
@@ -2217,6 +2218,706 @@ alignment:
     status: internal
     note: Monotonicity of the physical raw TW4 function is equivalent to the exact stated resolvent sign
       inequality.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Smoothness.cdfs
+    module: RMTFoundations/TracyWidom/Smoothness.lean
+    kind: theorem
+    claim: rmt-foundations/tw-smoothness-cdfs
+    status: internal
+    note: The actual canonical TW1 and TW2 CDFs are smooth globally.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Smoothness.densities
+    module: RMTFoundations/TracyWidom/Smoothness.lean
+    kind: theorem
+    claim: rmt-foundations/tw-smoothness-densities
+    status: internal
+    note: The actual canonical TW1 and TW2 probability densities are smooth globally.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TWDensitySmooth.TW1R_contDiff_infty
+    module: RMTFoundations/TracyWidom/TWDensitySmooth.lean
+    kind: theorem
+    claim: rmt-foundations/tw-twdensitysmooth-tw1r-contdiff-infty
+    status: internal
+    note: The actual GOE Tracy-Widom CDF is globally smooth.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TWDensitySmooth.TW2R_contDiff_infty
+    module: RMTFoundations/TracyWidom/TWDensitySmooth.lean
+    kind: theorem
+    claim: rmt-foundations/tw-twdensitysmooth-tw2r-contdiff-infty
+    status: internal
+    note: The actual GUE Tracy-Widom CDF is globally smooth.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TWDensitySmooth.TW1Density_contDiff_infty
+    module: RMTFoundations/TracyWidom/TWDensitySmooth.lean
+    kind: theorem
+    claim: rmt-foundations/tw-twdensitysmooth-tw1density-contdiff-infty
+    status: internal
+    note: The actual positive GOE density is globally smooth.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TWDensitySmooth.TW2Density_contDiff_infty
+    module: RMTFoundations/TracyWidom/TWDensitySmooth.lean
+    kind: theorem
+    claim: rmt-foundations/tw-twdensitysmooth-tw2density-contdiff-infty
+    status: internal
+    note: The actual positive GUE density is globally smooth.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TWDensityRegularity2.hasDerivAt_TW2Density
+    module: RMTFoundations/TracyWidom/TWDensityRegularity2.lean
+    kind: theorem
+    claim: rmt-foundations/tw-twdensityregularity2-hasderivat-tw2density
+    status: internal
+    note: The actual GUE density derivative is F2 times (u squared minus q squared) at every real cutoff.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TWDensityRegularity1.hasDerivAt_TW1Density
+    module: RMTFoundations/TracyWidom/TWDensityRegularity1.lean
+    kind: theorem
+    claim: rmt-foundations/tw-twdensityregularity1-hasderivat-tw1density
+    status: internal
+    note: The actual GOE density has the stated exact classical derivative at every real cutoff.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TWCoordinateSmooth.coordinates_contDiff_infty
+    module: RMTFoundations/TracyWidom/TWCoordinateSmooth.lean
+    kind: theorem
+    claim: rmt-foundations/tw-twcoordinatesmooth-coordinates-contdiff-infty
+    status: internal
+    note: The four actual Fredholm endpoint coordinates are globally smooth.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TW4_probability_exists_iff_monotone
+    module: RMTFoundations/TracyWidom/TW4Characterization.lean
+    kind: theorem
+    claim: rmt-foundations/tw-tw4-probability-exists-iff-monotone
+    status: internal
+    note: A probability law with canonical TW4 CDF exists if and only if TW4R is monotone; this does not
+      assert the open monotonicity condition.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TW4_probability_exists_iff_resolvent_sign
+    module: RMTFoundations/TracyWidom/TW4Characterization.lean
+    kind: theorem
+    claim: rmt-foundations/tw-tw4-probability-exists-iff-resolvent-sign
+    status: internal
+    note: TW4 probability-law existence is equivalent to the exact physical resolvent sign condition;
+      the sign is not assumed or proved here.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TW4R_contDiff_two
+    module: RMTFoundations/TracyWidom/TW4SecondOrder.lean
+    kind: theorem
+    claim: rmt-foundations/tw-tw4r-contdiff-two
+    status: internal
+    note: The actual TW96-scaled determinant-average TW4 function is globally C2.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TW4AiryR_contDiff_two
+    module: RMTFoundations/TracyWidom/TW4SecondOrder.lean
+    kind: theorem
+    claim: rmt-foundations/tw-tw4airyr-contdiff-two
+    status: internal
+    note: The actual raw Airy determinant-average TW4 function is globally C2.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TW4AiryR_second_order_equation
+    module: RMTFoundations/TracyWidom/TW4SecondOrder.lean
+    kind: theorem
+    claim: rmt-foundations/tw-tw4airyr-second-order-equation
+    status: internal
+    note: The actual raw TW4 determinant average obeys the exact coupled second-order differential equation.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TW4AiryR_scalar_second_order_identity
+    module: RMTFoundations/TracyWidom/TW4SecondOrder.lean
+    kind: theorem
+    claim: rmt-foundations/tw-tw4airyr-scalar-second-order-identity
+    status: internal
+    note: The actual raw TW4 determinant average obeys the scalar identity without division by the endpoint
+      coordinate q.
+  - source: null
+    lean: RMTFoundations.TracyWidom.eventually_TW1R_lt_TW2R
+    module: RMTFoundations/TracyWidom/TWPlusNonmonotone.lean
+    kind: theorem
+    claim: rmt-foundations/tw-eventually-tw1r-lt-tw2r
+    status: internal
+    note: The actual GOE CDF is strictly below the GUE CDF eventually at positive infinity.
+  - source: null
+    lean: RMTFoundations.TracyWidom.hankelDetPlus_not_monotone
+    module: RMTFoundations/TracyWidom/TWPlusNonmonotone.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hankeldetplus-not-monotone
+    status: internal
+    note: The plus Hankel determinant branch is not monotone on the real line.
+  - source: null
+    lean: RMTFoundations.TracyWidom.hankelDetPlus_not_antitone
+    module: RMTFoundations/TracyWidom/TWPlusNonmonotone.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hankeldetplus-not-antitone
+    status: internal
+    note: The plus Hankel determinant branch is not antitone on the real line.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HMNontrivialJets.no_double_zero
+    module: RMTFoundations/TracyWidom/HMNontrivialJets.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hmnontrivialjets-no-double-zero
+    status: internal
+    note: Every nonzero global classical Painleve II solution has no simultaneous function-and-derivative
+      zero.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HMNontrivialJets.normalized_no_double_zero
+    module: RMTFoundations/TracyWidom/HMNontrivialJets.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hmnontrivialjets-normalized-no-double-zero
+    status: internal
+    note: Every global classical Airy-normalized Painleve II solution has no simultaneous function-and-derivative
+      zero.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteEdgeNormalization.amplitude_tendsto
+    module: RMTFoundations/TracyWidom/HermiteEdgeNormalization.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermiteedgenormalization-amplitude-tendsto
+    status: internal
+    note: The actual Stirling-corrected finite Hermite edge amplitude tends to one.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteEdgeNormalization.amplitude_upper
+    module: RMTFoundations/TracyWidom/HermiteEdgeNormalization.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermiteedgenormalization-amplitude-upper
+    status: internal
+    note: The actual finite Hermite edge amplitude obeys the stated effective Stirling upper bound.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteEdgeNormalization.saddle_prefactor_locally_uniform
+    module: RMTFoundations/TracyWidom/HermiteEdgeNormalization.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermiteedgenormalization-saddle-prefactor-locally-uniform
+    status: internal
+    note: The actual Hermite saddle prefactor converges uniformly on every fixed compact interval.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteCubicSaddle.saddle_phase_locally_uniform
+    module: RMTFoundations/TracyWidom/HermiteCubicSaddle.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermitecubicsaddle-saddle-phase-locally-uniform
+    status: internal
+    note: The rescaled complex Hermite saddle phase converges uniformly on fixed compact disks to the
+      cubic phase.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteCubicSaddle.saddle_integrand_tendsto
+    module: RMTFoundations/TracyWidom/HermiteCubicSaddle.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermitecubicsaddle-saddle-integrand-tendsto
+    status: internal
+    note: The rescaled Hermite saddle integrand converges pointwise to the cubic-phase integrand.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteAiryVolterra.edge_mode_volterra
+    module: RMTFoundations/TracyWidom/HermiteAiryVolterra.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermiteairyvolterra-edge-mode-volterra
+    status: internal
+    note: The actual finite normalized Hermite edge mode has the exact Airy variation-of-constants representation.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2.physical_block_isTraceClass
+    module: RMTFoundations/TracyWidom/Airy2BlockTraceClass.lean
+    kind: theorem
+    claim: rmt-foundations/tw-airy2-physical-block-istraceclass
+    status: internal
+    note: Every actual finite-time extended Airy-kernel block defines a trace-class half-line operator.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2.extendedAiryKernel_physical_asymmetry
+    module: RMTFoundations/TracyWidom/Airy2RouteObstruction.lean
+    kind: theorem
+    claim: rmt-foundations/tw-airy2-extendedairykernel-physical-asymmetry
+    status: internal
+    note: The actual extended Airy kernel is asymmetric across strict time order; this records a route
+      obstruction.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2Probability.measure_eq_of_jointCDF
+    module: RMTFoundations/TracyWidom/Airy2ProbabilityCore.lean
+    kind: theorem
+    claim: rmt-foundations/tw-airy2probability-measure-equality-of-jointcdf
+    status: internal
+    note: A finite-dimensional real probability law is uniquely determined by its joint CDF.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2Probability.jointCDF_rectangle_nonneg
+    module: RMTFoundations/TracyWidom/Airy2ProbabilityCore.lean
+    kind: theorem
+    claim: rmt-foundations/tw-airy2probability-jointcdf-rectangle-nonneg
+    status: internal
+    note: Every rectangular increment of a genuine finite-dimensional probability CDF is nonnegative.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2Probability.one_time_physical_law
+    module: RMTFoundations/TracyWidom/Airy2ProbabilityCore.lean
+    kind: theorem
+    claim: rmt-foundations/tw-airy2probability-one-time-physical-law
+    status: internal
+    note: The singleton physical extended-Airy Fredholm expression is the canonical TW2 probability CDF.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2Probability.quasiCDF_has_no_probability_law
+    module: RMTFoundations/TracyWidom/Airy2ProbabilityCore.lean
+    kind: theorem
+    claim: rmt-foundations/tw-airy2probability-quasicdf-has-no-probability-law
+    status: internal
+    note: The explicit monotone bounded candidate with a negative rectangular increment cannot be a probability
+      CDF.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteLimits.locally_uniform
+    module: RMTFoundations/TracyWidom/HermiteLimits.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermitelimits-locally-uniform
+    status: internal
+    note: The actual normalized Hermite edge mode converges uniformly to Ai on every bounded real window.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteLimits.adjacent_tendsto
+    module: RMTFoundations/TracyWidom/HermiteLimits.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermitelimits-adjacent-tendsto
+    status: internal
+    note: The actual neighboring normalized Hermite edge mode converges pointwise to Ai.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteLimits.uniform_tail
+    module: RMTFoundations/TracyWidom/HermiteLimits.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermitelimits-uniform-tail
+    status: internal
+    note: Both neighboring Hermite edge modes have a common exponential half-line envelope uniform over
+      all positive dimensions.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteLimits.uniform_tail_masses
+    module: RMTFoundations/TracyWidom/HermiteLimits.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermitelimits-uniform-tail-masses
+    status: internal
+    note: For all positive dimensions both actual Hermite edge modes have uniform exponentially vanishing
+      half-line square-tail masses.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteLimits.uniform_product
+    module: RMTFoundations/TracyWidom/HermiteLimits.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermitelimits-uniform-product
+    status: internal
+    note: For all positive dimensions the product of actual adjacent edge modes has a common uniform two-variable
+      half-line envelope.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteAiryCompact.hermite_edge_sequence_tendsto
+    module: RMTFoundations/TracyWidom/HermiteAiryCompact.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermiteairycompact-hermite-edge-sequence-tendsto
+    status: internal
+    note: Along dimensions tending to infinity and uniformly bounded cutoffs tending to x, the actual
+      Hermite edge mode tends to Ai(x).
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteAiryCompact.hermite_edge_locally_uniform
+    module: RMTFoundations/TracyWidom/HermiteAiryCompact.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermiteairycompact-hermite-edge-locally-uniform
+    status: internal
+    note: The actual Hermite edge mode converges locally uniformly to the real Airy function.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteAdjacentAmplitude.adjacent_edge_tendsto
+    module: RMTFoundations/TracyWidom/HermiteAdjacentAmplitude.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermiteadjacentamplitude-adjacent-edge-tendsto
+    status: internal
+    note: The actual previous Hermite mode converges to Ai at each fixed edge coordinate.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteUniformTail.uniform_halfline_tail
+    module: RMTFoundations/TracyWidom/HermiteUniformTail.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermiteuniformtail-uniform-halfline-tail
+    status: internal
+    note: A single positive constant controls both physical Hermite modes on each fixed half-line for
+      every positive dimension.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteUniformTailMass.uniform_tail_masses
+    module: RMTFoundations/TracyWidom/HermiteUniformTailMass.lean
+    kind: theorem
+    claim: rmt-foundations/tw-hermiteuniformtailmass-uniform-tail-masses
+    status: internal
+    note: For all positive dimensions both neighboring physical Hermite modes have uniformly bounded square-tail
+      integrals with an exponential truncation error.
+  - source: null
+    lean: RMTFoundations.TracyWidom.GUEProjectionLaw.projectionLaw
+    module: RMTFoundations/TracyWidom/GUEProjectionLaw.lean
+    kind: definition
+    claim: rmt-foundations/tw-gueprojectionlaw-projectionlaw
+    status: internal
+    note: The finite determinantal Hermite density defines a genuine normalized eigenvalue probability
+      measure.
+  - source: null
+    lean: RMTFoundations.TracyWidom.GUEProjectionLaw.projectionGap_density_integral
+    module: RMTFoundations/TracyWidom/GUEProjectionLaw.lean
+    kind: theorem
+    claim: rmt-foundations/tw-gueprojectionlaw-projectiongap-density-integral
+    status: internal
+    note: The one-time finite Hermite projection gap is its normalized density integral.
+  - source: null
+    lean: RMTFoundations.TracyWidom.GUEProjectionDeterminant.projectionGap_eq_gram_det
+    module: RMTFoundations/TracyWidom/GUEProjectionDeterminant.lean
+    kind: theorem
+    claim: rmt-foundations/tw-gueprojectiondeterminant-projectiongap-equality-gram-det
+    status: internal
+    note: The normalized finite projection gap equals the determinant of the truncated Hermite Gram matrix.
+  - source: null
+    lean: RMTFoundations.TracyWidom.GUEProjectionDeterminant.gram_gap_det_monotone
+    module: RMTFoundations/TracyWidom/GUEProjectionDeterminant.lean
+    kind: theorem
+    claim: rmt-foundations/tw-gueprojectiondeterminant-gram-gap-det-monotone
+    status: internal
+    note: The finite truncated Gram determinant is monotone in its scalar cutoff.
+  - source: null
+    lean: RMTFoundations.TracyWidom.GUEChainIdentity.physical_two_time_chain_weight
+    module: RMTFoundations/TracyWidom/GUEChainIdentity.lean
+    kind: theorem
+    claim: rmt-foundations/tw-guechainidentity-physical-two-time-chain-weight
+    status: internal
+    note: At strictly increasing times the literal fully occupied two-time extended Hermite block determinant
+      factorizes as the committed density chain weight.
+  - source: null
+    lean: RMTFoundations.TracyWidom.OUMehlerConjugation.mehler_ground_conjugation
+    module: RMTFoundations/TracyWidom/OUMehlerConjugation.lean
+    kind: theorem
+    claim: rmt-foundations/tw-oumehlerconjugation-mehler-ground-conjugation
+    status: internal
+    note: The exact Hermite Mehler expression conjugates to the variance-one OU transition at negative
+      lag.
+  - source: null
+    lean: RMTFoundations.TracyWidom.OUMehlerConjugation.ou_detailed_balance
+    module: RMTFoundations/TracyWidom/OUMehlerConjugation.lean
+    kind: theorem
+    claim: rmt-foundations/tw-oumehlerconjugation-ou-detailed-balance
+    status: internal
+    note: At strictly negative lag the positive OU transition satisfies detailed balance with the standard
+      Gaussian density.
+  - source: null
+    lean: RMTFoundations.TracyWidom.OUMehlerConjugation.scalarJointDensity_integral
+    module: RMTFoundations/TracyWidom/OUMehlerConjugation.lean
+    kind: theorem
+    claim: rmt-foundations/tw-oumehlerconjugation-scalarjointdensity-integral
+    status: internal
+    note: The physical scalar two-time Hermite joint density integrates to one at each genuine negative
+      lag.
+  - source: null
+    lean: RMTFoundations.TracyWidom.OUMehlerConjugation.scalarHermiteJointLaw_probability
+    module: RMTFoundations/TracyWidom/OUMehlerConjugation.lean
+    kind: theorem
+    claim: rmt-foundations/tw-oumehlerconjugation-scalarhermitejointlaw-probability
+    status: internal
+    note: At strictly negative lag the physical scalar two-time measure is a probability law.
+  - source: null
+    lean: RMTFoundations.TracyWidom.FiniteDysonGaussianLaw.topJointLaw
+    module: RMTFoundations/TracyWidom/FiniteDysonGaussianLaw.lean
+    kind: definition
+    claim: rmt-foundations/tw-finitedysongaussianlaw-topjointlaw
+    status: internal
+    note: The literal finite-time largest Hermitian eigenvalues define a probability pushforward of independent
+      Gaussian innovations.
+  - source: null
+    lean: RMTFoundations.TracyWidom.FiniteDysonGaussianLaw.topJointLaw_gap
+    module: RMTFoundations/TracyWidom/FiniteDysonGaussianLaw.lean
+    kind: theorem
+    claim: rmt-foundations/tw-finitedysongaussianlaw-topjointlaw-gap
+    status: internal
+    note: The genuine top-eigenvalue joint CDF is exactly the literal finite matrix gap probability.
+  - source: null
+    lean: RMTFoundations.TracyWidom.FiniteDysonGaussianLaw.topJointLaw_time_shift
+    module: RMTFoundations/TracyWidom/FiniteDysonGaussianLaw.lean
+    kind: theorem
+    claim: rmt-foundations/tw-finitedysongaussianlaw-topjointlaw-time-shift
+    status: internal
+    note: Simultaneous time translation leaves the finite Gaussian-innovation top-eigenvalue law unchanged.
+  - source: null
+    lean: RMTFoundations.TracyWidom.FiniteDysonMarginals.stationary_GUE_coordinate_law
+    module: RMTFoundations/TracyWidom/FiniteDysonMarginals.lean
+    kind: theorem
+    claim: rmt-foundations/tw-finitedysonmarginals-stationary-gue-coordinate-law
+    status: internal
+    note: At nondecreasing times every finite OU coordinate array has the committed independent GUE source
+      law.
+  - source: null
+    lean: RMTFoundations.TracyWidom.FiniteDysonMarginals.stationary_GUE_matrix_law
+    module: RMTFoundations/TracyWidom/FiniteDysonMarginals.lean
+    kind: theorem
+    claim: rmt-foundations/tw-finitedysonmarginals-stationary-gue-matrix-law
+    status: internal
+    note: At nondecreasing times each finite Hermitian OU matrix has the committed GUE matrix law.
+  - source: null
+    lean: RMTFoundations.TracyWidom.FiniteDysonMarginals.stationary_GUE_top_marginal
+    module: RMTFoundations/TracyWidom/FiniteDysonMarginals.lean
+    kind: theorem
+    claim: rmt-foundations/tw-finitedysonmarginals-stationary-gue-top-marginal
+    status: internal
+    note: At nondecreasing times each marginal of the finite top-eigenvalue joint law is the committed
+      GUE top-eigenvalue pushforward.
+  - source: null
+    lean: RMTFoundations.TracyWidom.LargestEigenvalue.lamMax
+    module: RMTFoundations/TracyWidom/LargestEigenvalue.lean
+    kind: definition
+    claim: rmt-foundations/tw-largesteigenvalue-lammax
+    status: internal
+    note: The Rayleigh supremum defines the largest eigenvalue for finite Hermitian matrices.
+  - source: null
+    lean: RMTFoundations.TracyWidom.LargestEigenvalue.abs_lamMax_sub_le
+    module: RMTFoundations/TracyWidom/LargestEigenvalue.lean
+    kind: theorem
+    claim: rmt-foundations/tw-largesteigenvalue-abs-lammax-sub-le
+    status: internal
+    note: For nonempty finite dimensions the Rayleigh supremum obeys the operator-norm Lipschitz bound.
+  - source: null
+    lean: RMTFoundations.TracyWidom.LargestEigenvalue.continuous_lamMax
+    module: RMTFoundations/TracyWidom/LargestEigenvalue.lean
+    kind: theorem
+    claim: rmt-foundations/tw-largesteigenvalue-continuous-lammax
+    status: internal
+    note: The Rayleigh supremum map is continuous for nonempty finite complex matrices, giving continuity
+      of the Hermitian largest eigenvalue.
+  - source: null
+    lean: RMTFoundations.TracyWidom.LargestEigenvalue.lamMax_le_iff
+    module: RMTFoundations/TracyWidom/LargestEigenvalue.lean
+    kind: theorem
+    claim: rmt-foundations/tw-largesteigenvalue-lammax-le-iff
+    status: internal
+    note: For nonempty finite Hermitian matrices the largest-eigenvalue cutoff is equivalent to the simultaneous
+      eigenvalue cutoffs.
+  - source: null
+    lean: RMTFoundations.TracyWidom.GUECrossAndreief.cross_determinant_integral
+    module: RMTFoundations/TracyWidom/GUECrossAndreief.lean
+    kind: theorem
+    claim: rmt-foundations/tw-guecrossandreief-cross-determinant-integral
+    status: internal
+    note: The finite cross-Andreief integral identity retains its explicit entrywise product-integrability
+      hypotheses.
+  - source: null
+    lean: RMTFoundations.TracyWidom.AiryGreenKernelFoundation.ai_green_bounds
+    module: RMTFoundations/TracyWidom/AiryGreenKernelFoundation.lean
+    kind: theorem
+    claim: rmt-foundations/airygreenkernelfoundation-ai-green-bounds
+    status: internal
+    note: The actual positive Airy reduction-of-order kernel on a positive half-line is bounded by 1/(2
+      sqrt s).
+  - source: null
+    lean: RMTFoundations.TracyWidom.AiryPerturbationComparison.ai_ode_comparison
+    module: RMTFoundations/TracyWidom/AiryPerturbationComparison.lean
+    kind: theorem
+    claim: rmt-foundations/airyperturbationcomparison-ai-ode-comparison
+    status: internal
+    note: A normalized perturbed Airy ODE solution has relative and absolute error bounds conditional
+      on the stated small integrable perturbation budget, bounded relative size, boundary flux, normalized
+      amplitude, and all source and double-integral hypotheses.
+  - source: null
+    lean: RMTFoundations.TracyWidom.AiryPerturbationComparison.amplitude_counterinstance
+    module: RMTFoundations/TracyWidom/AiryPerturbationComparison.lean
+    kind: theorem
+    claim: rmt-foundations/airyperturbationcomparison-amplitude-counterinstance
+    status: internal
+    note: An Airy amplitude counterinstance witnesses why the normalized boundary-amplitude hypothesis
+      cannot be omitted.
+  - source: null
+    lean: RMTFoundations.TracyWidom.WeightedVolterraFoundation.solution_bounds
+    module: RMTFoundations/TracyWidom/WeightedVolterraFoundation.lean
+    kind: theorem
+    claim: rmt-foundations/weightedvolterrafoundation-solution-bounds
+    status: internal
+    note: Weighted Volterra solutions have size and deviation bounds when the stated kernel majorant has
+      integral below one, the weighted size is bounded, and the support and solution hypotheses hold.
+  - source: null
+    lean: RMTFoundations.TracyWidom.WeightedVolterraUniqueness.solution_unique
+    module: RMTFoundations/TracyWidom/WeightedVolterraUniqueness.lean
+    kind: theorem
+    claim: rmt-foundations/weightedvolterrauniqueness-solution-unique
+    status: internal
+    note: Two weighted Volterra solutions coincide under the stated common source, small kernel majorant,
+      bounded weighted difference, support and integrability hypotheses.
+  - source: null
+    lean: RMTFoundations.TracyWidom.ODEVolterraFoundation.normalized_volterra_of_ode
+    module: RMTFoundations/TracyWidom/ODEVolterraFoundation.lean
+    kind: theorem
+    claim: rmt-foundations/odevolterrafoundation-normalized-volterra-of-ode
+    status: internal
+    note: A normalized second-order perturbed ODE yields the Volterra representation conditional on the
+      explicit nonzero reference, flux, relative boundary, and integrability hypotheses.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermitePerturbationObstruction.no_sup_tail_budget
+    module: RMTFoundations/TracyWidom/HermitePerturbationObstruction.lean
+    kind: theorem
+    claim: rmt-foundations/hermiteperturbationobstruction-no-sup-tail-budget
+    status: internal
+    note: For every positive dimension the actual Hermite coefficient error has no finite uniform bound
+      on any real half-line.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermitePerturbationObstruction.no_integrable_tail_budget
+    module: RMTFoundations/TracyWidom/HermitePerturbationObstruction.lean
+    kind: theorem
+    claim: rmt-foundations/hermiteperturbationobstruction-no-integrable-tail-budget
+    status: internal
+    note: For every positive dimension the actual Hermite coefficient error admits no finite scalar multiple
+      of an integrable half-line envelope; this refutes that global perturbation route only.
+  - source: null
+    lean: RMTFoundations.TracyWidom.SoftEdgeTraceProducts.trace_product_tendsto_of_hs
+    module: RMTFoundations/TracyWidom/SoftEdgeTraceProducts.lean
+    kind: theorem
+    claim: rmt-foundations/softedgetraceproducts-trace-product-tendsto-of-hs
+    status: internal
+    note: Products converge in trace norm when both factors converge in Hilbert-Schmidt norm to Hilbert-Schmidt
+      limits.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteHankelConvergence.primaryHankelKernel_eLpNorm_tendsto
+    module: RMTFoundations/TracyWidom/HermiteHankelConvergence.lean
+    kind: theorem
+    claim: rmt-foundations/hermitehankelconvergence-primaryhankelkernel-elpnorm-tendsto
+    status: internal
+    note: The actual primary Hermite Hankel kernels converge to the Airy Hankel kernel in L2 on the full
+      positive quadrant at every real cut.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteHankelConvergence.adjacentHankelKernel_eLpNorm_tendsto
+    module: RMTFoundations/TracyWidom/HermiteHankelConvergence.lean
+    kind: theorem
+    claim: rmt-foundations/hermitehankelconvergence-adjacenthankelkernel-elpnorm-tendsto
+    status: internal
+    note: The actual adjacent-degree Hermite Hankel kernels converge to the Airy Hankel kernel in L2 on
+      the full positive quadrant at every real cut.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteHankelConvergence.primaryHankel_hs_tendsto
+    module: RMTFoundations/TracyWidom/HermiteHankelConvergence.lean
+    kind: theorem
+    claim: rmt-foundations/hermitehankelconvergence-primaryhankel-hs-tendsto
+    status: internal
+    note: The actual primary Hermite Hankel operators converge to the Airy Hankel operator in Hilbert-Schmidt
+      norm at every real cut.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteHankelConvergence.adjacentHankel_hs_tendsto
+    module: RMTFoundations/TracyWidom/HermiteHankelConvergence.lean
+    kind: theorem
+    claim: rmt-foundations/hermitehankelconvergence-adjacenthankel-hs-tendsto
+    status: internal
+    note: The actual adjacent Hermite Hankel operators converge to the Airy Hankel operator in Hilbert-Schmidt
+      norm at every real cut.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteHankelConvergence.mixed_hankel_trace_tendsto
+    module: RMTFoundations/TracyWidom/HermiteHankelConvergence.lean
+    kind: theorem
+    claim: rmt-foundations/hermitehankelconvergence-mixed-hankel-trace-tendsto
+    status: internal
+    note: Both ordered products of the actual primary and adjacent Hermite Hankel operators converge in
+      trace norm to the Airy kernel operator at every real cut.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteKernelIntegral.scaledKernel_eq_adjacent_integral
+    module: RMTFoundations/TracyWidom/HermiteKernelIntegral.lean
+    kind: theorem
+    claim: rmt-foundations/hermitekernelintegral-scaledkernel-equality-adjacent-integral
+    status: internal
+    note: The scaled Hermite projection kernel equals the integral of the actual adjacent-mode pair.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteFredholmLimit.scaledKernel_shift_uniform_bound
+    module: RMTFoundations/TracyWidom/HermiteFredholmLimit.lean
+    kind: theorem
+    claim: rmt-foundations/hermitefredholmlimit-scaledkernel-shift-uniform-bound
+    status: internal
+    note: The actual shifted Hermite projection kernels have a common full-half-line exponential envelope
+      over all dimensions n+2.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteFredholmLimit.scaledHermiteKernel_fredholm_tendsto
+    module: RMTFoundations/TracyWidom/HermiteFredholmLimit.lean
+    kind: theorem
+    claim: rmt-foundations/hermitefredholmlimit-scaledhermitekernel-fredholm-tendsto
+    status: internal
+    note: The support-restricted one-time Hermite Fredholm determinants converge at every real cut and
+      every complex coupling to the Airy Fredholm determinant.
+  - source: null
+    lean: RMTFoundations.TracyWidom.HermiteFredholmLimit.scaledHermiteKernel_gap_tendsto
+    module: RMTFoundations/TracyWidom/HermiteFredholmLimit.lean
+    kind: theorem
+    claim: rmt-foundations/hermitefredholmlimit-scaledhermitekernel-gap-tendsto
+    status: internal
+    note: At every real cut the real physical-coupling one-time Hermite Fredholm determinant converges
+      to TW2R; finite matrix spectral-density identification is a separate obligation.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2RectangleLimits.pointwise_limit_all_rectangles_nonneg
+    module: RMTFoundations/TracyWidom/Airy2RectangleLimits.lean
+    kind: theorem
+    claim: rmt-foundations/airy2rectanglelimits-pointwise-limit-all-rectangles-nonneg
+    status: internal
+    note: Pointwise limits of finite probability joint CDFs retain nonnegative rectangular increments
+      under the stated convergence hypothesis.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2LimitLaws.coordinate_cdf_limits_tight
+    module: RMTFoundations/TracyWidom/Airy2LimitLaws.lean
+    kind: theorem
+    claim: rmt-foundations/airy2limitlaws-coordinate-cdf-limits-tight
+    status: internal
+    note: Finite-dimensional probability laws are tight when all scalar coordinate CDFs converge to functions
+      with the stated zero/one endpoint limits.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2LimitLaws.finite_law_limit
+    module: RMTFoundations/TracyWidom/Airy2LimitLaws.lean
+    kind: theorem
+    claim: rmt-foundations/airy2limitlaws-finite-law-limit
+    status: internal
+    note: A continuous joint CDF limit of finite probability laws is uniquely realized by a probability
+      law when coordinate limits have the stated zero/one endpoints.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2LimitLaws.finite_law_limit_with_weak
+    module: RMTFoundations/TracyWidom/Airy2LimitLaws.lean
+    kind: theorem
+    claim: rmt-foundations/airy2limitlaws-finite-law-limit-with-weak
+    status: internal
+    note: The whole sequence converges weakly to its uniquely constructed finite-dimensional probability
+      law, conditional on the stated joint and coordinate CDF limits and endpoint hypotheses.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2LimitLaws.finite_law_limits_consistent
+    module: RMTFoundations/TracyWidom/Airy2LimitLaws.lean
+    kind: theorem
+    claim: rmt-foundations/airy2limitlaws-finite-law-limits-consistent
+    status: internal
+    note: Constructed finite-dimensional limits are consistent when the finite laws obey the stated selector
+      consistency and CDF-limit hypotheses.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2LimitEscape.zero_is_not_probability_cdf
+    module: RMTFoundations/TracyWidom/Airy2LimitEscape.lean
+    kind: theorem
+    claim: rmt-foundations/airy2limitescape-zero-is-not-probability-cdf
+    status: internal
+    note: The zero joint-CDF limit is not a probability CDF; escaping mass supplies a counterinstance
+      to dropping tightness.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2LimitPhysical.physical_fredholm_law_from_finite_limits
+    module: RMTFoundations/TracyWidom/Airy2LimitPhysical.lean
+    kind: theorem
+    claim: rmt-foundations/airy2limitphysical-physical-fredholm-law-from-finite-limits
+    status: internal
+    note: Conditional on finite-law joint Fredholm convergence and scalar TW2 convergence at strictly
+      ordered times, a probability law realizes the full complex extended Airy determinant, is the weak
+      limit, and has TW2 marginal measures.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2LimitPhysical.physical_law_stationary
+    module: RMTFoundations/TracyWidom/Airy2LimitPhysical.lean
+    kind: theorem
+    claim: rmt-foundations/airy2limitphysical-physical-law-stationary
+    status: internal
+    note: The physical finite-dimensional law has translation-invariant time distributions conditional
+      on the stated probability-CDF realizations.
+  - source: null
+    lean: RMTFoundations.TracyWidom.Airy2OneTimeGap.one_time_convergence_does_not_determine_extended_limit
+    module: RMTFoundations/TracyWidom/Airy2OneTimeGap.lean
+    kind: theorem
+    claim: rmt-foundations/airy2onetimegap-one-time-convergence-does-not-determine-extended-limit
+    status: internal
+    note: Equal-time Airy blocks alone do not determine a distinct-time extended-kernel limit; this is
+      a route counterinstance, not nonexistence of the Airy2 law.
+  - source: null
+    lean: RMTFoundations.TracyWidom.TW4_density_positive_of_grid_certificate
+    module: RMTFoundations/TracyWidom/TW4ResponseGrid.lean
+    kind: theorem
+    claim: rmt-foundations/tw4-density-positive-of-grid-certificate
+    status: internal
+    note: A finite-grid margin plus the stated derivative bound and coverage budget proves positive TW4
+      Airy-scale density on that compact interval; the caller must prove every certificate bound.
+  - source: null
+    lean: RMTFoundations.TracyWidom.exists_TW4R_strictMono_two_tails
+    module: RMTFoundations/TracyWidom/TW4TwoTails.lean
+    kind: theorem
+    claim: rmt-foundations/exists-tw4r-strictmono-two-tails
+    status: internal
+    note: The conventionally scaled TW4 candidate is strictly increasing with positive derivative on two
+      nonempty tails; the intervening compact interval is outside this conclusion.
+  - source: null
+    lean: RMTFoundations.TracyWidom.exists_TW4AiryR_strictMono_two_tails
+    module: RMTFoundations/TracyWidom/TW4TwoTails.lean
+    kind: theorem
+    claim: rmt-foundations/exists-tw4airyr-strictmono-two-tails
+    status: internal
+    note: The Airy-scale TW4 candidate is strictly increasing with positive derivative on two nonempty
+      tails; no global probability-law characterization is asserted.
 acknowledgements: Haoran Li — co-author of the research paper that motivated this library and proposer
   of the problem. Developed and verified with lean-pkg (https://github.com/lean-pkg/lean-pkg, doi:10.5281/zenodo.23272098).
   This work was completed in part with resources provided by the Auburn University Easley Cluster (https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/intro.html).
