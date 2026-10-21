@@ -1,0 +1,208 @@
+{
+  "build_provenance": {
+    "cache_reused": 340,
+    "compiled": false,
+    "modules_built": 0,
+    "prebuilt": true,
+    "source": "easley job 5589012 node418 v4.35.0 sha256 9bd3660cb41112bcb7283c54b2de49367d5a03ac7ff5da711ac06750e832496b"
+  },
+  "commit": "df8d037ff7db61ec172188bf20d85e7078199c70",
+  "configs": [
+    {
+      "challenge_module": "Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/df8d037ff7db-comparator-comparator.log",
+      "log_sha256": "7e3d29fcd499e1afe4ab55d72d13f9e9ae005a33e698baa759f700f4c5c92503",
+      "path": "comparator.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "b93890000b81620894f9451584cc92fc896149d4c16a5b830297ee0058dfc5b5",
+      "solution_module": "Solution",
+      "theorem_names": [
+        "RMTFoundations.Airy.iteratedDeriv_two_airyAiReal",
+        "RMTFoundations.Airy.isTraceClass_airyKernelShift",
+        "RMTFoundations.Fredholm.fredholmSeries_entire",
+        "RMTFoundations.TWOneMonotone.monotone_TW1R",
+        "RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment",
+        "RMTFoundations.Resolvent.resolvent_identity",
+        "RMTFoundations.Taylor.remainder_eq_interval_integral",
+        "RMTFoundations.WalkMajorant.walk_count_majorant",
+        "RMTFoundations.Airy.airySolution_unique",
+        "RMTFoundations.Stieltjes.analyticOn_stieltjes",
+        "RMTFoundations.MarchenkoPastur.mpMeasure_prob",
+        "RMTFoundations.MarchenkoPastur.mpMeasure_density",
+        "RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic",
+        "RMTFoundations.FreeConvolution.subordination",
+        "RMTFoundations.HerglotzBorelProof.herglotzBorel",
+        "RMTFoundations.StieltjesInversion.tendsto_interval_im"
+      ],
+      "units": [
+        {
+          "log_sha256": "b9d80388d95a78f58c6860c653e53b2a26e32471de14fc0ad0ea8c7e79d15202",
+          "slots": [
+            "RMTFoundations.Airy.iteratedDeriv_two_airyAiReal"
+          ]
+        },
+        {
+          "log_sha256": "df3289938e707e4fca7adfbcb2b203e75f1388c901ef080f18f39c6ca174eef0",
+          "slots": [
+            "RMTFoundations.Airy.isTraceClass_airyKernelShift"
+          ]
+        },
+        {
+          "log_sha256": "d53e6bcfd8a11e646bc3ff9ccb09508ae7cdf04d529ea88c020b485e6b603884",
+          "slots": [
+            "RMTFoundations.Fredholm.fredholmSeries_entire"
+          ]
+        },
+        {
+          "log_sha256": "e8e0a7b1f253f3f8c90c88179191e404687f422f74d2cb2e1194a41fb0861359",
+          "slots": [
+            "RMTFoundations.TWOneMonotone.monotone_TW1R"
+          ]
+        },
+        {
+          "log_sha256": "f003a7cf125ba66e3b9064ca2281b0e9e87ae11a1a8f515c820bb82481a73a46",
+          "slots": [
+            "RMTFoundations.Cumulants.moment_succ_eq_sum_cumulant_mul_moment"
+          ]
+        },
+        {
+          "log_sha256": "2850157b8617df36fc2378aad6ec30bf436168046558cf4d6970f3d86eeb62ee",
+          "slots": [
+            "RMTFoundations.Resolvent.resolvent_identity"
+          ]
+        },
+        {
+          "log_sha256": "0d35b48815418b4287121f01ac77df5268317e07415c31adb4c6652510c75ac4",
+          "slots": [
+            "RMTFoundations.Taylor.remainder_eq_interval_integral"
+          ]
+        },
+        {
+          "log_sha256": "99b1eb571ccf3616fe86b5f54efc249aac7cdec475f20281459b705adc385ae6",
+          "slots": [
+            "RMTFoundations.WalkMajorant.walk_count_majorant"
+          ]
+        },
+        {
+          "log_sha256": "64242a4b226e80798f58e9e75ea4cb58995160b53e55d8bb042c24f38e91fbd5",
+          "slots": [
+            "RMTFoundations.Airy.airySolution_unique"
+          ]
+        },
+        {
+          "log_sha256": "9dd36a010c8233e04e31c4088839eecf2b5bc6520949f9b612223853a3ef2b5f",
+          "slots": [
+            "RMTFoundations.Stieltjes.analyticOn_stieltjes"
+          ]
+        },
+        {
+          "log_sha256": "3b04ba69172ef871df584fd28ce69c7e567f47d1b011c3a2dd3425a92bd7e110",
+          "slots": [
+            "RMTFoundations.MarchenkoPastur.mpMeasure_prob"
+          ]
+        },
+        {
+          "log_sha256": "af62068356cbe5c7a761bbfe8d9a50668527dca6e2167f089bb1410327875ba7",
+          "slots": [
+            "RMTFoundations.MarchenkoPastur.mpMeasure_density"
+          ]
+        },
+        {
+          "log_sha256": "3fa23ed3237fcb8c072a3e7a69c1b6163fc2b1a5feb08f9f55345d444e2c2a87",
+          "slots": [
+            "RMTFoundations.MarchenkoPastur.mpMeasure_transform_quadratic"
+          ]
+        },
+        {
+          "log_sha256": "4259a1c53de4d6c674493dd07616d5156b8d192fa10c292d44f757dbb4bfc0ab",
+          "slots": [
+            "RMTFoundations.FreeConvolution.subordination"
+          ]
+        },
+        {
+          "log_sha256": "edb74e697d5608f1d5fbdb8125e5f4b254f3d7cf212278050c1afae7e34ee7ae",
+          "slots": [
+            "RMTFoundations.HerglotzBorelProof.herglotzBorel"
+          ]
+        },
+        {
+          "log_sha256": "6c66668d4e865b9ed7209e117f7c1a78953ef6f87766c0f90ccde529762d9efa",
+          "slots": [
+            "RMTFoundations.StieltjesInversion.tendsto_interval_im"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-10-21T13:19:46+00:00",
+  "host": "h-f985343177f7",
+  "host_label": "h-f985343177f7",
+  "host_policy": "host h-f985343177f7: the machine running the command (workstation default: no Slurm here, COMPARATOR_RECEIPT_ALLOWED_HOSTS unset)",
+  "job_id": "local-h-f985343177f7-2048733-20261021T131946Z",
+  "judges": 1,
+  "lean_threads": 1,
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mechanism": "toolchain",
+  "olean_manifest": {
+    "captured": "build",
+    "files": 360,
+    "lake_manifest_sha256": "f437e4fd32db7b02996ae9aaf3af51a847f89ed7c5be3ce611ef80e369922c68",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "schema": "olean-manifest/1",
+    "sha256": "7e7a7f03ecb9f1987ed36e0b1f47bd66a3e909f81702ffe3e410f8911dc01da3"
+  },
+  "result": "pass",
+  "resumed_slots": 16,
+  "schema": "comparator-receipt/2",
+  "stack_limit": {
+    "hard_kb": "unlimited",
+    "soft_kb": "unlimited",
+    "source": "COMPARATOR_RECEIPT_STACK"
+  },
+  "stages": [
+    {
+      "exit": 0,
+      "stage": "checkout",
+      "status": "prepared",
+      "wall_s": 11.638
+    },
+    {
+      "exit": 0,
+      "stage": "cache-get",
+      "status": "prepared",
+      "wall_s": 5.607
+    },
+    {
+      "exit": 0,
+      "stage": "build",
+      "status": "prepared",
+      "wall_s": 7.122
+    },
+    {
+      "exit": 0,
+      "stage": "comparator",
+      "status": "ok",
+      "wall_s": 4.252
+    }
+  ],
+  "toolchain_resolution": {
+    "lake": "<elan>/bin/lake",
+    "source": "elan",
+    "version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+  },
+  "tools": {
+    "con-ron_sha256": "60f4ca9fb9436c323789fa49aae33af6dcd1b9b54b43a66b461779ce79fd8eec",
+    "lake_sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "leanchecker_sha256": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6",
+    "leanexport_sha256": "f6a6483d518a11b323c28b9bac176d2220df0e9fc3230833815db9586669c074",
+    "nanoda_bin_sha256": "cbf13950fc4a48f635a0beceeb5ed32dd82568b870cfd081b6391c1f2cf02ba5"
+  },
+  "unit_size": 1
+}
