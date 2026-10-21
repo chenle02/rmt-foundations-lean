@@ -585,7 +585,7 @@ Expected: `#print axioms` on any declaration above reports a subset of {`Classic
 
 ## Citation
 
-Le Chen. *rmt-foundations: random-matrix and analytic foundations in Lean*. Version 0.2.0.
+Le Chen. *rmt-foundations: random-matrix and analytic foundations in Lean*. Version 0.2.0. [doi:10.5281/zenodo.23539485](https://doi.org/10.5281/zenodo.23539485).
 
 See [CITATION.cff](CITATION.cff).
 
