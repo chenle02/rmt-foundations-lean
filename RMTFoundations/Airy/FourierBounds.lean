@@ -324,7 +324,7 @@ theorem dampedHalfLine_memLp
     (hβ : 0 ≤ β /- [standing] -/)
     (f : Lp ℝ 2 halfLineMeasure /- [definition] -/) :
     MemLp (dampedHalfLineFunction β f) 2 := by
-  exact (memLp_indicator_iff_restrict measurableSet_Ioi).mpr (halfLine_damped_memLp β hβ f)
+  exact (memLp_indicator_iff_restrict measurableSet_Ioi.nullMeasurableSet).mpr (halfLine_damped_memLp β hβ f)
 
 theorem dampedHalfLine_integrable
     (β : ℝ /- [definition] -/)
@@ -348,7 +348,7 @@ theorem dampedHalfLine_norm_le
   have hw := halfLine_damped_memLp β hβ f
   have he : ‖(dampedHalfLine_memLp β hβ f).toLp (dampedHalfLineFunction β f)‖ = ‖hw.toLp (fun x : ℝ => (Real.exp (-β * x) : ℂ) * (f x : ℂ))‖ := by
     rw [Lp.norm_toLp, Lp.norm_toLp, dampedHalfLineFunction,
-      eLpNorm_indicator_eq_eLpNorm_restrict measurableSet_Ioi]
+      eLpNorm_indicator_eq_eLpNorm_restrict measurableSet_Ioi.nullMeasurableSet]
   rw [he]
   apply Lp.norm_le_norm_of_ae_le
   filter_upwards [hw.coeFn_toLp, ae_restrict_mem measurableSet_Ioi] with x hx hxpos

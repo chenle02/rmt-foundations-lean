@@ -1,7 +1,7 @@
 # Full API documentation
 
-This nested Lake package pins doc-gen4 to `v4.35.0-rc2` at
-`d736b237948ab1bdf316407a575f0d3c7f6ba772`, matching `lean-toolchain`.
+This nested Lake package pins doc-gen4 to `v4.35.0` at
+`0e1ffe2e4ba5ecfdfaf15c65b8d3805dbb7134ae`, matching `lean-toolchain`.
 The root package's Lean configuration is unchanged. The committed manifest
 pins doc-gen4's transitive dependencies.
 
@@ -21,7 +21,7 @@ inside this directory and review the resulting manifest diff. Normal builds
 use the committed lock.
 
 The normal doc-gen4 facet documents transitive imports, including Mathlib and
-Lean core. Version 0.1.0 does not commit generated API pages or Mathlib documentation.
+Lean core. Version 0.2.0 does not commit generated API pages or Mathlib documentation.
 The guided site uses `docs/declarations.html` and `docs/modules.html` as its
 lightweight source-linked reference, generated from `claims.yaml` and
 `MODULES.tsv`. Full API documentation remains a local build option.

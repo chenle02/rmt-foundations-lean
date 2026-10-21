@@ -1,16 +1,16 @@
-# rmt-foundations 0.1.0
+# rmt-foundations 0.2.0
 
 > Lean 4 library (package `RMTFoundations`) of Tracy–Widom, Airy, Painlevé II,
 > finite GUE and analytic random-matrix results. Proved: TW1/TW2 distribution
-> functions, measures, densities, quantiles, moments and tail bounds;
+> functions, measures, smooth densities, quantiles, moments and tail bounds;
 > Hastings–McLeod; TW4 function identities; extended Airy kernel with its
 > one-time TW2 reduction. Not established: TW4 monotonicity or TW4 measure;
-> GUE edge limit without the hypothesis `GUELimit TW2R`; multi-time Airy2
-> convergence or probability properties; sharp cubic left-tail asymptotics;
-> C^1 regularity of TW1/TW2 densities.
+> GUE edge limit without the hypothesis `GUELimit TW2R`; unconditional multi-time Airy2
+> convergence; conditional limit laws retain explicit producer hypotheses; sharp cubic left-tail asymptotics;
+> a sign certificate covering the compact gap between the two proved TW4 tails.
 
 Declarations and their hypotheses outrank all prose, including this file.
-Links point to branch `main`; for release `v0.1.0`, read the same paths at
+Links point to branch `main`; for release `v0.2.0`, read the same paths at
 that tag.
 
 ## Required context
@@ -20,7 +20,7 @@ that tag.
 - [Formalization record](https://github.com/chenle02/rmt-foundations-lean/blob/main/formalization.yaml)
 - [Module inventory](https://github.com/chenle02/rmt-foundations-lean/blob/main/MODULES.tsv)
 - [Umbrella imports](https://github.com/chenle02/rmt-foundations-lean/blob/main/RMTFoundations.lean)
-- [Toolchain](https://github.com/chenle02/rmt-foundations-lean/blob/main/lean-toolchain): Lean v4.35.0-rc2
+- [Toolchain](https://github.com/chenle02/rmt-foundations-lean/blob/main/lean-toolchain): Lean v4.35.0
 - [Verification entrypoint](https://github.com/chenle02/rmt-foundations-lean/blob/main/scripts/verify.sh)
 
 ## Guided documentation
@@ -31,6 +31,8 @@ that tag.
 - [Module map](https://chenle02.github.io/rmt-foundations-lean/modules.html)
 - [Declaration index](https://chenle02.github.io/rmt-foundations-lean/declarations.html)
 - [Trust and reproducibility](https://chenle02.github.io/rmt-foundations-lean/trust.html)
+
+- [Tracy–Widom guide](https://chenle02.github.io/rmt-foundations-lean/tracy-widom.html)
 
 ## Optional
 

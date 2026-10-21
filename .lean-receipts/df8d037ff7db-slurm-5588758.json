@@ -1,0 +1,33 @@
+{
+  "commit": "df8d037ff7db61ec172188bf20d85e7078199c70",
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "sorry_count": 0,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "report_sha256": "f2bd552d0b772dd394ecbeb92fe447a29ea240389fa1395ef5810a8a989abe63",
+  "job_id": "slurm-5588758",
+  "checker": "python3 scripts/verify.py (complete module build, examples, axiom audit, bounded complete leanchecker replay)",
+  "generated_at": "2026-10-20T23:22:51Z",
+  "job_stdout_sha256": "f2ce0d8507773cd5733211ae9089eb9691bbb7e62ff0a1b597232dddc340a07c",
+  "manifest_sha256": "f437e4fd32db7b02996ae9aaf3af51a847f89ed7c5be3ce611ef80e369922c68",
+  "log_commit_bound": true,
+  "container": {
+    "engine": "singularity",
+    "image_sha256": "0639ce71c13d479d456499b53f1efd887055123fe67573873170b7d1d9bba36a",
+    "ref": "<redacted>"
+  },
+  "claim_axioms": {
+    "checked": 384,
+    "nonstandard": [],
+    "missing": []
+  },
+  "report_compressed": {
+    "format": "gzip",
+    "sha256": "a0665a543442e79dda88289f1f3a7e6e2465d13c14f5f91d75f6d3d740ceee45",
+    "bytes": 115113437
+  }
+}

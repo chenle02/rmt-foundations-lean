@@ -1,10 +1,11 @@
 schema: coverage/1
 package: rmt-foundations
 kind: library
+stack: lts-2026.10
 summary: Kernel-checked foundations for random matrix theory (Airy function and kernel, Fredholm series,
   order-one Tracy-Widom monotonicity, moment-cumulant recursion, resolvent identity, Marchenko-Pastur
   law, Stieltjes transform and inversion, Herglotz-Borel representation, free-convolution subordination);
-  16 main results compared.
+  16 main results compared. Version 0.2.0 adds Tracy-Widom smoothness and Hermite-Airy limits.
 rows:
 - title: The actual real Airy function satisfies its second-order ODE
   claims:
@@ -123,4 +124,4 @@ rows:
 compute:
 - cluster: easley
   jobs:
-  - slurm-5582463
+  - slurm-5588758

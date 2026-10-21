@@ -7,7 +7,9 @@ authors:
   - family-names: Chen
     given-names: Le
     affiliation: "Department of Mathematics and Statistics, Auburn University"
-version: 0.1.0
+version: 0.2.0
+date-released: 2026-10-21
+doi: 10.5281/zenodo.23539485
 license: Apache-2.0
 repository-code: "https://github.com/chenle02/rmt-foundations-lean"
 url: "https://chenle02.github.io/rmt-foundations-lean/"
@@ -18,3 +20,10 @@ keywords:
   - Airy function
   - Lean
   - formal verification
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23539485
+    description: "Concept DOI (all versions; resolves to the latest)"
+  - type: doi
+    value: 10.5281/zenodo.23539486
+    description: "Version DOI for 0.2.0"

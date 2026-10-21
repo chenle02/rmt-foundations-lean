@@ -100,10 +100,14 @@ def check_site(root, source=False):
             assert 'name="viewport"' in p.read_text(), p
         assert 'noindex' not in p.read_text().lower(), 'docs must be indexable: ' + str(p)
     if source:
-        index = Links()
-        index.feed((root / 'index.md').read_text())
-        index.feed((root / '_layouts/landing.html').read_text())
-        parsed['index.html'] = index
+        for page in root.glob('*.md'):
+            text = page.read_text()
+            permalink = re.search(r'^permalink: /([^\n]+)$', text, re.M)
+            if permalink:
+                parser = Links()
+                parser.feed(text)
+                parser.feed((root / '_layouts/landing.html').read_text())
+                parsed[permalink[1]] = parser
     for name, parser in parsed.items():
         if name.startswith('api/'):
             # Generated API dependency links are audited during API extraction.
@@ -121,7 +125,7 @@ def check_site(root, source=False):
             if target.is_dir():
                 target = target / 'index.html'
             key = target.relative_to(root).as_posix()
-            assert target.exists() or (source and key == 'index.html'), (name, link)
+            assert target.exists() or (source and key in parsed), (name, link)
             if u.fragment and target.suffix == '.html':
                 assert unquote(u.fragment) in parsed[key].ids, (name, link)
     for name in ('llms.txt', 'CITATION.cff'):
@@ -141,7 +145,8 @@ def main():
     a.add_argument('--regenerate', action='store_true')
     a.add_argument('--site', type=Path, help='Check actual Jekyll output read-only')
     args = a.parse_args()
-    assert not any(p.is_symlink() for p in ROOT.rglob('*'))
+    assert not any(p.is_symlink() for p in ROOT.rglob('*')
+                   if not {'.git', '.lake'} & set(p.relative_to(ROOT).parts))
     modules = module_rows()
     claims = claims_rows(modules)
     update_or_check(ROOT / 'docs/modules.html', module_table(modules), len(modules), args.regenerate)
