@@ -4,3 +4,5 @@
 details.tex-source { margin: 0 0 1em; font-size: 0.85em; }
 details.tex-source > summary { cursor: pointer; opacity: 0.75; }
 mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+/* Narrow screens: long Lean names and file-path links in prose wrap; inside tables they stay whole and the table scrolls. */
+:not(pre)>code,p a,li a{overflow-wrap:anywhere}td,th,td code,th code{overflow-wrap:normal}:not(.table-scroll)>table{display:block;overflow-x:auto}
